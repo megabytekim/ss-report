@@ -3,174 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>🔬 브이엠 · 오로스테크놀로지 — 반도체 dry-process 소부장 (2026-06-22)</title>
-<meta property="og:type" content="article">
-<meta property="og:title" content="🔬 브이엠 · 오로스테크놀로지 — 반도체 dry-process 소부장">
-<meta property="og:description" content="dry etch(브이엠 089970) · overlay 계측(오로스테크 322310) 디스커션 정리 — thesis 검증·레드팀·8월 2Q 채점표 (2026-06-22)">
+<title>리서치 리포트</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="리서치 리포트">
+<meta property="og:description" content="종목·테마 디스커션 정리 모음 — 투자 참고용">
 <meta name="twitter:card" content="summary">
 <style>
   :root{
     --bg:#0f1115; --card:#171a21; --card2:#1d212b; --line:#2a2f3a;
-    --tx:#e6e8ec; --mut:#9aa3b2; --dim:#6b7280;
-    --accent:#4f8cff; --amber:#f0a93b; --red:#e5575a; --green:#3fb27f; --blue:#4f8cff;
+    --tx:#e6e8ec; --mut:#9aa3b2; --dim:#6b7280; --accent:#4f8cff;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--tx);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-    line-height:1.65;font-size:15px;-webkit-text-size-adjust:100%}
-  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
-  h1{font-size:23px;margin:0 0 6px;letter-spacing:-.3px}
-  h2{font-size:18px;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-  h3{font-size:16px;margin:18px 0 8px}
-  p{margin:9px 0}
-  a{color:var(--accent);text-decoration:none}
-  a:hover{text-decoration:underline}
-  .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
-  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;
-    border:1px solid var(--line);color:var(--mut);vertical-align:middle}
-  .badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:6px}
-  .b-hold{background:rgba(240,169,59,.15);color:var(--amber);border:1px solid rgba(240,169,59,.35)}
-  .b-risk{background:rgba(229,87,90,.15);color:var(--red);border:1px solid rgba(229,87,90,.35)}
-  .b-reg{background:rgba(79,140,255,.15);color:var(--blue);border:1px solid rgba(79,140,255,.35)}
-  .b-park{background:rgba(107,114,128,.18);color:var(--mut);border:1px solid var(--line)}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 6px;margin:16px 0}
-  .callout{background:linear-gradient(180deg,rgba(79,140,255,.10),rgba(79,140,255,.03));
-    border:1px solid rgba(79,140,255,.30);border-radius:12px;padding:14px 16px;margin:14px 0}
-  .callout.warn{background:linear-gradient(180deg,rgba(229,87,90,.10),rgba(229,87,90,.03));border-color:rgba(229,87,90,.30)}
-  .kicker{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--dim);margin:0 0 4px}
-  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
-  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-  th{color:var(--mut);font-weight:600;font-size:12.5px;background:var(--card2)}
-  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
-  .up{color:var(--green)} .down{color:var(--red)}
-  ul{margin:8px 0;padding-left:20px} li{margin:5px 0}
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
-  .stat{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
-  .stat .l{font-size:11.5px;color:var(--dim)} .stat .v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
-  .verdict{font-weight:600}
-  .v-true{color:var(--green)} .v-partly{color:var(--amber)} .v-false{color:var(--red)}
-  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
-  .foot a{color:var(--mut)}
-  @media(max-width:620px){.grid2{grid-template-columns:1fr}h1{font-size:20px}}
+    line-height:1.6;font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{max-width:760px;margin:0 auto;padding:34px 18px 80px}
+  h1{font-size:24px;margin:0 0 6px;letter-spacing:-.3px}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 26px}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;border:1px solid var(--line);color:var(--mut)}
+  a.report{display:block;text-decoration:none;color:inherit;background:var(--card);
+    border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0;transition:.15s}
+  a.report:hover{border-color:var(--accent);background:var(--card2);transform:translateY(-1px)}
+  .date{font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums;margin-bottom:5px}
+  .rtitle{font-size:16.5px;font-weight:600;margin-bottom:5px}
+  .rdesc{font-size:13.5px;color:var(--mut)}
+  .arrow{float:right;color:var(--dim);font-size:18px;margin-top:-2px}
+  .foot{margin-top:38px;padding-top:14px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <h1>🔬 브이엠 · 오로스테크놀로지</h1>
-  <p class="sub">반도체 dry-process 소부장 한 쌍 — 디스커션 정리 · <strong>2026-06-22 (KST)</strong> · <span class="tag">투자 참고용, 결정은 본인 책임</span></p>
+  <h1>리서치 리포트</h1>
+  <p class="sub">종목·테마 디스커션 정리 모음 · <span class="tag">투자 참고용, 결정은 본인 책임</span></p>
 
-  <div class="callout warn">
-    <p class="kicker">먼저, 사실 정정</p>
-    <p style="margin:2px 0"><strong>브이엠(089970) = 에이피티씨(APTC) 동일 회사.</strong> APTC(Adaptive Plasma Technology)가 2024년 3월 사명을 VM으로 변경(종목코드 동일). "브이엠 vs APTC 경쟁" 구도는 성립하지 않음 — 신·구 사명일 뿐. 실제 국내 경쟁자는 <strong>세메스(삼성 캡티브, 비상장)</strong>.</p>
-  </div>
-
-  <h2>한눈에</h2>
-  <table>
-    <thead><tr><th>종목</th><th>현재가 (6/22)</th><th>Rating</th><th>사이클 위치</th><th>한 줄</th></tr></thead>
-    <tbody>
-      <tr>
-        <td><strong>브이엠</strong><br><span class="tag">089970 · KOSDAQ</span></td>
-        <td class="num">≈100,000원<br><span class="up">+13~15% 신고가</span></td>
-        <td><span class="badge b-hold">Hold</span><br><span style="font-size:11px;color:var(--dim)">펀더 Buy급/진입 과열</span></td>
-        <td>이미 터진 모멘텀</td>
-        <td>thesis 진짜, 가격이 호재를 다 사놨다 — 추격 비대칭 하방</td>
-      </tr>
-      <tr>
-        <td><strong>오로스테크놀로지</strong><br><span class="tag">322310 · KOSDAQ</span> <span class="badge b-reg">interest 등록</span></td>
-        <td class="num">26,650원<br><span class="down">-3.44%</span></td>
-        <td><span class="badge b-hold">Hold</span><br><span style="font-size:11px;color:var(--dim)">약세 편향</span></td>
-        <td>아직 안 터진 회복 기대</td>
-        <td>회복 첫 체크포인트(1Q)가 미스 — 8/14 반기가 채점표</td>
-      </tr>
-    </tbody>
-  </table>
-  <p class="sub">공통: <em>반도체 미세화·적층 수혜 + SK하이닉스 의존 소부장</em>. 단 공정 단계(식각 vs 계측)도, 사이클 위치도 정반대. 둘 다 레드팀(반론 검증) 결론은 <span class="badge b-risk">serious-risk</span> — "회사가 나쁘다"가 아니라 "가격이 비대칭 하방".</p>
-
-  <h2>테마 — 왜 dry-process 소부장인가</h2>
-  <p>반도체는 ① 노광(패턴 그리기) → ② <strong>식각(패턴대로 깎기)</strong> → ③ 증착(채우기)을 수백 번 반복. 미세화될수록 정밀도 때문에 식각이 습식→<strong>건식(dry)</strong>으로 전환(SK하이닉스 뉴스룸 1차 확인). 계측(층간 정렬 측정) 수요도 적층·미세화로 구조적 증가.</p>
-  <div class="grid2">
-    <div class="stat"><div class="l">식각(etch) 글로벌</div><div class="v" style="font-size:13.5px">LAM 45 · TEL 25 · AMAT 18 (%)</div></div>
-    <div class="stat"><div class="l">오버레이 계측 글로벌</div><div class="v" style="font-size:13.5px">KLA 65 · ASML 30 · 오로스 ~5 (%)</div></div>
-  </div>
-  <p>둘 다 미·일이 과점하는 시장에 SK하이닉스 <strong>국산화/공급망 다변화</strong>로 침투하는 국내 플레이어. 다음 구조적 트리거는 <strong>HBM4E~ 하이브리드 본딩 전환</strong>(범프 없이 구리 직접 접합) → 정렬 허용오차가 한 자릿수 빡빡해져 본딩 계측 수요가 step-change.</p>
-
-  <!-- ============ 브이엠 ============ -->
-  <h2>브이엠 (089970) <span class="badge b-park">파킹</span></h2>
-  <p><strong>뭐하는 회사:</strong> 웨이퍼에 회로 패턴을 플라즈마로 깎아내는 <strong>건식 식각(dry etch) 장비</strong> 제조. SK하이닉스 DRAM 라인 납품(매출 95%+ 단일고객). 삼성 진영은 세메스가 캡티브라, 브이엠은 <strong>SK 진영의 사실상 유일한 외부 전문 etcher</strong>(SK 내 점유 10~12% 침투자). 다음 확장은 고난도 Oxide(유전체) 식각 — 아직 개발 단계.</p>
-
-  <div class="grid2">
-    <div class="stat"><div class="l">시총 / 발행주식</div><div class="v">≈2.5조 · 24,771,995주</div></div>
-    <div class="stat"><div class="l">YTD (pykrx 실측)</div><div class="v up">+234%</div></div>
-    <div class="stat"><div class="l">2025 실적</div><div class="v">매출 1,444억(+105.5%) · 영업익 247억(흑전)</div></div>
-    <div class="stat"><div class="l">1Q26 잠정</div><div class="v">매출 889억 · 영업익 301억 (OPM 34%)</div></div>
-  </div>
-
-  <h3>thesis 검증</h3>
-  <table>
-    <thead><tr><th>사용자 주장</th><th>판정</th><th>근거</th></tr></thead>
-    <tbody>
-      <tr><td>국내 유일 dry etcher</td><td class="verdict v-partly">partly</td><td>SK/독립계 한정으론 유일. 단 삼성 세메스 존재, 글로벌은 LAM/TEL/AMAT 88% 과점</td></tr>
-      <tr><td>DRAM 공정에 dry 비중 증가 → 수혜</td><td class="verdict v-true">true</td><td>SK하이닉스 1차 확인. 미세화로 식각 wet→dry 구조적 전환</td></tr>
-      <tr><td>실적으로 나오고 있다</td><td class="verdict v-true">true</td><td>2025 매출 2배·흑전 247억, 1Q26 영업익 301억</td></tr>
-      <tr><td>PSK가 dry 1등 입증</td><td class="verdict v-false">부정확</td><td>PSK는 strip/clean 1등이지 etch 1등 아님(etch 1등 LAM). 카테고리 오류</td></tr>
-    </tbody>
-  </table>
-
-  <h3>레드팀 — 왜 지금 사면 안 되나 (가격, not 회사)</h3>
-  <ul>
-    <li><strong>호재를 이미 다 사놨다:</strong> 컨센 평균 목표 103,500원의 96% 소진. 한경·대신 평균 타깃(80,000)은 이미 +25% 초과 돌파.</li>
-    <li><strong>2027 실적을 당겨 반영:</strong> fwd PER ≈26배 (2026E 30.9 / 2027E 22.7), 2025 trailing PER ≈87배. YTD +234% 신고가.</li>
-    <li><strong>단일고객 베타:</strong> SK하이닉스 capex 한 개에 레버리지. 과거 <strong>2023년 매출 -82% 붕괴·2년 연속 적자</strong> 전력 = 사이클 변동성 실증.</li>
-    <li><strong>컨센 분산 극심:</strong> 2026E 영업익 추정 하나 558억 ~ YIG 989억 (1.9배 차이) → 어닝 미스 확률 구조적.</li>
-  </ul>
-  <p><strong>비대칭:</strong> 다운 <span class="down">-35~50%</span> vs 업 <span class="up">+5~15%</span>. 호재는 가격 안, 악재만 가격 밖.</p>
-  <p><strong>결론:</strong> 회사 질은 좋음(실적·M15X tailwind 실재). 단 진입은 추격 금지 → 눌림(MA20 ≈76,000) + 실적 재확인 대기. <span class="badge b-park">관심밖 파킹</span> (분석만 보관).</p>
-
-  <!-- ============ 오로스 ============ -->
-  <h2>오로스테크놀로지 (322310) <span class="badge b-reg">interest 등록</span></h2>
-  <p><strong>뭐하는 회사:</strong> 수백 층 쌓는 반도체에서 <strong>층끼리 정확히 겹쳤는지 재는 오버레이(overlay) 계측 장비</strong> 제조. IBO(이미지 기반) 방식 양산은 전세계 <strong>KLA와 오로스 둘뿐</strong>(기술 해자). 글로벌 점유 ~5%지만 국내 SK하이닉스 하이엔드 오버레이 100%. 후공정(HBM 하이브리드 본딩·TSV) 계측으로 확장 중.</p>
-
-  <div class="grid2">
-    <div class="stat"><div class="l">시총 / 발행주식</div><div class="v">≈2,520억 · 9,366,542주</div></div>
-    <div class="stat"><div class="l">52주 고점(5/6) 대비</div><div class="v down">-48% (52,000 → 26,650)</div></div>
-    <div class="stat"><div class="l">2024 → 2025</div><div class="v">매출 614→521(-15.1%) · 영업익 61→<span class="down">-84</span></div></div>
-    <div class="stat"><div class="l">현금 (1분기 소진)</div><div class="v down">106.5억 → 28.2억 (-74%)</div></div>
-  </div>
-
-  <div class="callout warn">
-    <p class="kicker">결정타 — 회복의 첫 체크포인트(1Q)가 이미 미스</p>
-    <p style="margin:2px 0"><strong>2026Q1 영업적자 -68억 · 매출 68억 (YoY -60%, DART 5/15).</strong> 1년 전 2025Q1(매출 169억·영업익 -3억) 대비 매출 60% 빠지고 적자 22배 깊어짐 → "2025 트로프, 2026 회복"을 1Q가 정면 부정. <strong>2026Q1이 매출 기준 새 바닥.</strong> 컨센(2026 흑전 +50억) 달성하려면 -68억 이후 Q2~Q4에 <strong>+118억</strong>을 만들어야 함.</p>
-  </div>
-
-  <h3>레드팀 핵심</h3>
-  <ul>
-    <li><strong>컨센 신뢰도:</strong> 같은 증권사가 2025E를 영업익 +249억 규모로 틀림(유진 2025E 165억 → 실제 -84억). 그 출처가 낸 2026E +50억.</li>
-    <li><strong>회복 촉매가 다 미래형:</strong> 삼성 HE-900IR(60억)·MT-30T(150억)·IR오버레이 전부 <strong>퀄 단계</strong>, 양산 발주 미확정. 탈락/지연 시 2027로 이연.</li>
-    <li><strong>재무:</strong> 부채비율 45→99%지만 증가분 ~205억은 신사옥(동탄) 리스부채 = 순수 차입 +65억(비율 과장). 단 <strong>현금 74% 소진(cash burn)은 진짜.</strong> CB/유증은 현재 없음 확정(DART 교차검증).</li>
-    <li><strong>내부자:</strong> 유재만 전무가 5월 급등 정점(5/4 @44,738원) 보유 절반 매도.</li>
-  </ul>
-  <p><strong>green shoot:</strong> 삼성전자 장비수주 48억 확정(2026-01-26 DART, 2025 매출 10.5%, 기간 2026-12-31 연장) — 퀄→양산 초기 전환 신호.</p>
-  <p><strong>비대칭:</strong> 업 <span class="up">+15~17%</span>(컨센·목표 다 맞을 때) vs 다운 <span class="down">-30~45%</span>(또 미스 시 실적+멀티플 double-kill). "많이 빠졌다"는 안전마진 아님 — fwd PER 22~64배로 회복을 풀밸류로 사는 가격.</p>
-
-  <h3>조건부 의사결정 (Decision Triggers)</h3>
-  <table>
-    <thead><tr><th>조건</th><th>액션</th><th>기한</th><th>상태</th></tr></thead>
-    <tbody>
-      <tr><td>2Q26 영업이익 흑전 또는 적자 대폭 축소 확인</td><td>진입 검토(A 발동), 1차 분할</td><td class="num">~2026-08-14 반기</td><td>대기</td></tr>
-      <tr><td>삼성 HE-900IR/MT-30T 양산 발주 follow-up 수주</td><td>비중확대 게이트</td><td class="num">~2026-09-30</td><td>대기</td></tr>
-      <tr><td>유상증자/CB 희석 공시</td><td>thesis 재평가(이탈 검토)</td><td class="num">~2026-09-30</td><td>대기</td></tr>
-      <tr><td>종가 ≤ 18,500</td><td>deep-value 소량(후순위)만 재검토</td><td class="num">~2026-09-30</td><td>대기</td></tr>
-    </tbody>
-  </table>
-  <p><strong>결정:</strong> <strong>Wait(보류).</strong> 추격/줍기 금지 — 4월 분석의 "32K 이하 분할" 플랜대로 했으면 지금 stop 코앞에 물렸을 자리 = 떨어지는 칼 실증. <strong>8/14 반기 실적</strong>이 thesis 생사 변수. interest 등록은 매수가 아니라 트래킹용.</p>
-
-  <h2>Bottom line</h2>
-  <p>둘 다 <strong>thesis는 진짜인데 가격이 좋은 소식을 이미 사놨다</strong>. 회사 질은 브이엠 &gt; 오로스(브이엠은 실적·M15X가 실재로 굴러감, 오로스는 회복이 아직 다 미래형 + 컨센 신뢰 붕괴). 가격 매력은 둘 다 나쁨.</p>
-  <p>공교롭게 <strong>관심 종목 여럿이 "8월 2Q가 채점표"</strong> 패턴 — thesis 진짜, 가격 선반영, 실적 바이너리 대기. 지금 액션: <strong>브이엠 파킹 / 오로스 interest 트래킹, 8/14 반기 보고 A 발동 여부 판단.</strong></p>
+  <a class="report" href="./2026-06-22-vm-oros/">
+    <span class="arrow">&rsaquo;</span>
+    <div class="date">2026-06-22</div>
+    <div class="rtitle">브이엠 · 오로스테크놀로지 — 반도체 dry-process 소부장</div>
+    <div class="rdesc">dry etch(089970) · overlay 계측(322310) thesis 검증 · 레드팀 · 8월 2Q 채점표</div>
+  </a>
 
   <div class="foot">
-    <p>2026-06-22 기준 · 투자 참고용, 투자 권유 아님 · 결정과 결과는 본인 책임 · 수치는 작성 시점 실측(시장 변동·정정 가능)</p>
+    <p>각 리포트는 작성 시점 실측 기준이며 시장 변동·정정 가능. 투자 권유 아님, 결정과 결과는 본인 책임.</p>
   </div>
 
 </div>
