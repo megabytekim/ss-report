@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Micron 확정·flow 지배 — 6/30 바닥 매수 후보군</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="📊 Micron 확정·flow 지배 — 매수 후보군 스크리닝">
+<meta property="og:description" content="6/25 마이크론 블로우아웃이 메모리 슈퍼사이클을 확정했으나 외국인은 갭업에 메모리를 던졌다(flow 지배). 자기역사 밸류에이션 밴드 + 수급으로 17종목에서 매수 후보군을 추렸다.">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --line:#2a2f3a;
+    --tx:#e6e8ec; --mut:#9aa3b2; --dim:#6b7280;
+    --accent:#4f8cff; --amber:#f0a93b; --red:#e5575a; --green:#3fb27f; --blue:#4f8cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.65;font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:23px;margin:0 0 6px;letter-spacing:-.3px}
+  h2{font-size:18px;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  h3{font-size:16px;margin:18px 0 8px}
+  p{margin:9px 0}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;
+    border:1px solid var(--line);color:var(--mut);vertical-align:middle}
+  .badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:6px}
+  .b-hold{background:rgba(240,169,59,.15);color:var(--amber);border:1px solid rgba(240,169,59,.35)}
+  .b-risk{background:rgba(229,87,90,.15);color:var(--red);border:1px solid rgba(229,87,90,.35)}
+  .b-reg{background:rgba(79,140,255,.15);color:var(--blue);border:1px solid rgba(79,140,255,.35)}
+  .b-park{background:rgba(107,114,128,.18);color:var(--mut);border:1px solid var(--line)}
+  .b-good{background:rgba(63,178,127,.15);color:var(--green);border:1px solid rgba(63,178,127,.35)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 6px;margin:16px 0}
+  .callout{background:linear-gradient(180deg,rgba(79,140,255,.10),rgba(79,140,255,.03));
+    border:1px solid rgba(79,140,255,.30);border-radius:12px;padding:14px 16px;margin:14px 0}
+  .callout.warn{background:linear-gradient(180deg,rgba(229,87,90,.10),rgba(229,87,90,.03));border-color:rgba(229,87,90,.30)}
+  .callout.good{background:linear-gradient(180deg,rgba(63,178,127,.10),rgba(63,178,127,.03));border-color:rgba(63,178,127,.30)}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--dim);margin:0 0 4px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12.5px;background:var(--card2)}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .up{color:var(--green)} .down{color:var(--red)}
+  ul{margin:8px 0;padding-left:20px} li{margin:5px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+  .stat{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .stat .l{font-size:11.5px;color:var(--dim)} .stat .v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+  .verdict{font-weight:600}
+  .v-true{color:var(--green)} .v-partly{color:var(--amber)} .v-false{color:var(--red)}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Micron 확정·flow 지배 — 6/30 바닥 매수 후보군</h1>
+  <p class="sub">2026-06-25 · 메모리 펀더 확정 + 외국인 매도 지속 국면 · <span class="tag">투자 참고용, 결정은 본인 책임</span></p>
+
+  <div class="callout">
+    <p class="kicker">요지</p>
+    <p><b>6/25 새벽 마이크론 실적이 블로우아웃</b>(매출 +18% 서프라이즈·DRAM 가격 급등·다음 분기 가이던스 대폭 상향)으로, 6/23 -9.99% 크래시의 공포(메모리 피크아웃·공급과잉)를 <b>실데이터가 정면 반박</b>했다 — 메모리 슈퍼사이클은 꺾인 게 아니라 가속 중이다. <b>그런데 같은 날 외국인은 그 갭업에 삼성전자·SK하이닉스를 대규모로 던졌다</b>(코스피 외국인 -0.85조, 기관 +3.30조가 흡수). 펀더는 확정됐지만 <b>단기 가격은 수급(flow)이 지배</b>한다.</p>
+    <p>이 국면의 핵심 질문은 "무엇이 싸냐"가 아니라 <b>"외국인이 메모리에서 빼서 어디로 옮기느냐 + 그게 자기 역사 대비 정말 싼 자리냐"</b>다. 그래서 이번엔 <b>종목 자기 5년 밸류에이션 밴드(현재 PER·PBR이 자기 역사상 몇 %ile인지)</b>를 새 가치 렌즈로 더했다. 절대 저PER이 곧 저평가가 아니기 때문이다. 17종목을 밴드·수급으로 추린 결과 — <b>외국인 매수 + 자기역사 저평가가 겹치는 종목은 소수</b>이고, 메모리 본진은 6/30 분기말 매도 소진 후가 진입창이다.</p>
+  </div>
+
+  <h2>1. 무엇이 바뀌었나 — 펀더 확정 vs flow 지배</h2>
+  <p>3일에 걸쳐 국면이 두 번 뒤집혔다. (1) 6/23 크래시 = 마이크론 실적을 앞둔 메모리 공포. (2) 6/25 마이크론 블로우아웃 = 그 공포의 정면 반박, 메모리 펀더 확정. (3) 그러나 6/25 장중 +5.77% 개장이 +4%로 밀렸고, 마감 수급은 <b>외국인이 갭업에 메모리를 계속 던지고 기관이 받는 구도</b>였다. 즉 펀더는 강세 확정인데 외국인 매도가 단기 가격을 누른다.</p>
+  <table>
+    <tr><th>코스피 순매수(조원)</th><th>6/23 크래시</th><th>6/24 반등</th><th>6/25 마이크론</th></tr>
+    <tr><td>외국인</td><td class="num down">-4.20</td><td class="num down">-4.06</td><td class="num down">-0.85</td></tr>
+    <tr><td>기관</td><td class="num down">-4.48</td><td class="num up">+2.05</td><td class="num up">+3.30</td></tr>
+    <tr><td>개인</td><td class="num up">+8.59</td><td class="num up">+1.89</td><td class="num down">-2.42</td></tr>
+  </table>
+  <p>종목으로 보면 더 명확하다. 6/25 외국인은 <b>삼성전자 -6,187억·SK하이닉스 -2,736억</b>을 갭업(각 +5.2%·+12.9%)에 던졌고, 그 자금이 <b>비메모리 가치주로 소폭 회전</b>했다 — 기아 +236·현대모비스 +227·대한항공 +221·삼성바이오 +214·대한전선 +204. <b>메모리 펀더가 확정돼도 외국인은 안 돌아왔다</b>는 점이 핵심: 진짜 바닥은 6/30 분기말 리밸런싱 매도가 소진된 다음이고, 그 전까진 메모리 추격은 금물이다.</p>
+
+  <h2>2. 스크리닝 — 자기역사 밴드 + 6/25 수급</h2>
+  <p>17종목을 3축으로 점검했다: (1) <b>자기 5년 밸류에이션 밴드</b> — 현재 PER·PBR이 종목 자기 역사상 몇 %ile인지(0%=역사상 가장 쌈, 100%=가장 비쌈). (2) 6/25 외국인 순매수 방향. (3) 메모리/사이클 독립성. 밴드는 거래소 월별 실측 ~60개월 분포 기준이며, "절대 저PER"의 착시를 걷어낸다. 현재가는 6/25 종가 실측.</p>
+
+  <table>
+    <tr><th>종목</th><th>섹터</th><th>현재가(6/25)</th><th>자기역사 밴드 (PER%ile / PBR%ile)</th><th>외인 6/25</th><th>판정</th></tr>
+    <tr><td><b>셀트리온</b></td><td>바이오</td><td class="num">173,100</td><td class="num"><span class="up">PER 8% · PBR 25% (저평가)</span></td><td class="num up">+81</td><td><span class="badge b-good">최우선·조건부</span></td></tr>
+    <tr><td><b>삼성바이오로직스</b></td><td>CDMO</td><td class="num">1,386,000</td><td class="num"><span class="up">PER 2%</span> · PBR 52%</td><td class="num up">+214</td><td><span class="badge b-good">최우선·조건부</span></td></tr>
+    <tr><td>대한전선</td><td>전선/전력</td><td class="num">33,250</td><td class="num">PER 70% · PBR 67% (중립)</td><td class="num up">+204</td><td><span class="badge b-reg">후보</span></td></tr>
+    <tr><td><b>기아</b></td><td>자동차</td><td class="num">139,500</td><td class="num">PER 70% · PBR 48% (중립)</td><td class="num up">+236</td><td><span class="badge b-hold">조건부</span></td></tr>
+    <tr><td>한국타이어</td><td>타이어</td><td class="num">59,900</td><td class="num">PER 36% · PBR 66% (중립)</td><td class="num up">+36</td><td><span class="badge b-hold">조건부</span></td></tr>
+    <tr><td>대한항공</td><td>항공</td><td class="num">29,100</td><td class="num">PER 86% · PBR 57%</td><td class="num up">+221</td><td><span class="badge b-hold">조건부</span></td></tr>
+    <tr><td>엘앤에프</td><td>2차전지</td><td class="num">107,800</td><td class="num">PER 적자 · PBR 51%</td><td class="num up">+199</td><td><span class="badge b-hold">조건부</span></td></tr>
+    <tr><td>삼성전자</td><td>메모리</td><td class="num">358,500</td><td class="num">PER 100%? <span class="tag">출처 괴리·무시</span></td><td class="num down">-6,187</td><td><span class="badge b-reg">6/30 트랙</span></td></tr>
+    <tr><td>삼양식품</td><td>음식료</td><td class="num">1,143,000</td><td class="num">PER 57% · PBR 62%</td><td class="num down">-4</td><td><span class="badge b-park">관망</span></td></tr>
+    <tr><td>고려아연</td><td>비철금속</td><td class="num">1,110,000</td><td class="num">PER 66% · PBR 80%</td><td class="num up">+14</td><td><span class="badge b-park">관망</span></td></tr>
+    <tr><td>POSCO홀딩스</td><td>철강</td><td class="num">323,000</td><td class="num">PER 97% · <span class="up">PBR 36%</span></td><td class="num up">+44</td><td><span class="badge b-park">관망</span></td></tr>
+    <tr><td>HD현대일렉트릭</td><td>전력기기</td><td class="num">950,000</td><td class="num">PER 74% · PBR 87%</td><td class="num up">+61</td><td><span class="badge b-park">관망</span></td></tr>
+    <tr><td>현대모비스</td><td>자동차부품</td><td class="num">513,000</td><td class="num down">PER 80% · PBR 98% (비쌈)</td><td class="num up">+227</td><td><span class="badge b-risk">회피</span></td></tr>
+    <tr><td>LG이노텍</td><td>IT부품</td><td class="num">953,000</td><td class="num down">PER 98% · PBR 98% (비쌈)</td><td class="num up">+61</td><td><span class="badge b-risk">회피</span></td></tr>
+    <tr><td>한화시스템</td><td>방산</td><td class="num">79,000</td><td class="num down">PER 96% · PBR 77% (비쌈)</td><td class="num up">+43</td><td><span class="badge b-risk">회피</span></td></tr>
+    <tr><td>DB하이텍</td><td>파운드리</td><td class="num">158,000</td><td class="num down">PER 97% · PBR 82% (비쌈)</td><td class="num down">-103</td><td><span class="badge b-risk">회피</span></td></tr>
+    <tr><td>삼성중공업</td><td>조선</td><td class="num">23,800</td><td class="num"><span class="up">PER 0%</span> · PBR 85%</td><td class="num down">-98</td><td><span class="badge b-risk">회피</span></td></tr>
+  </table>
+
+  <h3>가치 렌즈 — 자기역사 밴드 vs 버핏·린치</h3>
+  <p>이번 리포트의 새 렌즈는 <b>자기역사 밴드</b>다. "PER이 절대적으로 낮다"가 아니라 "이 종목이 자기 역사 대비 싼 자리냐"를 본다. 단 밴드는 <b>곧이곧대로 읽으면 안 되는 예외</b>가 있다 — <b>삼성전자 밴드 PER 100%ile(=가장 비쌈)은 의심스럽다</b>: 같은 시점 다른 소스의 trailing PER은 ~25로 2배 괴리라 산정기준 차이가 의심되고, 1Q26이 사상 최대 분기(트로프 아님)라 "싸다/비싸다"를 밴드로 판단하기 어렵다(삼성전자는 밴드 의존 금지, forward 사이클로 본다). 반대로 밴드가 잘 작동하는 예 — <b>현대모비스는 외국인이 사는데도 PBR 98%ile(자기 역사상 최상단)</b>이라 "회전 매수"가 아니라 "비싼 자리 추격"임이 드러난다.</p>
+  <p>직전(6/24) 버핏·린치 정량 렌즈를 함께 보면(재무 기반이라 1일새 불변): <b>기아만 버핏 안전마진 +0.78(유일 저평가)·린치 PEG 0.61</b>이고 나머지는 MOS 음수였다. 단 그 버핏 저평가는 trailing 기준이며, <b>자기역사 밴드로 보면 기아 현재가는 중립</b>(PER 70%ile·PBR 48%ile) — "메모리에 소외돼 싸다"가 아니라 평년 수준이다. 두 렌즈가 갈리는 지점이 바로 매수 타이밍의 핵심이다.</p>
+  <table>
+    <tr><th>종목</th><th>자기역사 밴드</th><th>버핏 MOS / 린치 PEG (6/24 carry)</th><th>읽기</th></tr>
+    <tr><td><b>셀트리온</b></td><td class="num up">PER 8% · PBR 25%</td><td class="num">-0.33 / 1.55</td><td>버핏엔 비싸 보였으나 자기역사론 하단 = 외인 매수와 정합</td></tr>
+    <tr><td><b>삼성바이오</b></td><td class="num up">PER 2% · PBR 52%</td><td class="num">신규(미산출)</td><td>고멀티플 바이오지만 자기 역사상 가장 싼 구간</td></tr>
+    <tr><td>한국타이어</td><td class="num">PER 36% · PBR 66%</td><td class="num">— / 6.88</td><td>밴드는 중립, 린치 PEG 6+는 원가 충격 미반영 경고</td></tr>
+    <tr><td><b>기아</b></td><td class="num">PER 70% · PBR 48%</td><td class="num up">+0.78 / 0.61</td><td>버핏 유일 저평가지만 자기역사론 중립(상단 근처)</td></tr>
+    <tr><td>현대모비스</td><td class="num down">PER 80% · PBR 98%</td><td class="num">-0.35 / 6.08</td><td>두 렌즈 모두 비쌈 = 명백한 회피</td></tr>
+    <tr><td>삼성전자</td><td class="num">PER 100%? (출처 괴리)</td><td class="num">신규(미산출)</td><td>밴드값 의심(54 vs ~25)·record 실적 — 밴드 의존 말 것, forward 사이클로 판단</td></tr>
+  </table>
+
+  <h2>3. 수급 모멘텀 — 외국인 5일/20일 누적</h2>
+  <p>6/25 하루 매수는 노이즈일 수 있다. 누가 한 달간 실제로 사 모았는지 — <b>20거래일 누적</b>이 회전의 진위를 가른다. 단위 억원(+순매수), 거래소 실측. <b>5일·20일 모두 외국인 순매수</b>가 진짜 회전 수혜다.</p>
+  <table>
+    <tr><th>종목</th><th>외인 5일</th><th>외인 20일</th><th>읽기</th></tr>
+    <tr><td><b>셀트리온</b></td><td class="num up">+855</td><td class="num up">+1,292</td><td>5일·20일 모두 매수 = 진짜 회전 리더</td></tr>
+    <tr><td><b>삼성바이오</b></td><td class="num up">+540</td><td class="num up">+1,829</td><td>한 달 일관 매수</td></tr>
+    <tr><td>대한항공</td><td class="num up">+658</td><td class="num up">+2,331</td><td>외인+기관 동반 매수, 단 밴드는 비쌈</td></tr>
+    <tr><td>기아</td><td class="num down">-240</td><td class="num up">+2,437</td><td>20일 축적, 5일은 크래시 drag</td></tr>
+    <tr><td>POSCO홀딩스</td><td class="num up">+549</td><td class="num up">+2,042</td><td>외인 매수, 단 철강 사이클</td></tr>
+    <tr><td>한화시스템</td><td class="num up">+348</td><td class="num up">+1,426</td><td>외인 매수, 단 밴드 최상단</td></tr>
+    <tr><td>대한전선</td><td class="num up">+792</td><td class="num up">+989</td><td>외인 일관 매수 + 밴드 중립</td></tr>
+    <tr><td>한국타이어</td><td class="num up">+138</td><td class="num up">+598</td><td>소폭 매수, 밴드 중립</td></tr>
+    <tr><td>현대모비스</td><td class="num up">+1,061</td><td class="num down">-13,150</td><td>20일 대규모 매도, 5일 매수는 mechanical bounce</td></tr>
+    <tr><td>LG이노텍</td><td class="num up">+1,094</td><td class="num down">-8,435</td><td>마찬가지 — 20일 분산, 5일 노이즈</td></tr>
+    <tr><td>삼성전자</td><td class="num down">-29,075</td><td class="num down">-158,857</td><td>외인 메모리 exodus 지속 (6/30 소진 대기)</td></tr>
+  </table>
+  <p><b>읽기</b>: 밴드와 수급을 겹치면 후보가 좁혀진다. <b>셀트리온·삼성바이오</b>는 "자기역사 저평가 + 외국인 5일·20일 일관 매수"가 겹치는 유일한 조합이다. <b>현대모비스·LG이노텍</b>은 6/25·5일 외국인 매수로 보이지만 20일로는 각 -1.3조·-0.8조 분산 — 그 매수는 일중/단기 mechanical bounce이고 밴드도 최상단이라 회피다. 삼성전자는 외국인이 20일 -15.9조 던지는 중이라, 펀더가 확정됐어도 6/30 전엔 가격 바닥이 안 잡힌다.</p>
+
+  <h2>4. 최우선 후보 (조건부) — 바이오 2종</h2>
+  <p>밴드·수급 교집합 + 적대 검증(약세 시나리오 독립 점검)을 통과한 결과, 가장 앞선 후보는 셀트리온·삼성바이오 둘이다. 단 <b>둘 다 "무조건 매수"가 아니라 medium conviction의 조건부</b> — 자기역사 저평가가 value-trap이 아니라 디레이팅 정상화 구간이라는 건 확인됐지만, 각자 실행 리스크와 6/30 게이트가 남는다.</p>
+  <div class="callout good">
+    <p class="kicker">de-rating 정상화 + 외인 일관매수 (조건부)</p>
+    <p><b>셀트리온</b> — 자기 5년 PER 8%ile·PBR 25%ile 하단은 2024-25 합병 overhang + 짐펜트라 가이던스 3연속 하향의 잔상이다. 핵심은 <b>분모(이익)가 꺾인 게 아니라 회복 중</b>이라는 점 — 1Q26 매출 +36%·영업익 +115%·OPM 28.1%(역대 최대). 즉 value-trap이 아니라 디레이팅 정상화(리레이팅 초입)이고, 외국인 5일 +855·20일 +1,292 일관 매수가 이를 뒷받침한다. <b>유보</b>: fwd PER ~33x는 절대 싸지 않아 EPS 실현 의존도가 높고, 서정진 회장이 가이던스로 세 번 양치기한 만큼 짐펜트라 처방 램프 지속이 thesis breaker. 처방량 우상향 트렌드 + 6/30 후 외인 매집 지속 확인 후 분할.</p>
+    <p><b>삼성바이오로직스</b> — PER 2%ile은 자기 역사상 거의 최저인데, 삼바는 자기역사 PER 70~100배를 오간 고멀티플주라 이 디레이팅은 <b>성장 둔화가 아니라 분할 노이즈+수주 공백 mispricing</b>(1Q 영업이익 +35%·OPM 46.2%로 펀더 둔화 미확인)이다. 외국인 5일 +540·20일 +1,829 일관 매수는 비메모리 로테이션의 명확한 착지점. <b>유보</b>: 시총 ~98조·절대 멀티플 부담이 크고(PBR 52%ile 중립이 균형추), <b>신규 대형수주 공백</b>이 최대 리스크(누적수주 정체 → 삼성증권 목표 180만 하향). BIOSECURE 수혜는 2027년까지 시차. 게이트 = 6/30 overhang 소진 + 신규 수주 공시(또는 6공장 착공) + 분할(절대 밸류 때문에 ~130만 하단 지지 확인).</p>
+  </div>
+
+  <h2>5. 조건부 후보 — 게이트·리스크 대기</h2>
+  <ul>
+    <li><b>기아</b> — 외국인 +236(비메모리 회전 수혜)·20일 +2,437 축적. 단 <b>자기역사 밴드는 중립</b>(PER 70%·PBR 48%)이라 "소외돼 싸다"는 성립 안 하고, 미국 관세(현행 15% vs 25% 복구 위협)가 thesis tail. 진입 게이트 = 6/30 분기말 + 관세 세율 확인 + 7월 실적.</li>
+    <li><b>대한전선</b> — 외국인 5일 +792·20일 +989 일관 매수 + 밴드 중립. 전력 인프라(전선) 회전 수혜. 단 PER 절대값이 높아 실적 가속 확인 필요.</li>
+    <li><b>대한항공</b> — 외국인+기관 동반 강매수(+221/+343), 6/25 +6.4%. 단 <b>자기역사 PER 86%ile = 비싼 자리</b>라 추격 주의 — 회전 수혜는 맞으나 밴드상 매력은 약하다.</li>
+    <li><b>한국타이어</b> — 밴드 중립(PER 36%·PBR 66%)은 <b>peak earnings 착시</b>다: 17% 타이어 마진·OP +42.9%는 작년 저가 고무 투입이 만든 사이클 정점이고, 회사가 H2 마진 -4~5%p를 가이드해 forward PER은 보이는 6.7보다 훨씬 높아진다. 외국인 매수(+36/+138/+598)도 규모가 미미. 미국 25% 관세까지 더해 2026 컨센 하향이 base case에 가깝다 — <b>조건부 중 가장 약하다(value-trap 경계)</b>. 배당(3.7%→최대 7%)이 하방을 막아 회피는 아니나, 컨센 하향 선반영(나쁜 뉴스에 안 빠지는지) 확인 전 소량 watch까지만.</li>
+    <li><b>엘앤에프</b> — 외국인 매수(+199/+466/+511)이나 현재 적자라 PER 밴드 산출 불가, 6/25 -5.2% 변동성. 2차전지 사이클 베팅 성격이 강해 투기색.</li>
+  </ul>
+
+  <h2>6. 메모리 본진 — 6/30 트랙</h2>
+  <div class="card">
+    <p><b>삼성전자</b> — 마이크론이 메모리 슈퍼사이클을 <b>펀더로 확정</b>했고, 삼성도 1Q26이 사상 최대 분기(영업익 57조대)였다. 주의할 점: 자기역사 밴드 PER 100%ile은 <b>곧이곧대로 읽으면 안 된다</b> — 같은 시점 다른 소스의 trailing PER은 ~25로 밴드값(54)과 2배 괴리라 산정기준/시점 차이가 의심된다(밴드 의존 금지). 또 직전 실적이 트로프가 아니라 record이므로, bull case는 "트로프 정상화"가 아니라 <b>슈퍼사이클 연장(extension)에 ATH 부근 프리미엄을 지불하는 자리</b>다 — 즉 싸서 사는 게 아니라 펀더가 확정돼 사는 것이다.</p>
+    <p>핵심은 외국인 매도의 성격이다. 20일 -15.9조는 <b>conviction exodus가 아니라 mechanical 패시브 강제매도</b> — MSCI/FTSE 리밸런싱(6/19 종료) + 외인 지분율 13년 최저 디웨이팅이 주도했다. 즉 메모리 베어콜이 아니라 인덱스 기계적 매도이고, 강제매도 잔량은 6/19에 대부분 소진됐다. <b>셀러 고갈은 bull 신호</b>다(갭업에도 파는 건 conviction 아닌 리밸 잔량).</p>
+    <div class="grid2">
+      <div class="stat"><div class="l">펀더</div><div class="v">슈퍼사이클 확정·1Q26 record</div></div>
+      <div class="stat"><div class="l">외인 매도 성격</div><div class="v">패시브 강제(6/19 종료)</div></div>
+      <div class="stat"><div class="l">crowding</div><div class="v">삼성 47.5% &lt; 하닉 51.3%</div></div>
+      <div class="stat"><div class="l">진입</div><div class="v verdict v-partly">6/30 후 ATH-5~10% 분할</div></div>
+    </div>
+    <p><b>전략</b>: 갭 추격 금지. 6/30 분기말 통과 후 외국인 순매도 둔화/플랫 전환(셀러 소진) 확인 → ATH(374,500) 대비 5~10% 디스카운트 구간에서 분할. 사이클 노출은 <b>SK하이닉스보다 삼성전자</b>(외인 47.5%로 하이닉스 51.3%보다 덜 crowded). 진입 근거는 "싼 밴드"가 아니라 mechanical 셀러 고갈 + 덜 crowded + forward 사이클이다.</p>
+  </div>
+
+  <h2>7. 회피</h2>
+  <div class="callout warn">
+    <p class="kicker">자기역사 밴드 최상단 + 외인 20일 분산</p>
+    <p><b>현대모비스·LG이노텍</b> — 6/25·5일 외국인 매수로 보이지만 20일로는 각 -1.3조·-0.8조 분산이고, 자기역사 밴드 PBR 98%ile(둘 다 역사상 최상단). "회전 매수"가 아니라 mechanical bounce + 비싼 자리 추격이다.</p>
+    <p><b>한화시스템·DB하이텍·삼성중공업</b> — 한화시스템(PER 96%·PBR 77% 밴드 최상단, 6/25 -4.4%), DB하이텍(밴드 비쌈 + 외국인 순매도·메모리 인접), 삼성중공업(외국인 순매도 + PBR 85%ile). 밴드·수급 어느 쪽도 매수를 지지하지 않는다.</p>
+  </div>
+
+  <h2>8. 종합</h2>
+  <p><b>마이크론이 메모리 펀더를 확정했지만, 6/25 외국인이 그 갭에 메모리를 던지면서 단기 가격은 flow가 지배한다.</b> 그래서 지금의 매수 후보는 "메모리 추격"이 아니라 두 갈래다 — (1) <b>외국인이 메모리에서 빼 옮기는 비메모리 가치주 중 자기 역사 대비도 싼 종목</b>(셀트리온·삼성바이오), (2) <b>6/30 분기말 매도 소진 후의 메모리 본진</b>(삼성전자, 펀더 기반).</p>
+  <p>이번에 더한 <b>자기역사 밴드</b>가 한 일은 명확하다: 외국인이 사는 종목(현대모비스·대한항공·LG이노텍)이라도 자기 역사상 비싼 자리면 걸러내고, 반대로 PER 절대값이 높아도(셀트리온 39·삼성바이오 52) 자기 역사상 하단이면 후보로 올린다. 단 밴드도 만능은 아니어서 삼성전자처럼 산정 괴리·record 실적이면 의존하지 않는다. <b>"절대 저PER" 착시를 걷어낸 결과, 외국인 매수와 자기역사 저평가가 겹치는 최우선 후보는 바이오 2개(셀트리온·삼바)이나 둘 다 medium conviction의 조건부</b> — 셀트리온은 짐펜트라 처방 램프, 삼바는 신규 수주가 트리거다. 나머지는 게이트 대기(기아·대한전선) 또는 회피다. 종목별 진입은 일괄 베팅이 아니라 6/30 분기말 수급 소진 + 각자 촉매(7월 실적·수주) 확인 후가 맞다.</p>
+
+  <div class="foot">
+    <p>2026-06-25 기준 · 투자 권유 아님 · 결정과 결과는 본인 책임 · 수치는 작성 시점 실측(시장 변동·정정 가능) · 자기역사 밴드는 거래소 월별 ~60개월 분포 기준 · 버핏/린치는 6/24 재무 기반 추정치</p>
+  </div>
+
+</div>
+</body>
+</html>
