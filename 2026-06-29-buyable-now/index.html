@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지금 살 수 있는가 — 매수 가능 종목 스크린</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="지금 살 수 있는가 — 급락 직후 전종목에서 고른 매수 후보">
+<meta property="og:description" content="전종목에서 유동성+외인·기관 동반매수+확정 셋업을 갖춘 신규 매수 후보. 급락 직후라 조건부 1(에스티팜)+관찰 3+회피 3.">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --line:#2a2f3a;
+    --tx:#e6e8ec; --mut:#9aa3b2; --dim:#6b7280;
+    --accent:#4f8cff; --amber:#f0a93b; --red:#e5575a; --green:#3fb27f; --blue:#4f8cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.65;font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:23px;margin:0 0 6px;letter-spacing:-.3px}
+  h2{font-size:18px;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  h3{font-size:16px;margin:18px 0 8px}
+  p{margin:9px 0}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;
+    border:1px solid var(--line);color:var(--mut);vertical-align:middle}
+  .badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:6px}
+  .b-hold{background:rgba(240,169,59,.15);color:var(--amber);border:1px solid rgba(240,169,59,.35)}
+  .b-risk{background:rgba(229,87,90,.15);color:var(--red);border:1px solid rgba(229,87,90,.35)}
+  .b-reg{background:rgba(79,140,255,.15);color:var(--blue);border:1px solid rgba(79,140,255,.35)}
+  .b-park{background:rgba(107,114,128,.18);color:var(--mut);border:1px solid var(--line)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 6px;margin:16px 0}
+  .callout{background:linear-gradient(180deg,rgba(79,140,255,.10),rgba(79,140,255,.03));
+    border:1px solid rgba(79,140,255,.30);border-radius:12px;padding:14px 16px;margin:14px 0}
+  .callout.warn{background:linear-gradient(180deg,rgba(229,87,90,.10),rgba(229,87,90,.03));border-color:rgba(229,87,90,.30)}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--dim);margin:0 0 4px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12.5px;background:var(--card2)}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .up{color:var(--green)} .down{color:var(--red)}
+  ul{margin:8px 0;padding-left:20px} li{margin:5px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+  .stat{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .stat .l{font-size:11.5px;color:var(--dim)} .stat .v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+  .verdict{font-weight:600}
+  .v-true{color:var(--green)} .v-partly{color:var(--amber)} .v-false{color:var(--red)}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>지금 살 수 있는가 — 급락 직후 전종목에서 고른 매수 후보</h1>
+  <p class="sub">6/26 종가 거래소 실측 · 기존 분석 종목 제외 · <span class="tag">투자 참고용, 결정은 본인 책임</span></p>
+
+<div class="callout"><div class="kicker">한 줄</div><p>전종목에서 "지금 살 수 있는" 신규 종목(기존 분석 종목 전부 제외)을 찾았다. 직전 주(6/22~26) 급락 직후라 <b>깨끗이 방향을 돌린 종목은 거의 없고</b>, 조건부 매수 1 + 관찰 3 + 회피 3으로 정리된다.</p></div>
+<h2>1. 시장 — 직전 주 급락 직후</h2>
+<p>6/22~26 한 주간 변동성 급증: 삼성생명 6/22 -9.4%, 유진테크 6/23 -13.5%, KOSDAQ 6/23 -7.9% 등 광범위한 출렁임. 그 결과 과매도+수급 종목 대부분이 <b>바닥을 다지는 게 아니라 아직 출렁이는 칼날</b> 상태다. 이 구간의 규율은 "시초 추격 금지, 턴 확인 후 분할".</p>
+<h2>2. 스크리닝 — 무엇을 찾았나</h2>
+<p>6/26 종가 거래소 실측으로 전종목에서 <b>① 유동성(거래대금 ≥ 50억/일) ② 외국인·기관 동반 순매수 ③ 확정 진입 셋업(과매도 턴업 또는 추세 눌림목)</b>을 동시 충족하는 신규 종목을 추렸다. 기존에 분석한 종목군은 전부 제외. 셋업 통과 10종목 중 떨어지는 칼(고밸류 테마 하락주) 3개를 제외하고 7종목을 종목별로 실적·재무·이벤트까지 검증했다.</p>
+<p class="sub">방법론 주의: "과매도(RSI&lt;35)"와 "장기 누적 동반매수"는 상충한다(담기는 종목은 오르는 중이라 과매도가 아님). 그래서 누적이 아니라 <b>최근(20일) 동반매수</b> + <b>RSI 레벨이 아닌 추이(턴업/divergence)</b>로 잡았고, 유동성 floor로 초소형 노이즈를 배제했다.</p>
+<h2>3. 조건부 매수 — 에스티팜 (237690)</h2>
+<div class="card"><p><span class="badge b-hold">조건부 매수</span> 올리고핵산(siRNA/ASO) 치료제 원료 CDMO. 유일하게 실적·바닥·셋업이 함께 서는 종목.</p><div class="grid2"><div class="stat"><div class="l">1Q26 영업이익</div><div class="v up">+115억 (+1,024% YoY)</div></div><div class="stat"><div class="l">매출 / OPM</div><div class="v">670억(+27.7%) / 17.2%</div></div><div class="stat"><div class="l">외국인 20/60일</div><div class="v up">+78 / +736억</div></div><div class="stat"><div class="l">위치 (200일선 / 52주고)</div><div class="v">-6.4% / -30%</div></div></div><p><b>왜 지금:</b> 올리고 CDMO 상업화 본격화 + 미국 생물보안법(중국 CDMO 제재) 반사수혜 + 3월 897억 단일 최대수주. 추격 구간이 아니라 6월 눌림 회복 초입.</p><p><b>검증 정정:</b> 일부 자료가 든 "약 31% 유상증자 희석"은 <b>타사 공시 오귀속</b>으로 확인 — 상장주식수 약 2,087만주로 변동 없고 유증 공시 근거 없음. 최대 약세 논거가 사라졌다.</p><p><b>남는 리스크:</b> 기관 60일 -482억(외국인 단독 매수 leg) · PBR 4.1·PER 44 고밸류 · 8월 2분기 실적이 1분기 어닝서프라이즈를 확인하지 못하면 멀티플 디레이팅.</p></div>
+<table><tr><th>항목</th><th>레벨 (6/26 종가 117,400 기준)</th><th>근거</th></tr><tr><td><b>진입</b></td><td>시초 추격 금지. ① 122,000(20일선) 회복 종가+거래량, 또는 ② 115,900(6/23 저점) 지지 후 1/3씩 분할</td><td>칼날 아닌 턴 확인</td></tr><tr><td><b>종가 손절</b></td><td>113,000 이탈</td><td>6/23 저점 구조 하회</td></tr><tr><td><b>1차 목표</b></td><td>136,500 (60일선, +16%) → 이후 전고</td><td>되돌림 1차 저항</td></tr><tr><td><b>기간 / 비중</b></td><td>8월 2분기 실적 전까지. 실적 전 풀사이즈 금지, 소량</td><td>단일 leg 수급·고밸류</td></tr></table>
+<h2>4. 관찰 — 바닥은 좋으나 셋업 미완 (안정 후)</h2>
+<table><tr><th>종목</th><th>강점</th><th>현 상태 / 트리거</th></tr><tr><td><b>씨젠 (096530)</b></td><td>바닥 최강 — 순현금 3,300억, PBR 1.27, 1Q 영업익 +58.6%(비호흡기 턴어라운드)</td><td>6/25 +8.2%→6/26 -3.9% 데드캣, 20일선 아래. <b>트리거: 20일선(28,800) 회복+안착.</b> 배당성향 95.5% 지배구조가 재평가 캡</td></tr><tr><td><b>리노공업 (058470)</b></td><td>1Q 영업익 +473억(+35%), 무차입, AI ASIC 검사소켓 구조적 성장</td><td>6/23 -8%/6/26 -5% 변동 격심, 60일선 -19.6% 하락추세. <b>트리거: 20일선(93,500) 회복.</b> PBR 8.8 고밸류</td></tr><tr><td><b>유진테크 (084370)</b></td><td>DRAM 증설 CAPEX + 삼성전자 대용량 ALD 13대 첫 수주</td><td>강하나 <b>투자경고종목(5/11)</b>+과열(200일선 +64%). <b>트리거: 130~140k 되돌림 또는 경고 해제.</b> 추격 위험 높음</td></tr></table>
+<h2>5. 회피</h2>
+<ul><li><b>기업은행 (024110)</b> — PBR 0.43 싸지만 매일 신저가 갱신·1Q 영업익 -8.9%, 진행 중 하락추세(칼날). 분기배당 도입은 floor일 뿐 트리거 아님</li><li><b>삼성생명 (032830)</b> — 사실상 삼성전자 대리투자(proxy), 200일선 +98%로 extended. 삼전 변동에 동반, 특별배당 모멘텀은 2027년 초로 멀다</li><li><b>와이제이링크 (209640)</b> — floor 부재(적자)·250억 CB 오버행·동전주(6/26 -14%). 로봇 테마 기대뿐</li></ul>
+<h2>6. 종합</h2>
+<div class="callout"><div class="kicker">결론</div><p>급락 직후 구간이라 "지금 바로" 살 만한 건 <b>에스티팜 하나(그것도 트리거 후 소량)</b>다. 씨젠·리노공업·유진테크는 펀더가 받쳐주는 진짜 후보지만 <b>아직 방향을 안 돌렸다</b> — 각 트리거(20일선 회복 등)를 기다린다. 시초 추격·칼날 잡기는 금지.</p></div>
+<p class="sub">방법론: 6/26 종가 전종목 거래소 실측 → 유동성·최근 동반매수·RSI 추이 스크린 → 종목별 실적·재무·이벤트 검증 + 바닥 주장 반론 검증. 실적·날짜 1차값은 확인된 것만, 미확인은 추정으로 채우지 않음. 검증 중 "에스티팜 31% 유증" 등 오귀속 1건을 실측(상장주식수)으로 정정함.</p>
+
+  <div class="foot">
+    <p>2026-06-28 기준 · 투자 권유 아님 · 결정과 결과는 본인 책임 · 수치는 작성 시점 실측(시장 변동·정정 가능)</p>
+  </div>
+
+</div>
+</body>
+</html>
