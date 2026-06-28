@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>코스닥 과대낙폭 반등 후보 — 전종목 스크린</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="📉 코스닥 과대낙폭 반등 후보 — 전종목 스크린">
+<meta property="og:description" content="코스닥 1개월 평균 -27%. '떨어졌으니 반등'은 절반만 맞다 — 전종목 1,822개를 훑어 sector-panic과 테마 deflation을 가른 13종목 정밀 검증.">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --line:#2a2f3a;
+    --tx:#e6e8ec; --mut:#9aa3b2; --dim:#6b7280;
+    --accent:#4f8cff; --amber:#f0a93b; --red:#e5575a; --green:#3fb27f; --blue:#4f8cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.65;font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:23px;margin:0 0 6px;letter-spacing:-.3px}
+  h2{font-size:18px;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  h3{font-size:16px;margin:18px 0 8px}
+  p{margin:9px 0}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;
+    border:1px solid var(--line);color:var(--mut);vertical-align:middle}
+  .badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:6px}
+  .b-hold{background:rgba(240,169,59,.15);color:var(--amber);border:1px solid rgba(240,169,59,.35)}
+  .b-risk{background:rgba(229,87,90,.15);color:var(--red);border:1px solid rgba(229,87,90,.35)}
+  .b-reg{background:rgba(79,140,255,.15);color:var(--blue);border:1px solid rgba(79,140,255,.35)}
+  .b-park{background:rgba(107,114,128,.18);color:var(--mut);border:1px solid var(--line)}
+  .b-good{background:rgba(63,178,127,.15);color:var(--green);border:1px solid rgba(63,178,127,.35)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 6px;margin:16px 0}
+  .callout{background:linear-gradient(180deg,rgba(79,140,255,.10),rgba(79,140,255,.03));
+    border:1px solid rgba(79,140,255,.30);border-radius:12px;padding:14px 16px;margin:14px 0}
+  .callout.warn{background:linear-gradient(180deg,rgba(229,87,90,.10),rgba(229,87,90,.03));border-color:rgba(229,87,90,.30)}
+  .callout.good{background:linear-gradient(180deg,rgba(63,178,127,.10),rgba(63,178,127,.03));border-color:rgba(63,178,127,.30)}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--dim);margin:0 0 4px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12.5px;background:var(--card2)}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .up{color:var(--green)} .down{color:var(--red)}
+  ul{margin:8px 0;padding-left:20px} li{margin:5px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+  .stat{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .stat .l{font-size:11.5px;color:var(--dim)} .stat .v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+  .verdict{font-weight:600}
+  .v-true{color:var(--green)} .v-partly{color:var(--amber)} .v-false{color:var(--red)}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>코스닥 과대낙폭 반등 후보 — 전종목 스크린</h1>
+  <p class="sub">2026-06-28 · 분기말 바닥 진입 점검(6/29~30) · <span class="tag">투자 참고용, 결정은 본인 책임</span></p>
+
+  <div class="callout">
+    <p class="kicker">요지</p>
+    <p><b>코스닥은 최근 1개월 전종목 평균 -26.7%로 시장 전체가 크게 빠졌다</b>(6/23 반도체발 -7.94% 크래시 + 이후 약세). "많이 떨어졌으니 반등"을 노리고 6/29~30 분기말 바닥에서 들어가려는 자리다. 그런데 <b>전종목 1,822개를 훑어 가장 많이 빠진 종목들을 "왜 떨어졌나"로 분해하니 — '떨어졌으니 반등'은 절반만 맞다.</b></p>
+    <p>유동성 필터(시총·거래대금) 통과 530개 중 <b>3개월 과대낙폭 + 외국인·기관 매수 전환</b> 조건을 건 265개에서 13개를 정밀 검증했다. 결론: 6/23 시장 패닉에 '동반'된 순수 과매도는 소수이고, 다수는 <b>테마 급등 되돌림·실적 균열·일회성 이익 절벽·투기 거품 붕괴</b>가 섞여 있다 — 즉 "코스닥이 반등하면 다 오른다"는 등식은 성립하지 않고, <b>받쳐줄 바닥(floor)이 실재하는 종목만</b> 평균회귀 반등을 기대할 수 있다.</p>
+  </div>
+
+  <h2>1. 무엇이 무너졌나 — 코스닥 시스템 디레버리지</h2>
+  <p>6/23 코스피 -9.99%·코스닥 -7.94%(반도체발, 외국인+기관 약 4조 순매도, 매도 사이드카)가 진앙이고, 그 이후로도 코스닥은 약세를 이어가 1개월 평균이 -27%에 달했다. 6/25 마이크론 어닝 블로우아웃으로 메모리 사이클 펀더는 확정됐으나, 외국인은 갭업에 메모리를 던지며 수급(flow)이 가격을 눌렀다. 통상 분기말(6/30) 리밸런싱 매도가 소진된 직후가 바닥 후보로 거론된다.</p>
+  <table>
+    <tr><th>구분</th><th>코스닥 낙폭</th></tr>
+    <tr><td>6/23 크래시(1일)</td><td class="num down">-7.94%</td></tr>
+    <tr><td>최근 1개월 전종목 평균</td><td class="num down">-26.7%</td></tr>
+    <tr><td>유동 530종목 중 3개월 -25% 초과 낙폭</td><td class="num down">265종목</td></tr>
+  </table>
+
+  <h2>2. 핵심 발견 — "떨어졌으니 반등"의 함정</h2>
+  <div class="callout warn">
+    <p class="kicker">왜 떨어졌나로 분해</p>
+    <p>가장 많이 빠진 13종목의 하락 원인을 따로 따져보면 네 갈래다. 이 분류가 곧 "반등 적합/부적합"을 가른다.</p>
+    <ul>
+      <li><b>순수 시장 패닉(반등 적합)</b> — 종목 악재 없이 6/23 지수·섹터 청산에 동반: <b>엑시콘 · GST</b> 정도뿐.</li>
+      <li><b>테마 급등 되돌림(catalyst 소진, 부적합)</b> — 에이치브이엠(우주 IPO 기대 소멸)·아이티센글로벌(실물자산 토큰 테마 자체붕괴)·DSC인베스트먼트.</li>
+      <li><b>실적 균열·일회성 이익절벽</b> — 우리넷·한컴위드(분기 영업이익 급감)·보성파워텍(대형 단일 프로젝트가 매출 74%).</li>
+      <li><b>투기 거품 자체붕괴</b> — 휴림로봇(올해 초 10배 급등 후 대주주 지분 이탈).</li>
+    </ul>
+    <p>게다가 거의 모든 종목에서 외국인의 "최근 3거래일 순매수 전환"이 규모가 얇아(thin) 데드캣 반등일 가능성을 배제하기 어렵다. <b>단발 갭 매수만 보고 들어가면 떨어지는 칼을 잡는다.</b></p>
+  </div>
+
+  <h2>3. 스크리닝 프레임 — 전종목 1,822 → 13</h2>
+  <p>3축으로 추렸다: (1) <b>유동성/퀄리티</b>(시총 500억+·거래대금 10억+·자본잠식 제외) (2) <b>3개월 과대낙폭</b>(-25% 초과) + 1개월 비파국(-65% 이내, 단일 사건 급락 제외) (3) <b>외국인·기관 매수 전환</b>(최근 3거래일 순매수). 통과 종목을 자기역사 밸류에이션 밴드·재무·수급 지속성으로 정밀 검증했다. 수치는 거래소 6/26 종가 실측, 수급은 6/24~26.</p>
+
+  <h3>정량 가치 렌즈 — 자기역사 밸류에이션 밴드</h3>
+  <p>이번 스크린의 핵심 렌즈는 <b>각 종목의 PER·PBR이 자기 5년 역사상 몇 %ile인지</b>다(0%=역사상 가장 쌈, 100%=가장 비쌈). "많이 떨어졌다 ≠ 싸다"를 가른다 — 떨어졌어도 자기 역사 대비 여전히 비싼 자리면 반등해도 멀티플 부담이 남는다.</p>
+  <table>
+    <tr><th>종목</th><th>섹터</th><th>현재가(6/26)</th><th>자기역사 밴드 (PER%ile / PBR%ile)</th><th>외인 3일</th><th>판정</th></tr>
+    <tr><td><b>엑시콘</b></td><td>반도체 테스트</td><td class="num">18,650</td><td class="num">PER 80% · PBR 62%</td><td class="num up">+28억</td><td><span class="badge b-good">매수후보(조건부)</span></td></tr>
+    <tr><td><b>GST</b></td><td>반도체 소부장</td><td class="num">47,200</td><td class="num down">PER 93% · PBR 93% (비쌈)</td><td class="num up">+21억</td><td><span class="badge b-good">매수후보(조건부)</span></td></tr>
+    <tr><td><b>쏠리드</b></td><td>통신장비</td><td class="num">10,700</td><td class="num">PER 94% · PBR 70%</td><td class="num up">+70억</td><td><span class="badge b-good">매수후보(조건부)</span></td></tr>
+    <tr><td><b>헥토파이낸셜</b></td><td>핀테크</td><td class="num">18,400</td><td class="num">PER 89% · PBR 59%</td><td class="num up">+27억</td><td><span class="badge b-hold">조건부(과매도)</span></td></tr>
+    <tr><td><b>우리넷</b></td><td>통신장비</td><td class="num">7,530</td><td class="num up">PER 63% · PBR 13% (저평가)</td><td class="num up">+10억</td><td><span class="badge b-hold">조건부(자산주)</span></td></tr>
+    <tr><td>보성파워텍</td><td>전력기기</td><td class="num">6,600</td><td class="num">PER 0%? <span class="tag">peak 착시</span> · PBR 80%</td><td class="num up">+55억</td><td><span class="badge b-park">단기한정</span></td></tr>
+    <tr><td>RF머트리얼즈</td><td>RF/광부품</td><td class="num">52,000</td><td class="num down">PBR 93% (최상단)</td><td class="num up">+77억</td><td><span class="badge b-risk">제외</span></td></tr>
+    <tr><td>에이치브이엠</td><td>우주/소재</td><td class="num">51,300</td><td class="num down">PBR 68% · 적자</td><td class="num up">+46억</td><td><span class="badge b-risk">회피</span></td></tr>
+    <tr><td>아이티센글로벌</td><td>IT/금유통</td><td class="num">21,500</td><td class="num">PER 0%? · PBR 77%</td><td class="num up">+102억</td><td><span class="badge b-risk">회피</span></td></tr>
+    <tr><td>휴림로봇</td><td>로봇</td><td class="num">7,420</td><td class="num down">PBR 87% · 적자</td><td class="num up">+81억</td><td><span class="badge b-risk">회피</span></td></tr>
+  </table>
+  <p><b>읽기</b>: 자기 역사 대비도 싼 곳은 <b>우리넷(PBR 13%ile)</b> 정도다. 외국인이 가장 많이 산 <b>아이티센글로벌(+102억)·휴림로봇(+81억)</b>은 각각 인덱스 패시브 유입·투기 재유입 성격이라 "매수 신호"로 오독하면 안 된다. <b>GST·RF머트리얼즈</b>는 펀더가 좋아도 자기역사 최상단 밸류라 반등해도 멀티플 부담이 남는다.</p>
+
+  <h2>4. 매수 후보 (조건부) — 받쳐줄 바닥이 실재하는 순</h2>
+  <div class="callout good">
+    <p class="kicker">floor가 실재 + 시장 패닉 동반</p>
+    <p><b>엑시콘</b> — 13개 중 하락 성격이 가장 깨끗한 "순수 시장 패닉 동반". 사실상 무차입(부채비율 14.7%)에 메모리 후공정 테스트 장비로 신규 수주가 이어졌고, 6/25 마이크론 어닝이 고객 투자 사이클을 확정했다. 단 영업적자가 이어져 안전판은 '실적'이 아니라 '2026 흑자전환 기대'이고, 트레일링 PER 27로 밸류 자체는 싸지 않다. → 흑자전환 선취 베팅.</p>
+    <p><b>GST</b> — 펀더 바닥이 가장 단단(1분기 영업이익 +104%, 트레일링 PER 약 15배, 자본 희석 0). 종목 악재 없이 소부장 과열이 식으며 -20% 눌린 모멘텀 조정이고, 마이크론 어닝이 직접 호재다. 다만 PBR이 자기역사 93%ile이라 멀티플 안전마진은 없다 — 떨어진 게 아니라 올랐던 게 눌린 자리라 <b>시장 위험선호 복귀가 진입 트리거</b>.</p>
+    <p><b>쏠리드</b> — 4년 연속 흑자, 본사 영업이익은 1분기에도 정상(+67억), 글로벌 중계기 점유 3위. 연결 적자는 방산 자회사 일시 공백 탓이라 가치함정은 아니다. 단 PER이 자기역사 94%ile 상단이고 직전 어닝 미스로 신뢰가 흔들려, V자보다 바닥 다지기 가능성.</p>
+  </div>
+  <p><b>헥토파이낸셜</b>(핀테크) — 떨어지는 칼 중 펀더 받침이 가장 두껍다(순현금이 시총에 근접, 1분기 최대 실적, RSI 24~29 극과매도, 7월 글로벌 송금 신서비스 출시 임박). 단 하락의 메인 동인이 시장 패닉이 아니라 스테이블코인 테마 프리미엄 소멸이라 <b>평균회귀 트레이드로 한정</b>(테마 복원 베팅 금물). <b>우리넷</b>(통신장비) — 자산 바닥은 단단(PBR 0.82·자기역사 13%ile)하고 통신장비가 6/23 최대 낙폭 섹터라 섹터 정상화 시 베타 반등 여지. 단 1분기 영업손실로 실적 안전판이 무너져 "자산주의 섹터 반등"이지 실적 회복은 아니다 — 최소 비중.</p>
+
+  <h2>5. 회피</h2>
+  <div class="callout warn">
+    <p class="kicker">떨어졌어도 사면 안 되는 것</p>
+    <p><b>휴림로봇</b> — 올해 초 10배 급등의 자체 붕괴 + 대주주 지분이 6.6%→0.9%로 빠진 구조. 떨어졌어도 PBR 6.95의 적자주라 받쳐줄 바닥이 없고, 최근 외국인 매수는 투기 재유입 성격. 가장 전형적인 떨어지는 칼.</p>
+    <p><b>아이티센글로벌</b> — 실물자산 토큰 테마 거품이 6/15에 자체적으로 터진 케이스(시장 크래시보다 8거래일 빠르다). 외국인 최대 매수(+102억)는 인덱스 편입 패시브 유입이라 추세 전환 신호가 아니다. 핵심 실현 사업을 팔고 미검증 신사업으로 전환.</p>
+    <p><b>에이치브이엠</b> — 우주 관련 기대로 +400% 오른 뒤 IPO 이벤트가 현실화되며 되감기는 중. 안전마진 없고(PBR 6.78), 영업현금흐름 수년 적자, 순이익 절반이 비현금 평가이익. <b>RF머트리얼즈</b> — 펀더는 진짜지만 PBR 8.44(자기역사 최상단)에 약 14배 급등 꼭지 대비 낙폭이라 "싼 게 아님". <b>보성파워텍</b> — 자기역사 최저 PER은 대형 단일 프로젝트의 일회성 이익으로 부풀린 착시이고, 정상화되면 두 배로 튄다(매수 부적합, 단기 트레이딩만).</p>
+  </div>
+
+  <h2>6. 6/29~30 진입 전략</h2>
+  <div class="card">
+    <p><b>일괄·풀사이즈 진입 금지. 확인 후 분할.</b></p>
+    <div class="grid2">
+      <div class="stat"><div class="l">6/29(월)</div><div class="v">시초 추격 금지</div></div>
+      <div class="stat"><div class="l">6/30(화)</div><div class="v">분기말 매도 소진 확인</div></div>
+      <div class="stat"><div class="l">진입 게이트</div><div class="v">외인 4~5일 연속 순매수</div></div>
+      <div class="stat"><div class="l">사이징</div><div class="v">바닥 질에 비례·분할</div></div>
+    </div>
+    <ul>
+      <li><b>공통 게이트</b>: 거의 모든 종목의 외국인 "3거래일 순매수"가 얇다 → 4~5거래일 연속으로 이어지고 기관 매도가 멈추는지 확인되기 전엔 데드캣으로 간주. 단발 갭 매수만 보고 진입 금지.</li>
+      <li><b>분할</b>: 6/30 소진+수급 확인 후 목표비중 1/3 → 7월 초 추가 확인 시 1/3 → 나머지는 실적/촉매 신호 후.</li>
+      <li><b>섹터 분산</b>: 반도체(엑시콘·GST)는 같은 투자 사이클에 묶이니 합산 비중 관리, 통신(쏠리드)·핀테크로 균형.</li>
+      <li><b>손절 명확·물타기 금지</b>: 바닥 없는 종목은 -7~8% 타이트. 떨어졌다고 더 사는 행위는 금지.</li>
+    </ul>
+  </div>
+
+  <h2>7. 종합</h2>
+  <p><b>코스닥이 과대낙폭인 건 맞지만, "반등하면 다 오른다"는 틀렸다.</b> 가장 많이 빠진 13개 중 시장 패닉에 동반된 순수 과매도는 소수이고, 다수는 테마 되돌림·실적 균열·투기 붕괴라 받쳐줄 바닥이 없다. 이번에 더한 자기역사 밸류 밴드가 한 일은 명확하다 — "많이 떨어졌다"와 "싸다"를 분리했고, 외국인이 사는 종목이라도 자기역사 최상단 밸류면 걸러냈다.</p>
+  <p>따라서 6/29~30은 일괄 베팅이 아니라 <b>분기말 매도 소진을 직접 보고, 받쳐줄 바닥이 실재하는 종목(엑시콘·GST·쏠리드)에 외국인 매수 지속을 확인한 뒤 분할로</b> 들어가는 국면이다. 회피군에 갈 자본은 바닥이 단단한 우량 낙폭주로 옮기고, 펀더가 좋아도 자기역사 최상단 밸류는 사이즈를 줄인다.</p>
+
+  <div class="foot">
+    <p>2026-06-28 기준 · 투자 권유 아님 · 결정과 결과는 본인 책임 · 수치는 작성 시점 실측(거래소 6/26 종가·수급 6/24~26, 시장 변동·정정 가능) · 자기역사 밴드는 거래소 월별 ~60개월 분포 기준</p>
+  </div>
+
+</div>
+</body>
+</html>
