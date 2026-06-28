@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>유니버스 리셋: 단기반등 전종목 스크린</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="유니버스 리셋 — 단기반등, 바스켓 밖엔 더 클린한 게 없었다">
+<meta property="og:description" content="KOSPI/KOSDAQ 전종목에서 과매도+외인·기관 동반매수+바닥 실재를 동시충족하는 단기반등 종목을 백지 스크린. 결론: floor와 유동성이 양립하지 않는다.">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --line:#2a2f3a;
+    --tx:#e6e8ec; --mut:#9aa3b2; --dim:#6b7280;
+    --accent:#4f8cff; --amber:#f0a93b; --red:#e5575a; --green:#3fb27f; --blue:#4f8cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.65;font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:23px;margin:0 0 6px;letter-spacing:-.3px}
+  h2{font-size:18px;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  h3{font-size:16px;margin:18px 0 8px}
+  p{margin:9px 0}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;
+    border:1px solid var(--line);color:var(--mut);vertical-align:middle}
+  .badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:6px}
+  .b-hold{background:rgba(240,169,59,.15);color:var(--amber);border:1px solid rgba(240,169,59,.35)}
+  .b-risk{background:rgba(229,87,90,.15);color:var(--red);border:1px solid rgba(229,87,90,.35)}
+  .b-reg{background:rgba(79,140,255,.15);color:var(--blue);border:1px solid rgba(79,140,255,.35)}
+  .b-park{background:rgba(107,114,128,.18);color:var(--mut);border:1px solid var(--line)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 6px;margin:16px 0}
+  .callout{background:linear-gradient(180deg,rgba(79,140,255,.10),rgba(79,140,255,.03));
+    border:1px solid rgba(79,140,255,.30);border-radius:12px;padding:14px 16px;margin:14px 0}
+  .callout.warn{background:linear-gradient(180deg,rgba(229,87,90,.10),rgba(229,87,90,.03));border-color:rgba(229,87,90,.30)}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--dim);margin:0 0 4px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12.5px;background:var(--card2)}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .up{color:var(--green)} .down{color:var(--red)}
+  ul{margin:8px 0;padding-left:20px} li{margin:5px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+  .stat{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .stat .l{font-size:11.5px;color:var(--dim)} .stat .v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+  .verdict{font-weight:600}
+  .v-true{color:var(--green)} .v-partly{color:var(--amber)} .v-false{color:var(--red)}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>유니버스 리셋 — 단기반등, 바스켓 밖엔 더 클린한 게 없었다</h1>
+  <p class="sub">6/26 종가 거래소 실측 · 전종목 2,709 → 19 검증 · <span class="tag">투자 참고용, 결정은 본인 책임</span></p>
+
+<h2>1. 왜 전종목을 다시 뒤졌나</h2>
+<div class="callout"><div class="kicker">출발점</div><p>6/29 단기반등용으로 만든 39종목 토너먼트를 6라운드에 걸쳐 정제했더니, 살아남은 건 4종목(반도체 2·신재생 1·음식료 1)의 "조건부 진입"뿐이었고 그마저 <b>받쳐줄 바닥(floor)이 부재</b>하거나 <b>임박 이벤트(유상증자·실적·규제)</b>를 안고 있었다. 그래서 그 39종목 바스켓을 통째로 버리고, KOSPI/KOSDAQ 전종목에서 "더 클린한 단기 셋업"이 있는지 백지에서 다시 스크린했다.</p><p>스크린 3조건 동시충족: <b>과매도(RSI 14일 &lt; 35, 표준 Wilder)</b> + <b>외국인·기관 동반 순매수(5·20·60일 전 구간)</b> + <b>바닥 실재(순현금 / 저PBR / 흑자 중 하나)</b>. 6/26(직전 거래일) 종가 실측 기준.</p></div>
+<h2>2. 스크리닝 프레임 — 전종목 2,709 → 19</h2>
+<div class="grid2"><div class="stat"><div class="l">전종목 (KOSPI 927 + KOSDAQ 1,782)</div><div class="v">2,709</div></div><div class="stat"><div class="l">외인·기관 5/20/60일 전구간 동반 순매수</div><div class="v">78</div></div><div class="stat"><div class="l">+ RSI(14) &lt; 35 과매도</div><div class="v">41</div></div><div class="stat"><div class="l">+ 투자가능성(우선주·스팩·시총·실수급) → 검증</div><div class="v">19</div></div></div>
+<p class="sub">참고: 39종목 토너먼트의 4 조건부 생존자 중 이 더 엄격한 스크린(전구간 동반매수 + RSI&lt;35)을 통과한 건 신재생 1종목 하나뿐이었다 — 즉 이 스크린은 직전 토너먼트보다 빡빡하고, 그 결과를 독립적으로 재확인해준 셈이다.</p>
+<h2>3. 핵심 발견 — 바닥과 유동성은 같이 오지 않았다</h2>
+<div class="callout warn"><div class="kicker">이 스크린의 구조적 결론</div><p><b>"클린 진입(클린go)" = 0종목.</b> 19종목 전부 <b>받쳐줄 바닥</b>과 <b>거래 가능한 유동성</b>이 양립하지 않았다.</p><ul><li><b>바닥 실재(순현금·저PBR) → 유동성 데드.</b> 레이언스·제일테크노스·YW·대원산업. 일거래대금 1~2억대라 "외인·기관 동반매수"(60일 누적 5~22억)가 사실상 단일계좌 수준의 노이즈. 의미 있는 규모로 사고 되팔 수 없어 단기반등 도구로 부적합.</li><li><b>유동성 있음 → 바닥 부재.</b> 삼표시멘트·미래에셋벤처투자·클로봇·하이젠알앤엠·오킨스전자·인벤티지랩. 전부 테마가 꺼지며 고점 대비 -64~-74% 떨어지는 칼이고, 유상증자·자본잠식 인수·일회성 피크실적 등 단기 반등을 직접 누르는 이벤트를 안고 있다.</li></ul></div>
+<h2>4. 그나마 바닥이 실재한 것 — 단, "가치 보유"지 "단기 반등"이 아니다</h2>
+<table><tr><th>종목</th><th class="num">RSI</th><th class="num">PBR</th><th>바닥 근거</th><th>치명적 한계</th><th>판정</th></tr>
+<tr><td><b>레이언스 (228850)</b></td><td class="num">29.8</td><td class="num">0.37</td><td>순현금 1,456억 &gt; 시총 913억, 무차입(부채비율 10%), 1Q26 흑자전환 +36억, 배당</td><td>유통물량 ~30%(대주주 64.9%+자사주)·일거래 미미 → 천천히 모으는 가치 보유 성격</td><td><span class='badge b-hold'>가치 hold</span></td></tr>
+<tr><td><b>제일테크노스 (038010)</b></td><td class="num">31.6</td><td class="num">0.33</td><td>순현금 ~440억(시총의 90%), 부채비율 20%, 1Q26 흑자전환</td><td>신저가 갱신 중 + 일거래대금 ~1.8억 데드 유동성</td><td><span class='badge b-park'>보류</span></td></tr>
+<tr><td><b>YW (051390)</b></td><td class="num">32.1</td><td class="num">0.37</td><td>순현금 307억(시총 69%)·무차입·배당수익률 5.9%</td><td>단기 catalyst 공백 + 본업(렌탈) 구조적 감익 + 거래 거의 없음</td><td><span class='badge b-park'>보류</span></td></tr>
+<tr><td><b>대원산업 (005710)</b></td><td class="num">34.2</td><td class="num">0.35</td><td>순현금 ~4,100억 &gt; 시총 2,018억, 흑자, 저부채</td><td>3세 승계용 의도적 저배당(밸류트랩) + 행동주의 3/20 주총 패배 + 일거래 ~2억</td><td><span class='badge b-risk'>회피</span></td></tr>
+</table>
+<div class="callout"><div class="kicker">단 하나 꼽으면</div><p><b>레이언스</b>가 전 스크린을 통틀어 바닥이 가장 단단하다 — 순현금이 시가총액을 넘고(1,456억 &gt; 913억), PBR 0.37, 무차입, 1Q26 흑자전환, 임박 악재 없음. 다만 유통물량이 적고 거래가 얇아 <b>단기 반등 트레이드가 아니라 천천히 모으는 가치 보유</b>로만 의미가 있다. 제일테크노스·YW도 "순현금 바닥 + 데드 유동성"의 같은 부류.</p></div>
+<h2>5. 회피 — 유동성은 있으나 떨어지는 칼 (전부 부적합)</h2>
+<table><tr><th>종목</th><th class="num">RSI</th><th class="num">고점대비</th><th>바닥/이벤트 문제</th></tr>
+<tr><td><b>삼표시멘트 (038500)</b></td><td class="num">26.5</td><td class="num">-64%</td><td>순부채 1,757억 · 1Q26 흑자는 대보수 분산發 일회성 · 투자경고 이력 · 성수동 개발호재 귀속이 모회사</td></tr>
+<tr><td><b>미래에셋벤처투자 (100790)</b></td><td class="num">26.5</td><td class="num">-74%</td><td>SpaceX 직접 익스포저 40억뿐(sentiment proxy) · 흑자전환은 평가이익 일회성 → 2Q 평가손 위험 · PBR 2.5 프리미엄</td></tr>
+<tr><td><b>클로봇 (466100)</b></td><td class="num">31.5</td><td class="num">-65%</td><td>적자 지속 · 8월 2,000억 유상증자(22% 희석) · 인수대상 물류회사 완전자본잠식(-470억)</td></tr>
+<tr><td><b>하이젠알앤엠 (160190)</b></td><td class="num">27.5</td><td class="num">-60%</td><td>적자 확대(1Q26 -34억) · PBR 5~17배 · 신저가 갱신 · 흑자전환 컨센 붕괴</td></tr>
+<tr><td><b>오킨스전자 (080580)</b></td><td class="num">32.2</td><td class="num">-50%</td><td>순부채 · CB 180억+EB 58억 깊은 ITM 오버행 · 이미 +40% 반등해 진입 시점 지남</td></tr>
+<tr><td><b>인벤티지랩 (389470)</b></td><td class="num">29.0</td><td class="num">-65%</td><td>적자(-84억) · 985억 메자닌 + 390억 CB 오버행 · 자회사 9:1 감자(7/2)</td></tr>
+<tr><td><b>삼지전자 (037460)</b></td><td class="num">33.8</td><td class="num">+200%(저점대비)</td><td>PBR 1.09(저PBR 아님)·순부채 7,640억 · 메모리 유통 피크실적 · 테마 추격</td></tr>
+<tr><td><b>MDS테크 (086960)</b></td><td class="num">26.9</td><td class="num">신저가</td><td>순현금 512억 중 275억 관계사 대여 유출(지배구조) · 병합 후 신저가</td></tr>
+<tr><td><b>남선알미늄 (008350)</b></td><td class="num">17.6</td><td class="num">신저가</td><td>정치테마 후폭풍 · 유상증자 목적이 채무상환(바닥 confession) · 적자전환</td></tr>
+<tr><td><b>모베이스전자 (012860)</b></td><td class="num">29.0</td><td class="num">-60%</td><td>순부채(부채비율 209%) · 투자경고+유상증자 오버행 · 외인 단독(기관 0)</td></tr>
+<tr><td><b>우듬지팜 (403490)</b></td><td class="num">24.7</td><td class="num">신저가</td><td>적자 가속(-22억) · 동전주(550원) · CB 풋옵션 현금상환 리스크</td></tr>
+<tr><td><b>지에스이 (053050)</b></td><td class="num">24.6</td><td class="num">신저가</td><td>흑자 바닥은 있으나 catalyst 부재 · 테마 종속 유동성 · 2Q 비수기 음의 catalyst</td></tr>
+<tr><td><b>케이엘넷 (039420)</b></td><td class="num">34.2</td><td class="num">중단</td><td>저PBR·무차입 바닥 실재하나 영업익 역성장 밸류트랩 · 일거래 1.3억</td></tr>
+<tr><td><b>미래생명자원 (218150)</b></td><td class="num">16.6</td><td class="num">신저가</td><td>순현금 60억 바닥이나 4Q25 -33억 손상 · 초소형(331억) · 외인 단독 노이즈</td></tr>
+</table>
+<p class="sub">예외적으로 <b>뷰웍스(100120)</b>는 흑자 바닥이 실재(1Q26 영업익 +88억)하나, <b>진행 중 유상증자(약 37% 희석, 8/14 신주상장)</b>가 단기 반등 구간을 직격한다 — 8/14 이후로 진입을 미루는 조건부.</p>
+<h2>6. 정면 비교 — 39종목 4 생존자 vs 유니버스 리셋</h2>
+<table><tr><th>축</th><th>4 조건부 생존자 (반도체·신재생·음식료)</th><th>유니버스 리셋 딥밸류 (레이언스 등)</th></tr><tr><td>바닥(floor)</td><td><span class="down">약</span> — floor 부재(고PBR·순부채·일회성)</td><td><span class="up">강</span> — 순현금&gt;시총·저PBR·무차입</td></tr><tr><td>유동성</td><td><span class="up">강</span> — 일거래 수백억, 동반매수 실재</td><td><span class="down">약</span> — 일거래 1~2억, 동반매수가 노이즈</td></tr><tr><td>이벤트 청정도</td><td><span class="down">약</span> — 7월 ITC·실적·연기금 역풍 landmine</td><td><span class="up">중</span> — 임박 악재는 대체로 없음</td></tr><tr><td>단기반등 적합성</td><td>가능(규율 전제)</td><td><b>부적합</b> — size 진입/청산 불가</td></tr></table>
+<p>단기 반등은 본질적으로 "의미 있는 금액으로 들어갔다 되파는" 게임이다. 유니버스 리셋의 딥밸류 종목은 <b>바닥은 4 생존자보다 명백히 우월</b>하지만 <b>유동성 열위가 그 우위를 상쇄</b>한다 — 진입 슬리피지가 기대 반등폭을 잠식하고, 반등이 와도 청산이 안 된다. 즉 <b>단기반등 목적으로는 바스켓 밖이 더 낫지 않다.</b></p>
+<h2>7. 종합</h2>
+<div class="callout warn"><div class="kicker">결론</div><p><b>① 단기반등(6/29~7월초):</b> 39종목 밖에서 더 클린한 후보는 없었다. "과매도 + 외인·기관 동반매수 + 실재 바닥"이 <b>거래 가능한 유동성과 동시에 충족되는 종목이 이 장세엔 사실상 부재</b>하다. 무리해서 종목을 채우기보다 <b>관망이 알파</b>이거나, 굳이 한다면 직전 4 생존자를 규율(분할·종가손절·소량)대로 다루는 게 낫다.</p><p><b>② 별도 트랙(딥밸류 가치 보유, 단기반등 아님):</b> <b>레이언스(228850)</b>는 순현금이 시총을 넘는 무차입 흑자전환 기업으로 바닥이 가장 단단하다. 단기 트레이드가 아니라 유동성을 감안해 천천히 모으는 가치 보유 후보. 제일테크노스·YW도 같은 성격.</p></div>
+<p class="sub">방법론: 6/26 종가 거래소 실측으로 전종목 스크린 → 19종목을 각각 독립 리서치 후 "바닥이 실재하나"를 반론 검증(refute 시도)으로 교차 확인. 실적·순현금 같은 1차값은 확인된 것만 사용했고, 검색으로 확정 못 한 항목은 본문에서 추정으로 채우지 않았다.</p>
+
+  <div class="foot">
+    <p>2026-06-28 기준 · 투자 권유 아님 · 결정과 결과는 본인 책임 · 수치는 작성 시점 실측(시장 변동·정정 가능)</p>
+  </div>
+
+</div>
+</body>
+</html>
