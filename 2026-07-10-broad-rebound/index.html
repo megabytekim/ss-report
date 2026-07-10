@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>크래시 5일차, 광폭 반등 — ADR 분수령 전야</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="📈 크래시 5일차, 광폭 반등 — ADR 분수령 전야">
+<meta property="og:description" content="매수 사이드카 2연발 광폭 반등(KOSPI +5%, 상승 90%)의 정체와 미완의 조각(외국인). 보유 8종 전략, 관심 18종 점검, 전시장 dual-flow 스크린, 오늘 밤 ADR 체크리스트.">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --line:#2a2f3a;
+    --tx:#e6e8ec; --mut:#9aa3b2; --dim:#6b7280;
+    --accent:#4f8cff; --amber:#f0a93b; --red:#e5575a; --green:#3fb27f; --blue:#4f8cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.65;font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:23px;margin:0 0 6px;letter-spacing:-.3px}
+  h2{font-size:18px;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  h3{font-size:16px;margin:18px 0 8px}
+  p{margin:9px 0}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;
+    border:1px solid var(--line);color:var(--mut);vertical-align:middle}
+  .badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:6px}
+  .b-hold{background:rgba(240,169,59,.15);color:var(--amber);border:1px solid rgba(240,169,59,.35)}
+  .b-risk{background:rgba(229,87,90,.15);color:var(--red);border:1px solid rgba(229,87,90,.35)}
+  .b-reg{background:rgba(79,140,255,.15);color:var(--blue);border:1px solid rgba(79,140,255,.35)}
+  .b-park{background:rgba(107,114,128,.18);color:var(--mut);border:1px solid var(--line)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 6px;margin:16px 0}
+  .callout{background:linear-gradient(180deg,rgba(79,140,255,.10),rgba(79,140,255,.03));
+    border:1px solid rgba(79,140,255,.30);border-radius:12px;padding:14px 16px;margin:14px 0}
+  .callout.warn{background:linear-gradient(180deg,rgba(229,87,90,.10),rgba(229,87,90,.03));border-color:rgba(229,87,90,.30)}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--dim);margin:0 0 4px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12.5px;background:var(--card2)}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .up{color:var(--green)} .down{color:var(--red)}
+  ul{margin:8px 0;padding-left:20px} li{margin:5px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+  .stat{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .stat .l{font-size:11.5px;color:var(--dim)} .stat .v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+  .verdict{font-weight:600}
+  .v-true{color:var(--green)} .v-partly{color:var(--amber)} .v-false{color:var(--red)}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
+  .tblwrap{overflow-x:auto}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>📈 크래시 5일차, 광폭 반등 — ADR 분수령 전야</h1>
+  <p class="sub">2026-07-10(금) 14:00 KST 장중 · 크래시 -12.7% 후 첫 광폭 반등의 정체와 미완의 조각 · <span class="tag">투자 참고용, 결정은 본인 책임</span></p>
+
+  <div class="callout">
+    <p class="kicker">data note</p>
+    <p>가격은 13:56~14:15 <b>장중 스냅샷</b>(마감 15:30 전 미확정). 종목별 투자자 수급은 <b>7/9 확정치</b>까지만 반영 — 오늘 수급은 장중 미공표. 수치는 전부 거래소 실측.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="stat"><div class="l">KOSPI</div><div class="v">7,654.37 <span class="up">+4.97%</span></div></div>
+    <div class="stat"><div class="l">KOSDAQ</div><div class="v">843.27 <span class="up">+6.21%</span></div></div>
+    <div class="stat"><div class="l">상승/하락 (양시장)</div><div class="v">2,330 / 262 — 90% 상승</div></div>
+    <div class="stat"><div class="l">삼성전자 · SK하이닉스</div><div class="v"><span class="up">+6.65%</span> · <span class="up">+3.57%</span></div></div>
+    <div class="stat"><div class="l">USD/KRW</div><div class="v">1,511 (약세 지속)</div></div>
+    <div class="stat"><div class="l">Brent · SOX(전일)</div><div class="v">$76.5 · <span class="up">+3.06%</span></div></div>
+  </div>
+
+  <h2>1. 오늘 시장 — 광폭 반등의 정체</h2>
+  <ul>
+    <li><b>매수 사이드카 2연발</b> — KOSPI 12:54, KOSDAQ 13:08 (올해 34번째). 상승 종목 90%로 어제 좁은 반등(하락 73%)과 정반대 체질.</li>
+    <li><b>트리거 = SK하이닉스 ADR 수요예측 7배 초과</b> (기준가 $158.14, ADR 10주 = 본주 1주, 티커 SKHY). 45.45조 희석 공포가 "미국 기관 수요 검증"으로 반전 + 밤사이 미 반도체지수 +3.06%.</li>
+    <li><b>미완의 조각 = 외국인</b>: 오늘 랠리는 기관 +1.24조 견인, <span class="down"><b>외국인은 장중 -5,595억 매도 지속</b></span>. 7/8의 첫 매수 전환(+3,311억)은 1일 천하로 끝난 상태.</li>
+    <li>이란: 휴전 붕괴 · 90곳 추가 타격에도 유가는 협상 기대로 냉각(Brent $76.5) — 시장은 비봉쇄에 베팅. 원화 1,511 약세 지속.</li>
+  </ul>
+  <div class="callout warn">
+    <p class="kicker">판정 2단 — 추세전환 "가능성 상승"이지 확정 아님</p>
+    <p>① 오늘 밤 22:30 KST ADR 실거래 — 본주 환산가 대비 프리미엄 여부 &nbsp;② 외국인 순매수 전환 지속 여부. 크래시 -12.7% 후 첫 +5%는 베어마켓 랠리와 구분 불가 — <b>추격 신규 베팅은 이벤트 통과 후</b>. 유리한 각은 오늘도 역행 중인 소외 딥밸류(섹션 7).</p>
+  </div>
+
+  <h2>2. 보유 종목 수급 스크린 + 평가 (8종)</h2>
+  <p class="sub">수급 = 외국인 / 실질기관(기관합계-금융투자) 순매수, 억원, 5·20·60일 누적(~7/9 확정). 당일 확정치는 장중이라 없음 — 4호라이즌 중 3개만 표기. 판정 배지는 자체 평가.</p>
+  <div class="tblwrap">
+  <table>
+    <tr><th>종목</th><th>현재가 (장중)</th><th>vs 지수</th><th>외인 5/20/60d</th><th>실질기관 5/20/60d</th><th>판정</th><th>코멘트</th></tr>
+    <tr><td><b>서진시스템</b></td><td class="num">47,800 <span class="up">+14.6%</span></td><td class="num up">+8.4%p</td><td class="num">+628 / +1,239 / +2,713</td><td class="num">-85 / +503 / -17</td><td><span class="badge b-reg">HOLD</span></td><td>외국인 60d 매집 가속 — 오늘 플로우-가격 정합 확인. 손절 41,700</td></tr>
+    <tr><td><b>GST</b></td><td class="num">48,900 <span class="up">+12.9%</span></td><td class="num up">+6.7%p</td><td class="num">+48 / +193 / +411</td><td class="num">-5 / +109 / -41</td><td><span class="badge b-reg">HOLD</span></td><td>외국인 5d 재유입 · 60d 매집 온전. 추가매수는 ADR + 확정수급 확인 후(첫 반응 매수 금지)</td></tr>
+    <tr><td><b>헥토파이낸셜</b></td><td class="num">17,950 <span class="up">+7.0%</span></td><td class="num">동행</td><td class="num">+15 / +88 / +203</td><td class="num">-2 / -28 / +9</td><td><span class="badge b-hold">HOLD</span></td><td>판정 변수는 가격이 아니라 7월 글로벌 송금 서비스 출시 실체</td></tr>
+    <tr><td><b>현대에너지솔루션</b></td><td class="num">111,700 <span class="up">+3.7%</span></td><td class="num down">-1.3%p</td><td class="num">+141 / -420 / +813</td><td class="num">-74 / +379 / +669</td><td><span class="badge b-hold">HOLD</span></td><td>반등장 소외 + 20d dual 붕괴 잔존. <b>7/18 미 상무부 AD/CVD 바이너리</b>. 114k 회복 실패 지속 시 축소</td></tr>
+    <tr><td><b>압타바이오</b></td><td class="num">4,360 <span class="up">+3.7%</span></td><td class="num down">-2.5%p</td><td class="num">-2 / -7 / -14</td><td class="num">0 / 0 / 0</td><td><span class="badge b-hold">HOLD</span></td><td>바이너리 소액 — 4Q 임상 topline이 전부. 손절 3,500 · 추가매수 금지</td></tr>
+    <tr><td><b>케이옥션</b></td><td class="num">3,165 <span class="up">+3.6%</span></td><td class="num down">-2.6%p</td><td class="num">-2 / -1 / -4</td><td class="num">0 / 0 / 0</td><td><span class="badge b-risk">TRIM 오늘</span></td><td><b>1차 매도구간(3,100~3,200) 진입</b> — 대주주 단독 수급 랠리는 청산 창구. 손절 2,790 유지</td></tr>
+    <tr><td><b>대원미디어</b></td><td class="num">4,835 <span class="up">+2.1%</span></td><td class="num down">-4.1%p</td><td class="num">+1 / +3 / -8</td><td class="num">0 / 0 / -2</td><td><span class="badge b-risk">TRIM 지속</span></td><td>반등장에도 거래량 0.16배 극박 — 소량 지속 정리, 대량은 강세일 대기. 잔여분은 8월 2Q 게이트</td></tr>
+    <tr><td><b>클래시스</b></td><td class="num">48,950 <span class="down">-2.3%</span></td><td class="num down">-8.5%p 최하위</td><td class="num">+17 / -70 / -135</td><td class="num">-1 / +41 / +25</td><td><span class="badge b-hold">TIEBREAKER</span></td><td>크래시 방어주가 리스크온에서 소외 반전. <b>오늘 종가 외국인 수급으로 트림/홀드 판정</b> · 손절 47,600 근접</td></tr>
+  </table>
+  </div>
+
+  <h3>오늘 실행</h3>
+  <ul>
+    <li><b>케이옥션</b> — 1차 매도구간(3,100~3,200) 순차 매도 실행. 반등을 청산 창구로.</li>
+    <li><b>클래시스</b> — 마감 후 확정 외국인 수급 확인: 강세에 또 매도면 절반 트림, 매수 전환이면 홀드 유지.</li>
+    <li><b>대원미디어</b> — 소량 정리 지속. 공통 규율: 급등일 신규 추가매수 없음.</li>
+  </ul>
+
+  <h2>3. 관심 종목 점검 (18종 · 20d 수급)</h2>
+  <p class="sub">주목도: 트리거 도달/임박 = 높음. 수급은 20일 누적(억, ~7/9 확정), 괄호는 5일 특기 사항.</p>
+  <div class="tblwrap">
+  <table>
+    <tr><th>종목</th><th>현재가 (장중)</th><th>외인 20d</th><th>실질기관 20d</th><th>주목도</th><th>한 줄</th></tr>
+    <tr><td><b>대한항공</b></td><td class="num">26,850 <span class="up">+0.6%</span></td><td class="num">+1,574</td><td class="num">+2,870 (5d +817)</td><td><span class="badge b-risk">높음</span></td><td><b>내일(7/11) 2Q 잠정실적 게이트</b> — dual 선매수 유입 중, 오늘 소외는 실적 대기 성격</td></tr>
+    <tr><td><b>쏠리드</b></td><td class="num">10,620 <span class="up">+9.4%</span></td><td class="num">+281 (5d +70)</td><td class="num">-31</td><td><span class="badge b-risk">높음</span></td><td>지정 진입존(10,000~10,300) 상향 관통 — 추격 대신 눌림 재대기 or 소량. 손절 9,000</td></tr>
+    <tr><td><b>기아</b></td><td class="num">148,100 <span class="up">+2.3%</span></td><td class="num">+1,361 (5d +299)</td><td class="num">+939 (5d)</td><td><span class="badge b-risk">높음</span></td><td>진입 게이트 3중 2 충족(분기말 통과 + dual 전환) — 남은 건 관세 15% 재검증</td></tr>
+    <tr><td><b>NAVER</b></td><td class="num">191,100 <span class="up">+3.6%</span></td><td class="num">+2,478</td><td class="num">—</td><td><span class="badge b-risk">높음</span></td><td>3차 진입가(200k) 하향 이탈로 분할 플랜 전 구간 개방 — 플랜 재설정 결정 필요</td></tr>
+    <tr><td><b>티에프이</b></td><td class="num">39,650 <span class="up">+9.8%</span></td><td class="num">(5d +18)</td><td class="num">(5d +20)</td><td><span class="badge b-risk">높음</span></td><td>5d dual 유입 + 지수 초과 반등 — CPO 급락 저점 확인 중. 8월 2Q OPM 게이트 전 소량 각</td></tr>
+    <tr><td><b>엑시콘</b></td><td class="num">18,480 <span class="up">+21.0%</span></td><td class="num">+77 (5d +17)</td><td class="num">-70</td><td><span class="badge b-risk">높음</span></td><td>어제 손절선 이탈 후 하루 만에 +21% 회복한 극단 변동 — 8월 2Q 흑전 게이트 전 추격 금지 유지</td></tr>
+    <tr><td><b>큐알티</b></td><td class="num">10,860 <span class="up">+5.5%</span></td><td class="num">-4</td><td class="num">-5</td><td><span class="badge b-risk">높음</span></td><td>stop(11,200) 이탈 확정 상태 — 크래시 유예 적용 여부 결정 필요</td></tr>
+    <tr><td><b>페스카로</b></td><td class="num">7,580 <span class="up">+10.2%</span></td><td class="num">+4</td><td class="num">0</td><td><span class="badge b-risk">높음</span></td><td>관찰 제외 룰(9,000 이탈) 발동 상태에서 +10% 반등 — 룰 실행/유예 결정 필요, 수급 공백이라 반등의 질 약함</td></tr>
+    <tr><td>동성화인텍</td><td class="num">16,870 <span class="up">+7.5%</span></td><td class="num">+14</td><td class="num">-60 (5d -15)</td><td><span class="badge b-hold">중간</span></td><td>2차 진입존 하단 스치고 반등 — 1차 트리거(18,300 돌파) 미도달, dual 미형성</td></tr>
+    <tr><td>아이에스동서</td><td class="num">20,750 <span class="up">+2.5%</span></td><td class="num">—</td><td class="num">-41</td><td><span class="badge b-hold">중간</span></td><td>진입존 하단(22k) 아래 — 분양 결과 확인 시점, 룰 유효성 재검토 필요</td></tr>
+    <tr><td>오로스테크놀로지</td><td class="num">18,620 <span class="up">+9.3%</span></td><td class="num">+36</td><td class="num">+14</td><td><span class="badge b-hold">중간</span></td><td>B트리거(18,500 이하 딥밸류 재검토) 터치 후 경계선 위 복귀 — 8월 2Q 채점이 메인</td></tr>
+    <tr><td>카카오페이</td><td class="num">38,950 <span class="up">+4.0%</span></td><td class="num">+127</td><td class="num">+92 (5d -50)</td><td><span class="badge b-hold">중간</span></td><td>분할 밴드(44~45.5k) 훨씬 아래 + 옛 정리 라인 터치 — 밴드 전면 재설정 필요하나 급하지 않음</td></tr>
+    <tr><td>강원랜드</td><td class="num">14,750 <span class="up">+0.3%</span></td><td class="num">-520</td><td class="num">+550</td><td><span class="badge b-park">중간</span></td><td>저베타 디펜시브 — 7월 신임 사장 발표 임박, 관찰 지속</td></tr>
+    <tr><td>SK바이오팜</td><td class="num">82,300 <span class="up">+2.6%</span></td><td class="num">-207</td><td class="num">—</td><td><span class="badge b-park">낮음</span></td><td>watch 트리거(외국인 전환·MA60 회복) 모두 미충족</td></tr>
+    <tr><td>덕산네오룩스</td><td class="num">30,100 <span class="up">+5.2%</span></td><td class="num">+34</td><td class="num">-144</td><td><span class="badge b-park">낮음</span></td><td>지수 동조 반등일 뿐 — 수급 반전 미충족, 변화 없음</td></tr>
+    <tr><td>씨에스윈드</td><td class="num">39,550 <span class="up">+0.9%</span></td><td class="num">-689</td><td class="num">+29</td><td><span class="badge b-park">낮음</span></td><td>광폭 반등일에 +0.9% 상대약세 극심 — 스마트머니 거부 지속</td></tr>
+    <tr><td>큐에스아이</td><td class="num">7,570 <span class="up">+6.9%</span></td><td class="num">+14</td><td class="num">0</td><td><span class="badge b-park">낮음</span></td><td>게이트(8월 수주공시 1건) 미도달 — 반등은 시장 인라인</td></tr>
+    <tr><td>파이오링크</td><td class="num">7,880 <span class="up">+1.4%</span></td><td class="num">0</td><td class="num">0</td><td><span class="badge b-park">낮음</span></td><td>급반등장 +1.4% 뚜렷한 소외 + 수급 부재 — 8월 2Q 검증 그대로</td></tr>
+  </table>
+  </div>
+
+  <h2>4. 걸어둔 판정 점검 (미결 조건부 콜)</h2>
+  <p class="sub">장중 가격 기준 잠정 — 게이트 확정은 종가/수급 마감 후.</p>
+  <ul>
+    <li><b>에스티팜</b> 125,000 (+4.9%) — 게이트 122k 회복 <span class="verdict v-partly">장중 터치</span> (종가+거래량 조건, 마감 확인)</li>
+    <li><b>씨젠</b> 29,300 (+7.5%) — 게이트 28.8k 회복 <span class="verdict v-partly">장중 터치</span> (안착 조건)</li>
+    <li><b>엘앤씨바이오</b> 73,700 — 분할존 85k를 크래시에서 <b>하향 관통</b>(-13%) — 존 설계 재평가 필요 <span class="verdict v-partly">재검토</span></li>
+    <li><b>리노공업</b> 75,300 — 게이트 93.5k 회복 <span class="verdict v-false">미충족</span> / <b>유진테크</b> 166,100 — 되돌림존(130~140k) 안 옴 <span class="verdict v-false">미충족</span></li>
+    <li><b>SK하이닉스</b> — "7/10 ADR 통과까지 대기" <span class="verdict v-partly">오늘 밤 판정</span></li>
+    <li>KB금융(외국인 합류)·삼성SDI(dual 지속)·현대로템(실질기관 전환) — 수급 게이트라 마감 후 판정</li>
+  </ul>
+
+  <h2>5. 신규 발굴 — 전시장 dual-flow 스크린</h2>
+  <p class="sub">필터: 20d 외국인+실질기관 동반 순매수 · 시총 3,000억+ · 거래대금 50억+ · 기존 커버 종목 제외. 상대강도 = 7/1→7/9 수익률 vs KOSPI -12.2% / KOSDAQ -14.6%. <b>전부 심층 분석 미실행 — 수급 신호만으로 진입하지 않음.</b></p>
+  <div class="tblwrap">
+  <table>
+    <tr><th>종목</th><th>Dual (외인/실질기관 20d, 억)</th><th>크래시 상대강도</th><th>코멘트</th></tr>
+    <tr><td><b>인텍플러스</b> <span class="tag">KOSDAQ</span></td><td class="num">+63 / +355</td><td class="num down">-20.4% (소외)</td><td><b>매집강도(dual/시총 8.4%) 전 시장 1위</b> — 조정 중 매집의 전형. 최우선 분석 후보</td></tr>
+    <tr><td><b>아모레퍼시픽</b> <span class="tag">KOSPI</span></td><td class="num">+43 / +598</td><td class="num up">+2.4% 방어</td><td>크래시 플러스 방어 + 외국인 5d +386억 가속</td></tr>
+    <tr><td><b>HL만도</b> <span class="tag">KOSPI</span></td><td class="num">+209 / +362</td><td class="num up">+0.5% 방어</td><td>제동/조향/ADAS — 대형 고유동성</td></tr>
+    <tr><td><b>LG유플러스</b> <span class="tag">KOSPI</span></td><td class="num">+56 / +361</td><td class="num up">+7.4% 최상위</td><td>통신 방어주 — 크래시 방어력 백분위 98%</td></tr>
+    <tr><td><b>글로벌텍스프리</b> <span class="tag">KOSDAQ</span></td><td class="num">+84 / +27</td><td class="num up">+1.0% 방어</td><td>택스리펀드 1위 — 양주체 5d/20d 전부 양수. 유동성 54억 턱걸이</td></tr>
+    <tr><td>한국콜마 <span class="tag">KOSPI</span></td><td class="num">+280 / +532</td><td class="num down">-3.8%</td><td>화장품 ODM — 5d 실질기관 매도 전환 유의</td></tr>
+    <tr><td>S-Oil <span class="tag">KOSPI</span></td><td class="num">+575 / +811</td><td class="num up">+21.8% 1위</td><td>유가 이벤트 수혜 — 휴전 협상 시 되돌림 리스크</td></tr>
+    <tr><td>뉴로메카 <span class="tag">KOSDAQ</span></td><td class="num">+98 / +43</td><td class="num down">-16.8%</td><td>협동로봇 — 방어력 아닌 매집강도 픽</td></tr>
+  </table>
+  </div>
+  <p><b>방어/역발상 렌즈</b>: 이번 스크린 상위가 자연스럽게 방어 섹터(통신 LG유플러스 · 화장품 아모레/콜마 · 소비서비스 글로벌텍스프리)로 채워짐 — 크래시 주간의 실승자가 피난처였다는 직전 관찰과 일관. <b>섹터 집중 경고</b>: 상위 픽 섹터 분포 장비/로봇 2 · 화장품 2 · 통신 1 · 차부품 1 · 정유 1 · 소비 1 = 단일 섹터 60% 미만, 집중 리스크 없음. 단 반도체 재진입(섹션 7)은 전부 오늘 밤 ADR 단일 이벤트에 걸려 있음을 인지.</p>
+
+  <h2>6. 정량 가치 렌즈</h2>
+  <p>이번 회차는 전 종목 정량 가치 스크린(버핏 MOS · 린치 PEG) 미실행 — 기존 분석 수치만 인용: 달바글로벌 PEG ~0.5, 삼양식품 PEG 0.45, KT나스미디어 PBR 0.57(순현금&gt;시총). 신규 스크린 8종은 밸류 미검증 상태.</p>
+
+  <h2>7. 기분석 매수의견 중 오늘 반등장 역행 조 — 가장 유리한 각</h2>
+  <p class="sub">90% 상승장에서 역행/미반등 = 아직 아무도 안 산 딥밸류. 분석 신선도 30일 내.</p>
+  <div class="tblwrap">
+  <table>
+    <tr><th>종목</th><th>현재가 (장중)</th><th>분석일比</th><th>왜 지금</th></tr>
+    <tr><td><b>한미약품</b></td><td class="num">385,500 <span class="down">-3.9% 역행</span></td><td class="num">-8.9% (7/4)</td><td><b>분석이 기다리라던 415k 이하 진입존 도달.</b> MASH readout · 국내 신약 출시 촉매 유효</td></tr>
+    <tr><td><b>KT나스미디어</b></td><td class="num">10,090 <span class="down">-1.4% 역행</span></td><td class="num">-0.3% (7/8)</td><td>순현금&gt;시총 · PBR 0.57 · 배당 6.9% — 초저유동성이라 분할 전제</td></tr>
+    <tr><td><b>달바글로벌</b></td><td class="num">195,500 <span class="down">-2.2%</span></td><td class="num">-9.3% (7/3)</td><td>해외 폭발 성장 + PEG ~0.5 — 조정이 온 성장주</td></tr>
+    <tr><td><b>F&amp;F</b></td><td class="num">77,700 <span class="down">-1.0%</span></td><td class="num">-2.8% (7/2)</td><td>MLB 중국 +17% + 브랜드 매각차익 옵션 — 중국소비 조 최저점</td></tr>
+    <tr><td>삼성전자 · SK하이닉스</td><td class="num"><span class="up">+5.2% · +3.6%</span></td><td class="num">-5.5% · -7.6% (7/3)</td><td>삼성전자는 7/7 사상최대 잠정실적으로 트리거 통과 — <b>둘 다 오늘 밤 ADR 소화 확인 후 분할</b>이 기존 스탠스</td></tr>
+    <tr><td>한국금융지주</td><td class="num">241,500 <span class="up">+8.5%</span></td><td class="num">+8.9% (7/3)</td><td>분할존(226k) 위로 이탈 — <b>추격 금지</b>, 눌림 재대기</td></tr>
+  </table>
+  </div>
+
+  <h2>8. 종합 + 실행 규율</h2>
+  <div class="callout">
+    <p class="kicker">verdict</p>
+    <p><b>광폭 반등으로 체질은 좋아졌지만, 방향 확정은 오늘 밤 ADR + 외국인 전환의 2단 확인 후.</b> 오늘은 보유 정리 대상(케이옥션·대원)의 청산 창구로 쓰고, 신규는 역행 딥밸류(한미약품 진입존 도달)만 분할 각. 반도체 재진입과 스크린 신규는 이벤트 통과 + 심층 분석 후.</p>
+  </div>
+  <ul>
+    <li><b>손절폭</b>: 고정 %가 아니라 최근 20일 일중 진폭 기준 — 여유가 1일치 진폭 미만이면 트레이드 구조 부적격으로 기각.</li>
+    <li><b>가격존 도달 판정</b>: "시장 동반 하락 도달"만 유효, 개별 약세로 도달한 존은 보류 (엘앤씨바이오 존 관통이 이 룰의 재확인 사례).</li>
+    <li><b>급등일 규율</b>: 첫 반응 추격 매수 금지 — 오늘 +5~21% 급등 종목(엑시콘·쏠리드 등)은 눌림/확정 수급 대기.</li>
+  </ul>
+
+  <h3>체크리스트</h3>
+  <ul>
+    <li><b>오늘 15:30</b> — 마감 확정 수급: 외국인 전환 여부 + 클래시스 tiebreaker + 수급 게이트 콜들(KB금융·삼성SDI·현대로템)</li>
+    <li><b>오늘 22:30</b> — SKHY 나스닥 실거래: 본주 환산가($158.14) 대비 프리미엄 = 레짐 판정 1단</li>
+    <li><b>내일 7/11</b> — 대한항공 2Q 잠정실적</li>
+    <li><b>7/18</b> — 미 상무부 한국산 셀 AD/CVD 우회조사 개시 결정 (현대에너지솔루션 바이너리)</li>
+  </ul>
+
+  <div class="foot">
+    <p>2026-07-10 14:00 KST 장중 기준 · 투자 권유 아님 · 결정과 결과는 본인 책임 · 수치는 작성 시점 실측(시장 변동·정정 가능) · 출처: 거래소 데이터 실측, <a href="https://biz.heraldcorp.com/article/10804941">헤럴드경제</a>, <a href="http://www.opinionnews.co.kr/news/articleView.html?idxno=141340">오피니언뉴스</a>, <a href="https://www.fnnews.com/news/202607091822539083">파이낸셜뉴스</a>, <a href="https://www.news1.kr/finance/general-stock/6223541">뉴스1</a></p>
+  </div>
+
+</div>
+</body>
+</html>
