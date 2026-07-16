@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>펀더멘탈이 부러졌나 — 크래시 3주의 해부</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="🔬 펀더멘탈이 부러졌나 — 크래시 3주의 해부">
+<meta property="og:description" content="KOSPI 고점 -25%의 정체: 이익은 하향이나 증익 기조 유지, 부러진 건 멀티플(PBR 15→11)과 수급 구조. 판정 = 펀더 골절 아님, 단 바닥 단정도 불가 — 진짜 시험은 7월말.">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --line:#2a2f3a;
+    --tx:#e6e8ec; --mut:#9aa3b2; --dim:#6b7280;
+    --accent:#4f8cff; --amber:#f0a93b; --red:#e5575a; --green:#3fb27f; --blue:#4f8cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.65;font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:23px;margin:0 0 6px;letter-spacing:-.3px}
+  h2{font-size:18px;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  h3{font-size:16px;margin:18px 0 8px}
+  p{margin:9px 0}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;
+    border:1px solid var(--line);color:var(--mut);vertical-align:middle}
+  .badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:6px}
+  .b-hold{background:rgba(240,169,59,.15);color:var(--amber);border:1px solid rgba(240,169,59,.35)}
+  .b-risk{background:rgba(229,87,90,.15);color:var(--red);border:1px solid rgba(229,87,90,.35)}
+  .b-reg{background:rgba(79,140,255,.15);color:var(--blue);border:1px solid rgba(79,140,255,.35)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 6px;margin:16px 0}
+  .callout{background:linear-gradient(180deg,rgba(79,140,255,.10),rgba(79,140,255,.03));
+    border:1px solid rgba(79,140,255,.30);border-radius:12px;padding:14px 16px;margin:14px 0}
+  .callout.warn{background:linear-gradient(180deg,rgba(229,87,90,.10),rgba(229,87,90,.03));border-color:rgba(229,87,90,.30)}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--dim);margin:0 0 4px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12.5px;background:var(--card2)}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .up{color:var(--green)} .down{color:var(--red)}
+  ul{margin:8px 0;padding-left:20px} li{margin:5px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+  .stat{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .stat .l{font-size:11.5px;color:var(--dim)} .stat .v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+  .verdict{font-weight:600}
+  .v-true{color:var(--green)} .v-partly{color:var(--amber)} .v-false{color:var(--red)}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
+  .tblwrap{overflow-x:auto}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>🔬 펀더멘탈이 부러졌나 — 크래시 3주의 해부</h1>
+  <p class="sub">2026-07-16(목) 장중 기준 · 고점 -25%의 정체를 이익·밸류·수급 세 축으로 분리 판정 · <span class="tag">투자 참고용, 결정은 본인 책임</span></p>
+
+  <div class="callout">
+    <p class="kicker">한 줄 판정</p>
+    <p><b>펀더멘탈(이익)은 부러지지 않았다 — 부러진 것은 멀티플과 수급 구조다.</b> 단 "일시적 = 곧 회복"이라는 뜻은 아니다: 밸류는 조정 후에도 역사적 고위라 바닥을 밸류로 단정할 수 없고, 이익 눈높이는 하향 중이다. 펀더 판정의 <b>진짜 시험일은 7월 말</b>(메타 2Q capex 가이던스 + 메모리 대장 2Q 확정 실적)이다.</p>
+  </div>
+
+  <h2>1. 프레임 — "얼마나 빠졌나"보다 "어디서 빠졌나"</h2>
+  <div class="grid2">
+    <div class="stat"><div class="l">KOSPI 여정 (거래소 실측)</div><div class="v">연초 4,310 → 고점 9,115 (6/22) → 현재 6,818</div></div>
+    <div class="stat"><div class="l">현재 위치</div><div class="v"><span class="up">연초比 +58%</span> · <span class="down">고점比 -25.2%</span></div></div>
+    <div class="stat"><div class="l">메모리 대장 A (하이닉스)</div><div class="v">연초 +172% · 고점比 -37%</div></div>
+    <div class="stat"><div class="l">메모리 대장 B (삼성전자)</div><div class="v">연초 +98% · 고점比 -30%</div></div>
+  </div>
+  <p>지금의 -25%는 <b>상반기 +111% 메가랠리의 약 1/3 되돌림</b>이다. "폭락장"의 체감과 달리 지수는 여전히 연초보다 58% 위에 있다 — 판정의 출발점은 "무너진 시장"이 아니라 <b>"역사적 랠리가 정당했는지 재심사받는 시장"</b>이다.</p>
+
+  <h2>2. 이익 축 — 하향은 실재, 골절은 아님</h2>
+  <div class="tblwrap">
+  <table>
+    <tr><th>증거</th><th>실측</th><th>판독</th></tr>
+    <tr><td>2Q 잠정 (삼성전자, 7/7)</td><td class="num">사상 최대 영업이익</td><td><span class="verdict v-true">이익 실현 중</span></td></tr>
+    <tr><td>2Q 컨센서스 (하이닉스)</td><td class="num">증권가 하향 -8~12% (ASP 전망 현실화)</td><td><span class="verdict v-partly">기울기 조정</span></td></tr>
+    <tr><td>중기 증익 기조</td><td class="num">2027년 영업익 전년比 +46% 전망 유지</td><td><span class="verdict v-true">성장 스토리 유지</span></td></tr>
+    <tr><td>실수요 검증</td><td class="num">ADR 공모 수요 7배 · 40조 조달 완료 (7/10)</td><td><span class="verdict v-true">글로벌 기관의 실물 베팅</span></td></tr>
+    <tr><td>공급자 행동</td><td class="num">캐파 5년 2배 공격 증설 공시 (감산 아님)</td><td><span class="verdict v-partly">수요 자신감 / 오버서플라이 씨앗 양면</span></td></tr>
+  </table>
+  </div>
+  <p>이익이 "부러졌다"면 나타나야 할 것 — 실적 미스, 가이던스 철회, 수주 취소 — 는 <b>아직 하나도 실증되지 않았다</b>. 나타난 것은 애널리스트들의 눈높이 조정(-8~12%)이며, 그 조정 후에도 증익 기조다 ([머니투데이](https://www.mt.co.kr/stock/2026/07/14/2026071408500455654), [아주경제](https://www.ajunews.com/view/20260714091656781), [파이낸셜뉴스](https://www.fnnews.com/news/202607131813181473)). 성장률의 <b>1차 미분이 줄었지 부호가 바뀌지 않았다</b>.</p>
+
+  <h2>3. 밸류 축 — 여기가 부러진 곳</h2>
+  <div class="tblwrap">
+  <table>
+    <tr><th></th><th>7/1 (고점권)</th><th>현재</th><th>판독</th></tr>
+    <tr><td class="num">하이닉스 PER / PBR</td><td class="num">41.3 / 14.9</td><td class="num">29.7 / 10.7</td><td>압축됐지만 <b>여전히 자기 역사 극고</b></td></tr>
+    <tr><td class="num">삼성전자 PER / PBR</td><td class="num">47.6 / 4.9</td><td class="num">38.6 / 4.0</td><td>동일</td></tr>
+  </table>
+  </div>
+  <p>PBR 15배는 <b>완벽한 실적으로도 지키기 어려운 멀티플</b>이다 — 이익 눈높이가 -10% 내려오는 순간 멀티플 압축이 증폭돼 주가는 -30~40% 반응한다. 지금 벌어진 일의 몸통은 이것이다: <b>이익 성장의 기울기 하향 × 극단 멀티플의 디레이팅</b>. 중요한 경고: 조정 후 PBR 10.7도 낮은 값이 아니므로, <b>"많이 빠졌으니 바닥"이라는 밸류 논거는 성립하지 않는다</b>.</p>
+
+  <h2>4. 수급·구조 축 — 변동성의 증폭기들 (이익과 무관)</h2>
+  <ul>
+    <li><b>ADR-본주 커플링</b>: 상호전환 불가 구조에서 ADR 프리미엄(+17%)이 "본주 매도·ADR 매수" 차익 압력으로, ADR 급등락(월 +27% → 수 -9%)이 본주 ±6~12% whipsaw로 직수입 — 하루 걸러 폭등락(7/13 -8.95% 서킷 → 7/15 +6.24% → 7/16 장중 -6%대)의 주범 ([헤럴드경제](https://biz.heraldcorp.com/article/10810706)).</li>
+    <li><b>지정학</b>: 이란-미 전면전 위기(7/13 서킷의 트리거), 유가·환율(1,530) 경유 이중 타격 — 정전/격화에 따라 하루 ±5%를 만드는 외생 변수.</li>
+    <li><b>수급 이벤트</b>: 외국인 상반기 랠리 차익의 리밸런싱(단일일 -3.4조 기록), 국민연금 오버행, 7/29 신주 상장 대기. 반대로 7/14~15 외인 +3.2조 재유입이 보여주듯 <b>이탈은 영구 이별이 아니라 왕복</b>.</li>
+    <li><b>금리</b>: 한은 기준금리 인상(2.50→2.75%) 전망 — 멀티플 압박 요인이지 이익 훼손 요인 아님.</li>
+  </ul>
+
+  <h2>5. 무엇이 나오면 "펀더가 부러졌다"인가 — 조기경보 체크리스트</h2>
+  <div class="tblwrap">
+  <table>
+    <tr><th>경보</th><th>시점</th><th>현재 상태</th></tr>
+    <tr><td><b>메타 2Q capex 가이던스 삭감</b> (한국 메모리로의 유일한 실물 전달 관문)</td><td class="num">7월 말</td><td><span class="verdict v-partly">대기 — 최중요</span></td></tr>
+    <tr><td>메모리 대장 2Q 확정 실적·가이던스 (잠정 대비 훼손 여부)</td><td class="num">7월 말</td><td><span class="verdict v-partly">대기</span></td></tr>
+    <tr><td>AI랩 매출 성장 둔화 (capex-매출 커버리지 0.4~0.5배의 수렴 경로 이탈)</td><td class="num">상시</td><td><span class="verdict v-true">미발화</span></td></tr>
+    <tr><td>중국발 가격 디플레가 토큰 수요 성장을 추월</td><td class="num">상시</td><td><span class="verdict v-true">미발화</span></td></tr>
+    <tr><td>수주 취소/LTA 재협상 보도</td><td class="num">상시</td><td><span class="verdict v-true">미발화</span></td></tr>
+  </table>
+  </div>
+  <p>참고 리스크 계기판: AI 인프라 capex-매출 괴리 46%는 2001년 텔레콤 버블(32%)보다 크고 BIS가 공식 경고했다 — <b>미스매치는 실재</b>하되, 수요 성장(연 +100%대)이 비용 성장(+60~70%)의 약 2배라 수렴 경로(~2028)도 살아 있다. 즉 "버블 논거"와 "성장 논거"가 모두 데이터를 갖고 있으며, 위 경보들이 어느 쪽 손을 들지 결정한다.</p>
+
+  <h2>6. 종합 판정 + 실행 함의</h2>
+  <div class="callout warn">
+    <p class="kicker">verdict</p>
+    <p><b>골절 아님 — 삼중 조정(밸류 디레이팅 × 이익 눈높이 하향 × 변동성 증폭 구조)이다.</b> 그러나 "일시적"이라는 단어에서 "곧 V자 회복"을 읽으면 안 된다: ①밸류가 여전히 높아 하방 공간이 남아 있고 ②whipsaw 레짐에서 일 단위 방향 판정은 무의미하며(7/15 +6% 다음날 -6% 실측) ③7월 말 이벤트 2개가 판정을 뒤집을 권한을 갖고 있다. <b>"펀더는 살아있으나 가격 발견이 끝나지 않은 시장"</b>이 정확한 서술이다.</p>
+  </div>
+  <ul>
+    <li><b>반도체 직접 노출</b>: 신규 진입은 7월 말 이벤트(메타 capex·2Q 확정) 전 보류 — 이벤트 앵커 + 시간 분할만. 추격 금지.</li>
+    <li><b>비반도체 역행 딥밸류</b>: whipsaw와 무관하게 자기 게이트(실적·수급)로 판정 — 급등락장에서 소외됐다 돌아오는 종목이 리스크 대비 유리.</li>
+    <li><b>판정 단위</b>: 일 단위 지수·수급으로 방향을 선언하지 않는다(이번 주 실측 교훈) — 주간 외인 누적 + ADR-본주 프리미엄 추이로.</li>
+  </ul>
+
+  <div class="foot">
+    <p>2026-07-16 장중 기준 · 투자 권유 아님 · 결정과 결과는 본인 책임 · 수치는 작성 시점 실측(시장 변동·정정 가능) · 출처: 거래소 데이터 실측, <a href="https://www.mt.co.kr/stock/2026/07/14/2026071408500455654">머니투데이</a>, <a href="https://www.ajunews.com/view/20260714091656781">아주경제</a>, <a href="https://www.fnnews.com/news/202607131813181473">파이낸셜뉴스</a>, <a href="https://biz.heraldcorp.com/article/10810706">헤럴드경제</a>, <a href="https://epoch.ai/data-insights/hyperscaler-capex-vs-cash-flow">Epoch AI</a>, <a href="https://www.forbes.com/sites/jasonkirsch/2026/06/02/the-ai-capex-to-revenue-gap-is-widening---and-markets-are-starting-to-notice/">Forbes</a></p>
+  </div>
+
+</div>
+</body>
+</html>
