@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>보유 9종 대응 점검 — 급등의 정체와 '지금이면 살까' 거울</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="🪞 보유 9종 대응 점검 — 급등의 정체와 '지금이면 살까' 거울">
+<meta property="og:description" content="오늘 리스크온에 보유 넷이 급등했지만 수급 해부하면 대부분 블록딜 착시·시장 베타·개인 pop. 9종 전부 '0포지션이면 안 산다'. 대응: 축소 2·게이트 대기 3·유지 3·테슬라 관망.">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --line:#2a2f3a;
+    --tx:#e6e8ec; --mut:#9aa3b2; --dim:#6b7280;
+    --accent:#4f8cff; --amber:#f0a93b; --red:#e5575a; --green:#3fb27f; --blue:#4f8cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.65;font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:23px;margin:0 0 6px;letter-spacing:-.3px}
+  h2{font-size:18px;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  h3{font-size:16px;margin:18px 0 8px}
+  p{margin:9px 0}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;
+    border:1px solid var(--line);color:var(--mut);vertical-align:middle}
+  .badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:6px}
+  .b-hold{background:rgba(240,169,59,.15);color:var(--amber);border:1px solid rgba(240,169,59,.35)}
+  .b-risk{background:rgba(229,87,90,.15);color:var(--red);border:1px solid rgba(229,87,90,.35)}
+  .b-reg{background:rgba(79,140,255,.15);color:var(--blue);border:1px solid rgba(79,140,255,.35)}
+  .b-park{background:rgba(107,114,128,.18);color:var(--mut);border:1px solid var(--line)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 6px;margin:16px 0}
+  .callout{background:linear-gradient(180deg,rgba(79,140,255,.10),rgba(79,140,255,.03));
+    border:1px solid rgba(79,140,255,.30);border-radius:12px;padding:14px 16px;margin:14px 0}
+  .callout.warn{background:linear-gradient(180deg,rgba(229,87,90,.10),rgba(229,87,90,.03));border-color:rgba(229,87,90,.30)}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--dim);margin:0 0 4px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12.5px;background:var(--card2)}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .up{color:var(--green)} .down{color:var(--red)}
+  ul{margin:8px 0;padding-left:20px} li{margin:5px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+  .stat{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .stat .l{font-size:11.5px;color:var(--dim)} .stat .v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+  .verdict{font-weight:600}
+  .v-true{color:var(--green)} .v-partly{color:var(--amber)} .v-false{color:var(--red)}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>🪞 보유 9종 대응 점검 — 급등의 정체와 '지금이면 살까' 거울</h1>
+  <p class="sub">2026-07-23 마감 · 보유 종목 수급·뉴스·대응 점검 · 거래소 확정 실측 · <span class="tag">투자 참고용, 결정은 본인 책임</span></p>
+
+  <div class="callout warn">
+    <p class="kicker">한 줄 요지 — 오늘의 거울</p>
+    <p>오늘 코스피 +4.4% 리스크온에 보유 종목 넷이 급등했다(상한가 1·+17%·+16%·+9%). 그런데 수급을 해부하면 <b>대부분 시장 베타이거나 개인 단독 pop</b>이지 스마트머니 동반이 아니다. 그리고 9종 전부에 "오늘 0포지션이면 이 가격에 살까?"를 물었더니 <b>전부 '아니오'</b>가 나왔다. 급등을 "내 논리가 맞았다"로 읽지 않기 위해, 대응을 냉정하게 정리한다 — <b>축소 2 · 게이트/정리 대기 3 · 유지 3 · 관망 1(테슬라)</b>.</p>
+  </div>
+
+  <h2>전체 대응 요약</h2>
+  <p>수급은 거래소 확정치(억원), 실질기관 = 기관합계 − 금융투자(증권사 프랍/차익거래 제외 실수요 기관). 블록딜 크로스가 있으면 외인 순매수에 착시가 생겨 별도 표기.</p>
+  <table>
+    <thead><tr><th>종목</th><th class="num">현재가</th><th class="num">당일</th><th class="num">주간</th><th class="num">외인 60d</th><th class="num">실질기관 20d</th><th>대응</th></tr></thead>
+    <tbody>
+      <tr><td>HD현대에너지솔루션</td><td class="num">171,500</td><td class="num up">+29.7%</td><td class="num up">+55.8%</td><td class="num">+365 <span style="color:#6b7280">(블록제외 +545)</span></td><td class="num up">+385</td><td><span class="badge b-risk">축소</span></td></tr>
+      <tr><td>서진시스템</td><td class="num">42,500</td><td class="num up">+17.2%</td><td class="num up">+8.1%</td><td class="num">+1,944 <span style="color:#6b7280">(블록제외 +1,350)</span></td><td class="num down">−221</td><td><span class="badge b-risk">축소</span></td></tr>
+      <tr><td>압타바이오</td><td class="num">4,915</td><td class="num up">+16.2%</td><td class="num up">+15.8%</td><td class="num down">−17</td><td class="num">0</td><td><span class="badge b-reg">유지</span></td></tr>
+      <tr><td>헥토파이낸셜</td><td class="num">18,090</td><td class="num up">+8.7%</td><td class="num up">+4.6%</td><td class="num up">+98</td><td class="num down">−22</td><td><span class="badge b-hold">관망</span></td></tr>
+      <tr><td>GST</td><td class="num">43,600</td><td class="num up">+3.0%</td><td class="num down">−2.8%</td><td class="num up">+197</td><td class="num up">+37</td><td><span class="badge b-reg">유지</span></td></tr>
+      <tr><td>대원미디어</td><td class="num">4,690</td><td class="num up">+3.0%</td><td class="num">0.0%</td><td class="num">+2</td><td class="num">0</td><td><span class="badge b-hold">관망</span></td></tr>
+      <tr><td>클래시스</td><td class="num">44,250</td><td class="num up">+2.0%</td><td class="num up">+0.3%</td><td class="num down">−165</td><td class="num down">−29</td><td><span class="badge b-reg">유지</span></td></tr>
+      <tr><td>케이옥션</td><td class="num">2,895</td><td class="num down">−1.0%</td><td class="num down">−9.5%</td><td class="num">−3</td><td class="num">0</td><td><span class="badge b-risk">정리중</span></td></tr>
+      <tr><td>테슬라 <span class="tag">US</span></td><td class="num">$358</td><td class="num down">−4.3%</td><td class="num down">−5.3%</td><td class="num" colspan="2">해외 — 수급 산출 불가</td><td><span class="badge b-hold">관망</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>1. 오늘 급등의 정체 — 스마트머니냐, 베타냐</h2>
+  <p>보유 종목 넷이 오늘 크게 올랐다. 문제는 <b>왜</b>다. 급등이 논리의 증명이면 대응은 유지·확대지만, 급등이 시장 베타나 개인 심리 pop이면 오히려 <b>차익실현 창</b>이다. 수급이 이 둘을 가른다.</p>
+  <div class="grid2">
+    <div class="stat"><div class="l">HD현대에너지솔루션 상한가</div><div class="v">외인 −180억 = <b>전액 블록딜 크로스</b><br><span style="font-size:12px;color:#9aa3b2">블록 제외 시 외인 0. 실매수는 실질기관 +121억 + 유가·태양광 테마 베타</span></div></div>
+    <div class="stat"><div class="l">서진시스템 +17%</div><div class="v">외인 1일 −187 / 5일 −105억 <b>순매도</b><br><span style="font-size:12px;color:#9aa3b2">매집 주체가 반등에 불참. 사이드카 발동 시장 베타(β 1.65) 편승</span></div></div>
+    <div class="stat"><div class="l">압타바이오 +16%</div><div class="v">외인·기관 <b>동반 0</b> — 개인 단독<br><span style="font-size:12px;color:#9aa3b2">CI-AKI 2상 추적관찰 완료 뉴스에 리테일 pop, 데이터 전</span></div></div>
+    <div class="stat"><div class="l">헥토파이낸셜 +8.7%</div><div class="v">실질기관 <b>전 구간 순매도</b><br><span style="font-size:12px;color:#9aa3b2">코스닥 +5.2% 베타 편승 + 스테이블코인법 재추진 심리</span></div></div>
+  </div>
+  <p class="verdict">넷 다 <span class="v-false">스마트머니 동반 매수 아님</span>. 급등의 실체는 <b>블록딜 착시 · 시장 베타 · 개인 pop</b>이다. "논리가 맞아서 올랐다"고 읽으면 hope 편향에 걸린다.</p>
+
+  <h2>2. 대응이 필요한 종목</h2>
+
+  <h3><span class="badge b-risk">축소</span> HD현대에너지솔루션 — 상한가는 유가·테마 베타, 밸류는 극단</h3>
+  <p>2026 턴어라운드(1Q 영업이익 290억·마진 18%) + 미국의 對중국 반덤핑 반사이익이 원래 논거였다. 그런데 오늘 상한가는 <b>회사 고유 재료가 아니라</b> 이란-호르무즈발 유가 급등 + 반도체 주도 시장 랠리에 올라탄 것이다. 핵심 근거인 관세우회 조사(AD/CVD)는 <b>개시/기각 공식 결정이 아직 없다</b>. 그 사이 밸류만 자체 2차 목표(170,000)를 이미 넘겼고 — 주간 +55.8%. 수급도 60일 관점에서만 dual이고 최근 20일은 외인 차익실현·국내기관 단독이다.</p>
+  <ul>
+    <li><b>대응</b>: 급등분 일부 <b>축소</b>(분할 익절) 검토. 회사 고유 촉매(AD/CVD 판정) 없이 뜨거운 가격만 남은 자리 — 추격은 물론 전량 보유도 리스크/보상 비대칭.</li>
+    <li><b>다음 트리거</b>: ① AD/CVD 조사 개시/기각 공식 결정(나오는 순간 방향 확정) ② 오늘 상한가의 되돌림 여부(6/29 전례처럼 반납되는지) ③ 114,000 종가 2일 연속 하회 = 구조 이탈 ④ 8월 2Q 실적(미국 매출 비중 확인).</li>
+  </ul>
+
+  <h3><span class="badge b-risk">축소</span> 서진시스템 — 매집 주체 불참 + 거버넌스 오버행, 하방 가드 없음</h3>
+  <p>ESS·AI 데이터센터 전력 장기 논리는 유효하고 증권사 목표가(41,000~67,500)도 현재가 위다. 하지만 오늘 +17%는 <b>시장 전체 반도체 베타</b>(사이드카 랠리)에 레버리지(β 1.65)로 얹힌 것이고, 정작 외인은 1일·5일 모두 순매도 — <b>매집 주체가 반등에 불참</b>했다. 60일 외인 누적 +1,944억도 27~31%가 블록딜이라 조직적 매집으로 읽기 위험하다. 여기에 대표이사 불공정거래 조사 가능성·최대주주 변경 수반 담보계약 등 <b>거버넌스 오버행</b>이 미해소고, 손절 룰은 정지 상태(하방 가드 없음)다.</p>
+  <ul>
+    <li><b>대응</b>: 급등 자리에서 일부 <b>축소</b>. 외인 불참 + 거버넌스 리스크 + 무가드 조합에서 반등은 리스크를 줄일 기회.</li>
+    <li><b>다음 트리거</b>: 외인 5일 순매수 재전환 시 축소 판단 재검토 / 금감원 조사 관련 실제 조치(혐의 확정·무혐의) 발생 시 즉시 재평가.</li>
+  </ul>
+
+  <h2>3. 트리거 대기 — 규율로 묶인 종목</h2>
+  <h3><span class="badge b-hold">관망</span> 헥토파이낸셜 — 7/31 데드라인</h3>
+  <p>익절 후 잔여 소량(immaterial). 오늘 +8.7%는 코스닥 베타이고 실질기관은 전 구간 순매도다. <b>7/31까지 CPN 글로벌 송금 출시가 공식 확인되지 않으면 잔여 전량 자동 정리</b>(사전 확정 룰). 급등이 이 룰을 무효화할 근거는 없고, 기관 순매도 지속은 오히려 정리 쪽에 무게.</p>
+  <h3><span class="badge b-hold">관망</span> 대원미디어 — 8월 2Q 게이트</h3>
+  <p>스토리작 IPO 무산으로 딥밸류 논거의 기둥이 소멸, value trap으로 확정된 상태. 가격 stop은 폐기됐고 유일한 트리거는 <b>8월 2Q 실적</b>: 영업이익률 3.5%+ AND 영업현금흐름 플러스 동시 충족 미달 시 잔여 전량 정리. 스위치2 가격 인상(9/1)은 논거 부활이 아니라 매도 단가 개선용 이벤트일 뿐. 거래량 극박 지속.</p>
+  <h3><span class="badge b-risk">정리중</span> 케이옥션 — 두 트리거 사이</h3>
+  <p>5년 구조적 적자 value-trap. 논리는 이미 "보유"에서 "본전 근처 순차 청산"으로 전환됐다. 이번 주 −9.5%는 스마트머니 이탈이 아니라 대주주 단독 방어매수 랠리의 되돌림(외인·기관 수급 전무). 7/13 전환사채 조기상환 유예로 단기 오버행은 완화됐으나 펀더 반전은 아니다. 현재가 2,895원은 <b>정리 트리거(2,790 이탈=전량 / 3,100~3,200 반등=순차매도) 사이</b> — 오늘 신규 액션 없이 계획 유지.</p>
+
+  <h2>4. 유지 — 논리가 아직 살아있는 종목</h2>
+  <h3><span class="badge b-reg">유지</span> GST — 유일하게 dual-flow가 살아있음</h3>
+  <p>보유 종목 중 <b>수급이 가장 건강</b>하다. 20일 외인 +33 / 실질기관 +37로 진짜 동반매수(dual), 60일 외인 누적 +197억 매집 기조. 무차입·전환사채 0의 재무 최강 + 1Q 영업이익 +104%. 다만 밸류는 자기 5년 밴드 90%ile(안전마진 0)이라 하방은 멀티플 디레이팅이다. 오늘 +3.0%는 오히려 반도체 대장주 대비 언더퍼폼. <b>8/7 2Q 실적이 설비 인도(capex delivery) 검증 관문</b>, 37,000원 하드손절.</p>
+  <h3><span class="badge b-reg">유지</span> 압타바이오 — 복권 베팅, 물타기 금지</h3>
+  <p>APX-115 신장질환 임상 topline까지 완주하는 <b>binary 복권 베팅</b>. 오늘 +16%는 2상 추적관찰 완료(하반기 topline 스케줄 온트랙) 뉴스에 개인이 반응한 것 — 논리를 강화하는 정보지 매수·매도 근거는 아니다. 프레임 그대로: 성공 시 리레이팅 / 실패 시 전량정리, <b>3,500원 이탈 시 stop</b>. 분기 현금 소진(80억)·유상증자 오버행은 살아있어 확대 근거도 없음.</p>
+  <h3><span class="badge b-reg">유지</span> 클래시스 — 9월 이벤트 베팅(하방 가드 없음 유의)</h3>
+  <p>수급 이탈로 한번 정리 권고까지 갔다가, <b>9월 볼뉴머 중국 NMPA 허가</b>를 만기로 한 이벤트 보유로 성격 전환된 종목. 손절선 포함 트리거가 정지된 상태라 <b>하방 가드가 없다는 점을 명확히 인지</b>해야 한다. 수급은 여전히 다이버전스(단기 외인 유입 vs 실질기관 매도, 60일은 양쪽 순매도)로 확신을 주지 않는다. 실질 촉매는 9월 허가 + 8월 2Q 실적.</p>
+
+  <h2>5. 테슬라 <span class="tag">US · IBKR</span></h2>
+  <p>7/22 2Q 실적: 매출 $28.2B(+26%)로 상회했으나 <b>조정 EPS $0.33(컨센 $0.51 대폭 미스)</b>, AI·로봇 투자로 영업마진 1.4%까지 붕괴, FCF 2년 만에 첫 마이너스(−$1.1B). 오늘 종가 $358(−4.3%). 논리의 유일한 지지축인 <b>로보택시 지리적 확장은 진행 중</b>(올랜도·탬파·SFO 개시)이라 즉각 붕괴는 아니다. 그러나 등록 시 지목한 다음 트리거(EPS 아닌 로보택시·capex)에서 capex는 더 나쁜 방향(내년도 컨센 상회 전망)으로 확인됐고, <b>NHTSA가 FSD 안전 마케팅 클레임을 정면으로 겨냥한 조사(답변시한 8/12)</b>를 열었다 — 서사의 근간을 겨냥한 규제 리스크.</p>
+  <p class="verdict">대응: <span class="v-partly">관망(홀드 유지)</span>. PER 300배대를 정당화할 실적이 이번 분기 오히려 후퇴 — 확대 근거 없음. 워치: ① 8/12 NHTSA 답변 ② 로보택시 사고 여부(1건이 멀티플 직격) ③ Q3 capex 가이던스.</p>
+
+  <h2>6. '지금이면 살까' 거울 — 그럼 왜 들고 있나</h2>
+  <p>오늘 9종 전부에 물었다. "이미 보유"를 빼고, <b>오늘 0포지션이라면 이 가격에 살까?</b> — <b>9종 전부 '아니오'</b>였다. 이건 포트폴리오가 틀렸다는 뜻이 아니라, <b>보유 사유와 신규 매수 사유는 다르다</b>는 규율의 확인이다. 보유 정당성을 유형으로 분류하면:</p>
+  <ul>
+    <li><b>규율적 exit 진행 중</b> (케이옥션·대원미디어·헥토파이낸셜) — 신규로 안 사는 게 당연. 트리거대로 나가는 중.</li>
+    <li><b>Binary 이벤트 mid-flight</b> (압타바이오·클래시스) — 데이터/허가 결과 전엔 신규 진입도 확대도 안 함. 정해진 stop·만기로만 관리.</li>
+    <li><b>논리는 유효하나 밸류가 비쌈</b> (GST) — 유일하게 수급이 건강. 신규론 안 사도 보유는 논리·수급 근거 있음. 8/7이 관문.</li>
+    <li><b>급등이 베타/오버행인데 무가드</b> (HD현대에너지솔루션·서진시스템) — 여기가 <b>액션(축소)</b>. 급등을 논리 증명으로 읽으면 정확히 hope 편향.</li>
+  </ul>
+  <div class="callout warn">
+    <p class="kicker">실행 규율</p>
+    <ul>
+      <li><b>급등 = 차익실현 창.</b> 스마트머니 동반 없는 급등(블록딜 착시·베타·개인 pop)은 확대가 아니라 축소·정리 페이싱의 기회다.</li>
+      <li><b>무가드 종목 인지.</b> 서진시스템·클래시스는 손절 룰이 정지돼 하방 가드가 없다 — 이벤트/트리거로만 관리되는 상태임을 잊지 말 것.</li>
+      <li><b>규율 준수 = 급등에도 계획 유지.</b> 케이옥션·대원·헥토는 사전 확정 트리거(가격·날짜·실적 게이트)대로. 오늘 반등이 룰을 무효화하지 않는다.</li>
+    </ul>
+  </div>
+
+  <h2>7. 캘린더</h2>
+  <ul>
+    <li><b>7/31</b> — 헥토파이낸셜 CPN 글로벌 송금 출시 확인 데드라인(미확인 시 잔여 정리)</li>
+    <li><b>8월 초</b> — 대원미디어 2Q 실적 게이트(OPM 3.5%+ AND 영업CF+)</li>
+    <li><b>8/7</b> — GST 2Q 실적(capex delivery 검증)</li>
+    <li><b>8/12</b> — 테슬라 NHTSA FSD 조사 답변시한</li>
+    <li><b>8월</b> — 클래시스 2Q 실적 / <b>9월</b> — 클래시스 볼뉴머 중국 NMPA 허가 결과</li>
+    <li><b>하반기</b> — 압타바이오 APX-115 topline</li>
+    <li><b>상시</b> — HD현대에너지솔루션 AD/CVD 판정 · 서진시스템 금감원 조사 향방</li>
+  </ul>
+
+
+  <div class="foot">
+    <p>2026-07-23 기준 · 투자 권유 아님 · 결정과 결과는 본인 책임 · 종목별 비중·손익 미포함 · 수치는 작성 시점 실측(시장 변동·정정 가능)</p>
+  </div>
+
+</div>
+</body>
+</html>
