@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🧭 크래시 속 포지셔닝 — 과매도 판정과 3단계 배치 플랜</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="🧭 크래시 속 포지셔닝 — 과매도 판정과 3단계 배치 플랜">
+<meta property="og:description" content="고점 -33% 크래시 신저점의 아침 — 과매도 정량 대차대조표(VKOSPI 77·fwd PER 위기 저점권·이격도 83), 이번 달 교훈 10계, 보유 액션 매트릭스, 존 도달 진입 매트릭스, 3단계 배치 플랜.">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --line:#2a2f3a;
+    --tx:#e6e8ec; --mut:#9aa3b2; --dim:#6b7280;
+    --accent:#4f8cff; --amber:#f0a93b; --red:#e5575a; --green:#3fb27f; --blue:#4f8cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.65;font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:23px;margin:0 0 6px;letter-spacing:-.3px}
+  h2{font-size:18px;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  h3{font-size:16px;margin:18px 0 8px}
+  p{margin:9px 0}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;
+    border:1px solid var(--line);color:var(--mut);vertical-align:middle}
+  .badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:6px}
+  .b-hold{background:rgba(240,169,59,.15);color:var(--amber);border:1px solid rgba(240,169,59,.35)}
+  .b-risk{background:rgba(229,87,90,.15);color:var(--red);border:1px solid rgba(229,87,90,.35)}
+  .b-reg{background:rgba(79,140,255,.15);color:var(--blue);border:1px solid rgba(79,140,255,.35)}
+  .b-park{background:rgba(107,114,128,.18);color:var(--mut);border:1px solid var(--line)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 6px;margin:16px 0}
+  .callout{background:linear-gradient(180deg,rgba(79,140,255,.10),rgba(79,140,255,.03));
+    border:1px solid rgba(79,140,255,.30);border-radius:12px;padding:14px 16px;margin:14px 0}
+  .callout.warn{background:linear-gradient(180deg,rgba(229,87,90,.10),rgba(229,87,90,.03));border-color:rgba(229,87,90,.30)}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--dim);margin:0 0 4px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12.5px;background:var(--card2)}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .up{color:var(--green)} .down{color:var(--red)}
+  ul{margin:8px 0;padding-left:20px} li{margin:5px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+  .stat{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .stat .l{font-size:11.5px;color:var(--dim)} .stat .v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+  .verdict{font-weight:600}
+  .v-true{color:var(--green)} .v-partly{color:var(--amber)} .v-false{color:var(--red)}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>크래시 속 포지셔닝 — 과매도 판정과 3단계 배치 플랜</h1>
+  <p class="sub">2026-07-28 장중 09:16 실측 기준 (급변 중 — 판정은 레벨·룰 기반) · <span class="tag">투자 참고용, 결정은 본인 책임</span></p>
+
+<h2>0. 프레임 정정 — 지금 서 있는 곳</h2>
+
+<p>"과매도 아닌가"라는 질문의 좌표부터 실측으로 잡는다. 이것은 지난주 고점 대비 -5% 조정이 아니다:</p>
+
+<div class="grid2">
+  <div class="stat"><div class="l">KOSPI 6/19 고점</div><div class="v">9,385</div></div>
+  <div class="stat"><div class="l">7/21 저점</div><div class="v down">6,429 (-31.5%)</div></div>
+  <div class="stat"><div class="l">지금 (09:16)</div><div class="v down">6,305 (-6.7%) — 신저점 경신 중</div></div>
+  <div class="stat"><div class="l">올해 사이드카/서킷</div><div class="v">코스피 41회 / 서킷 7회</div></div>
+</div>
+
+<p><b>7주 만에 -33%.</b> 코로나(-36%)·2022년(-31%)급 낙폭이다. 간밤 미 반도체 -5%(circular financing 공포)가 트리거가 되어 오늘 개장 10분 만에 -5%대, 하이닉스 -9.8%·삼성전자 -8.1%. 과매도라는 감각은 맞는 자리에 서 있다 — 문제는 "과매도"가 진입 논거의 절반이라는 것. 나머지 절반을 아래에서 채운다.</p>
+
+<h2>1. 과매도 판정 — 정량 대차대조표</h2>
+
+<h3>성립하는 것</h3>
+<table>
+  <tr><th>지표</th><th>실측</th><th>판독</th></tr>
+  <tr><td>VKOSPI</td><td class="num">77~79 (6/29 피크 96.94 = 2009년 산출 이래 역대최고)</td><td>금융위기급 변동성, 피크 대비 하향 중</td></tr>
+  <tr><td>12M fwd PER</td><td class="num">6.36배 (지수 7,300 기준·7/13) vs 금융위기 저점 6.27배</td><td>현 지수 6,300대 환산 시 위기 저점 하회 추정 (파생값). fwd EPS는 오히려 상향 중 — 가격만 무너짐</td></tr>
+  <tr><td>20/60일 이격도</td><td class="num">83 / 84</td><td>금융위기·코로나 제외 시 경험적 바닥권</td></tr>
+  <tr><td>외국인 순매도</td><td class="num">YTD 약 -160조 (시총 대비 3.1%)</td><td>2008년(4.6%) 이후 최대 매도 강도</td></tr>
+</table>
+
+<h3>성립 안 하거나 미완인 것</h3>
+<ul>
+  <li><b>레버리지 청산 미완</b> — 신용융자 38.5조 → 32.75조(-5.7조) 진행 중, 반대매매 7배 급증 금감원 점검. 레버리지 ETF 거래대금이 본주를 초과하는 "후유증 미종료" 상태.</li>
+  <li><b>극단공포 미도달</b> — 공포탐욕지수 39.94 "공포" (극단공포 0~25 아님).</li>
+  <li><b>신규 악재 발화</b> — AI 순환거래(circular financing) 공포가 어제 새로 점화, 오늘도 진행형.</li>
+</ul>
+
+<div class="callout">
+  <p class="kicker">verdict 1</p>
+  <p><b>과매도 정량 성립 — 단 "바닥 확인 완료"가 아니라 "바닥권 진입".</b> 증권가도 갈린다: "언더슈팅, 6,000선대 비중확대 기회"(IBK·대신) vs "V자 없다, 회복 한 달+"(유진). 이 갈림의 실전 함의는 하나다 — <b>전량 베팅 금지, 단계 배치.</b></p>
+</div>
+
+<h2>2. 이번 달 교훈 10계 — 오늘 적용 룰</h2>
+
+<p>7월 한 달의 실측 사고·검증에서 나온 원칙과, 크래시 아침에 각각이 명령하는 것:</p>
+
+<table>
+  <tr><th>#</th><th>교훈 (실측 사례)</th><th>오늘의 적용</th></tr>
+  <tr><td class="num">1</td><td>개인 단독 수급은 반등 연료가 아니다 (하이닉스 7/24 개인 +2.57조 → 나흘 뒤 -9.8%)</td><td>지금도 개인이 받는 중 — 외인/실질기관 전환 전 베타 바닥잡기 금지</td></tr>
+  <tr><td class="num">2</td><td>실질기관 분해 — 기관합계는 착시 가능 (하이닉스 60d 합계 +0.36조 = 실질 -0.50조)</td><td>기관 매수 헤드라인은 금융투자 걷어내고 판독</td></tr>
+  <tr><td class="num">3</td><td>급등/급락일 단독 판정 금지 (7/23 +4.4% 다음날 -5.7%)</td><td>오늘 -6.7%도 단독으론 신호 아님 — 레벨 도달만 본다</td></tr>
+  <tr><td class="num">4</td><td>무차별 투매 도달 = 가치주 존 체결 유효 / 개별 이탈 도달 = 보류</td><td><b>오늘은 전형적 무차별 투매 — 존 도달 가치주의 1차 분할은 룰상 유효</b></td></tr>
+  <tr><td class="num">5</td><td>규율 비대칭 — 가치주 게이트 하나 덜(기아 +17% 미스), 모멘텀주 하나 더(현대에솔 -21% 꼭지)</td><td>아래 진입 매트릭스의 분류 기준</td></tr>
+  <tr><td class="num">6</td><td>손절폭 &lt; 일중 진폭이면 구조 부적격 (하이닉스 진폭 9.3%)</td><td>오늘 타이트 스탑 신규 진입은 자동 기각</td></tr>
+  <tr><td class="num">7</td><td>이벤트 전 신규 최소화 — 단 가격이 먼저 온 경우 분할 1차만 예외</td><td>신주(내일)·FOMC/메타(목 새벽) 전 — 1차 분할 이상 금지</td></tr>
+  <tr><td class="num">8</td><td>froth는 하루에 다 뱉는다 (유가발 신재생 -20%)</td><td>낙폭 큰 모멘텀주 "싸 보임" 매수 금지 — 할인이 아니라 프리미엄 반납</td></tr>
+  <tr><td class="num">9</td><td>확약은 무르지 않는다</td><td>기존 게이트·확약을 오늘 공포로 재설계하지 않는다</td></tr>
+  <tr><td class="num">10</td><td>눈대중 금지 — 모든 레벨은 실측 (직전 사례: "최고가권" 오판정정)</td><td>이 리포트의 모든 수치는 실측값</td></tr>
+</table>
+
+<h2>3. 이벤트 맵 — 배치 타이밍의 뼈대</h2>
+
+<table>
+  <tr><th>시점</th><th>이벤트</th><th>성격</th></tr>
+  <tr><td class="num">오늘 (화)</td><td>크래시 진행 — 신저점 테스트</td><td>무차별 투매 = 존 체결의 날</td></tr>
+  <tr><td class="num"><b>수 7/29</b></td><td><b>SK하이닉스 신주 1,779만주 상장 + ADR 상호전환 개시</b> (발행가 2,249,751원 vs 본주 1,638,000 = +37% 괴리)</td><td>물량 vs 수렴 차익거래 충돌</td></tr>
+  <tr><td class="num"><b>목 새벽 7/30</b></td><td><b>FOMC 결과 + 메타 실적·설비투자 가이던스</b></td><td>매크로 + AI capex 이중 바이너리</td></tr>
+  <tr><td class="num">목 7/30 전후</td><td>보유 종목 2분기 실적 확약 판정 1건</td><td>사전 확약 집행일</td></tr>
+  <tr><td class="num">8/7</td><td>보유 종목 실적 게이트 1건</td><td>증액 게이트</td></tr>
+  <tr><td class="num"><b>8/14 전후</b></td><td><b>반기 실적 게이트 클러스터 — 관찰 종목 11종 일괄 판정</b></td><td>크래시와 무관하게 예정된 채점일</td></tr>
+</table>
+
+<h2>4. 보유 포트폴리오 — 액션 매트릭스 (09:16 실측)</h2>
+
+<table>
+  <tr><th>종목</th><th>현재가</th><th>오늘</th><th>판정</th><th>액션</th></tr>
+  <tr><td><b>케이옥션</b></td><td class="num">2,805</td><td class="num down">-0.9%</td><td>손절선 2,790 여유 0.5% — 오늘 발동 가능</td><td><b>즉시 결정 필요</b> — 그 선의 원 근거(CB 상환절벽)는 7/13 소멸. 기계 집행 vs 근거 소멸 반영 재설계(예: 2,600 종가) 중 하나를 <b>지금</b> 박고, 새 선에선 무조건 집행</td></tr>
+  <tr><td><b>GST</b></td><td class="num">40,150</td><td class="num down">-8.8%</td><td>하드손절 37,000 여유 -7.8%. 무차별 투매 동반 — 개별 악재 아님 (어제 +8.8% 반납)</td><td>스탑 유지, 무액션. 8/7 실적 판정</td></tr>
+  <tr><td><b>서진시스템</b></td><td class="num">36,500</td><td class="num down">-8.3%</td><td>7/21 저점 36,200 직전. 2분기 확약 D-2</td><td><b>무가드 유지</b> — 오늘 팔면 판정이 아니라 공포다. "실적 미달 시 즉시 정리" 확약이 이미 안전판</td></tr>
+  <tr><td>클래시스</td><td class="num">44,850</td><td class="num down">-1.2%</td><td>급락일 상대 방어 3연속 — 수급 구조 유지</td><td>무액션 (9월 중국 허가 단일 판정)</td></tr>
+  <tr><td>압타바이오</td><td class="num">4,605</td><td class="num down">-0.7%</td><td>임상 바이너리 — 시장과 무관</td><td>무액션 (9~10월 topline)</td></tr>
+  <tr><td>대원미디어</td><td class="num">4,655</td><td class="num up">+0.8%</td><td>크래시 역행 상승</td><td>무액션 (8/14 전량 판정 게이트)</td></tr>
+  <tr><td>헥토파이낸셜</td><td class="num">17,180</td><td class="num down">-0.7%</td><td>스테이블코인 테마 프리미엄 유지</td><td>무액션 (8월 실적 게이트)</td></tr>
+  <tr><td>테슬라</td><td class="num">$313 (7/24)</td><td>—</td><td>9월 말 기한부 유예 watch</td><td>무액션</td></tr>
+  <tr><td>은/구리 헷지</td><td class="num">$58.41 / $6.38</td><td class="num">-0.4% / +0.9%</td><td>은은 리스크오프에도 하락 — "달러약세 상관 롱" 진단 그대로</td><td>재진입 보류 유지. 내일 BOJ + 목 새벽 FOMC = 캐리 청산 watch 창</td></tr>
+</table>
+
+<div class="callout">
+  <p class="kicker">holdings one-liner</p>
+  <p>오늘은 파는 날이 아니라 <b>집행 라인을 미리 박는 날</b>이다. 케이옥션 결정 하나만 지금 필요하고, 나머지는 전부 기존 게이트가 안전판이다.</p>
+</div>
+
+<h2>5. 진입 매트릭스 — 지금 걸 수 있는 주문</h2>
+
+<h3>A군 — 존 도달: 무차별 투매 도달이라 1차 분할 유효 (가치주)</h3>
+<table>
+  <tr><th>종목</th><th>현재가</th><th>진입존</th><th>상태</th><th>근거</th><th>1차 사이즈</th></tr>
+  <tr><td><b>삼성E&amp;A</b></td><td class="num">46,050</td><td class="num">46,500~44,000</td><td><span class="badge b-reg">존 안</span></td><td>2Q 영업익 +51% 실체, 수주잔고 22.7조, 실질기관 매수 지속, forward PER 13</td><td>계획의 30%</td></tr>
+  <tr><td><b>한미글로벌</b></td><td class="num">16,520</td><td class="num">17,000 이하 (2차 15,500)</td><td><span class="badge b-reg">존 안</span></td><td>PBR 5년 15%ile + forward PER 5.8, 원전 PM 실체 + AIDC 옵션</td><td>계획의 30%</td></tr>
+  <tr><td>동성화인텍</td><td class="num">16,160</td><td class="num">2차 존 15,900~16,200</td><td><span class="badge b-hold">조건부</span></td><td>밸류 5년 최하단 + 수주잔고 3.6년치. 단 진입 트리거를 "투매 진정 확인"으로 조인 상태 — 도달만으로 체결 안 함</td><td>소량 (조건 확인 후)</td></tr>
+  <tr><td>강원랜드</td><td class="num">14,430</td><td class="num">신저가권 배당 캐리</td><td><span class="badge b-hold">게이트 우선</span></td><td>배당 6.6%·PBR 0.76 쿠션. 2분기 발표 며칠 앞 — 실적 확인 후 원칙</td><td>스타터만 or 게이트 후</td></tr>
+</table>
+
+<h3>B군 — 존 미도달: 지정가 설치</h3>
+<table>
+  <tr><th>종목</th><th>현재가</th><th>대기 존</th><th>거리</th></tr>
+  <tr><td>대한항공</td><td class="num">25,900</td><td class="num">24,700~25,500</td><td class="num">-1.5% — 오늘 도달 가능. 도달 시 1차 30% (2Q 서프라이즈 + 유가 순풍 기확인)</td></tr>
+  <tr><td>삼양식품</td><td class="num">1,207,000</td><td class="num">1,050,000~1,180,000</td><td class="num">-2.2% — 크래시 이틀째 -1%대 방어 (dual 매집 쿠션 실측 중). 존 진입 시 1차</td></tr>
+  <tr><td>NAVER</td><td class="num">222,500</td><td class="num">뉴스 소화 후 재설계</td><td class="num">역행 +2.4% → -1.1% 반전 — 유증 소화 미완, 대기</td></tr>
+</table>
+
+<h3>C군 — 금지 (교훈 직결)</h3>
+<ul>
+  <li><b>하이닉스/삼성전자 베타 바닥잡기</b> — 개인 단독 수급 + 신주 상장 D-1 + R/R 구조 부적격 (오늘 아침 별도 리포트의 게이트 3종 판정 그대로).</li>
+  <li><b>오늘 -7~9% 모멘텀주 줍기</b> — 8월 실적 게이트 전 미증명 상태의 froth 반납이지 할인이 아니다. 보유분 유지와 신규 추가는 다른 판정이다.</li>
+  <li><b>레버리지/전량 투입</b> — 신용 청산이 끝나지 않은 장세에서 청산당하는 쪽과 같은 배를 타는 것.</li>
+</ul>
+
+<h2>6. 종합 — 3단계 배치 플랜</h2>
+
+<div class="callout warn">
+  <p class="kicker">verdict 2</p>
+  <p><b>과매도는 성립한다. 그러나 오늘은 "다 사는 날"이 아니라 "가치주 존 체결 + 라인 설치의 날"이다.</b> 오늘 투입 총량은 신규 예산의 1/4 이하로 캡 — 바닥 확인 미완이 정량 결론이었다.</p>
+</div>
+
+<ul>
+  <li><b>1단계 (오늘~수)</b>: A군 가치주 1차 분할만 — 삼성E&amp;A·한미글로벌 (각 계획의 30% 이하), 동성화인텍은 투매 진정 조건부. 대한항공·삼양식품 지정가 설치. 총량 캡 1/4.</li>
+  <li><b>2단계 (목 새벽 FOMC·메타 + 신주 소화 후)</b>: 통과 시 A군 2차 + B군 증액 + 하이닉스 게이트 3종 재평가. <b>역방향(메타 설비투자 삭감)이면 1단계 물량 손절선 일괄 점검 후 중단.</b></li>
+  <li><b>3단계 (8/14 반기 클러스터)</b>: 실적 게이트 통과 종목만 본 사이즈로.</li>
+</ul>
+
+<h2>7. 무엇이 이 플랜을 깨나</h2>
+
+<ul>
+  <li><b>메타 설비투자 삭감 (목 새벽)</b> — AI capex 지속성의 단일 관문. 삭감이면 "과매도 매수"가 "떨어지는 칼 2막"이 된다. 1단계를 1/4로 캡한 이유.</li>
+  <li><b>신주 상장일 하이닉스 추가 붕괴</b> — 시장 4차 하락 파동 트리거 가능.</li>
+  <li><b>서킷브레이커 (KOSPI -8%)</b> — 발동 시 오늘 존 체결도 중단·관망. 무차별 투매를 넘어선 시스템 이벤트.</li>
+  <li><b>원화 급락 재개</b> (현재 1,472) — 1,550 재돌파 시 외국인 이탈 레짐 재점화.</li>
+</ul>
+
+<p><b>한 줄 요약</b>: 과매도 판단은 데이터가 지지한다. 다만 이번 달의 교훈 전부는 "맞는 방향을 틀린 사이즈·틀린 날짜로 사면 진다"였다 — 오늘은 가치주 존 체결 30%와 지정가 설치까지, 나머지는 목요일 새벽이 정해준다.</p>
+
+<h3>Sources</h3>
+<ul>
+  <li><a href="https://biz.heraldcorp.com/article/10821525">고점 9,385→6,429 -31.5%·서킷 7회 (헤럴드경제)</a></li>
+  <li><a href="https://www.fnnews.com/news/202607260601410185">VKOSPI 96.94 역대최고 (파이낸셜뉴스)</a></li>
+  <li><a href="https://money2.daishin.com/PDF/Out/intranet_data/Product/ResearchCenter/Report/2026/07/58068_MMB_260713.pdf">fwd PER 6.36배 vs 금융위기 저점 6.27배 (대신증권)</a></li>
+  <li><a href="https://www.fnnews.com/news/202607241535108279">신용융자 32.75조·코스닥 -23.9% (파이낸셜뉴스)</a></li>
+  <li><a href="https://edaily.co.kr/News/Read?mediaCodeNo=257&amp;newsId=02564966645516816">외국인 YTD 160조 순매도·시총비 3.1% (이데일리)</a></li>
+  <li><a href="https://www.hankyung.com/article/2026072770916">유진 "V자 반등 어렵다" (한국경제)</a></li>
+  <li><a href="https://www.fnnews.com/news/202607210829007678">IBK 외인 매도 정점·언더슈팅 (파이낸셜뉴스)</a></li>
+  <li><a href="https://v.daum.net/v/20260712140810431">하이닉스 신주 7/29 추가상장 (연합)</a></li>
+  <li>지수·종목 시세·수급·이격: 거래소 데이터 직접 실측 (2026-07-28 09:16)</li>
+</ul>
+
+  <div class="foot">
+    <p>2026-07-28 장중(09:16 KST) 기준 · 투자 권유 아님 · 결정과 결과는 본인 책임 · 수치는 작성 시점 실측(장중 급변·정정 가능) · 본 리포트의 보유·관심 종목 실명 공개는 작성자 인가에 따름</p>
+  </div>
+
+</div>
+</body>
+</html>
