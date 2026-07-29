@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🔎 하이닉스 컨콜 해부 + 과매도 재검토 — 살 만한 것</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="🔎 하이닉스 컨콜 해부 + 과매도 재검토 — 살 만한 것">
+<meta property="og:description" content="컨콜이 3대 질문을 해소 — 미스는 출하 이연, ASP는 강세, HBM4 순항, 영업외 +62조는 투자자산 평가익. 그리고 오늘 외인 매수 전환. 하이닉스 외 살 만한 것을 종목별로 재검토.">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --line:#2a2f3a;
+    --tx:#e6e8ec; --mut:#9aa3b2; --dim:#6b7280;
+    --accent:#4f8cff; --amber:#f0a93b; --red:#e5575a; --green:#3fb27f; --blue:#4f8cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.65;font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:23px;margin:0 0 6px;letter-spacing:-.3px}
+  h2{font-size:18px;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  h3{font-size:16px;margin:20px 0 8px}
+  p{margin:9px 0}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;
+    border:1px solid var(--line);color:var(--mut);vertical-align:middle}
+  .badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:6px}
+  .b-hold{background:rgba(240,169,59,.15);color:var(--amber);border:1px solid rgba(240,169,59,.35)}
+  .b-risk{background:rgba(229,87,90,.15);color:var(--red);border:1px solid rgba(229,87,90,.35)}
+  .b-reg{background:rgba(79,140,255,.15);color:var(--blue);border:1px solid rgba(79,140,255,.35)}
+  .b-park{background:rgba(107,114,128,.18);color:var(--mut);border:1px solid var(--line)}
+  .b-buy{background:rgba(63,178,127,.15);color:var(--green);border:1px solid rgba(63,178,127,.35)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 6px;margin:16px 0}
+  .callout{background:linear-gradient(180deg,rgba(79,140,255,.10),rgba(79,140,255,.03));
+    border:1px solid rgba(79,140,255,.30);border-radius:12px;padding:14px 16px;margin:14px 0}
+  .callout.warn{background:linear-gradient(180deg,rgba(229,87,90,.10),rgba(229,87,90,.03));border-color:rgba(229,87,90,.30)}
+  .callout.good{background:linear-gradient(180deg,rgba(63,178,127,.10),rgba(63,178,127,.03));border-color:rgba(63,178,127,.30)}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--dim);margin:0 0 4px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12.5px;background:var(--card2)}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .up{color:var(--green)} .down{color:var(--red)}
+  ul{margin:8px 0;padding-left:20px} li{margin:5px 0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+  .stat{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .stat .l{font-size:11.5px;color:var(--dim)} .stat .v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+  .verdict{font-weight:600}
+  .v-true{color:var(--green)} .v-partly{color:var(--amber)} .v-false{color:var(--red)}
+  .stock{border-left:3px solid var(--line);padding-left:14px;margin:18px 0}
+  .stock.buy{border-color:var(--green)} .stock.wait{border-color:var(--amber)} .stock.avoid{border-color:var(--red)}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>하이닉스 컨콜 해부 + 과매도 재검토</h1>
+  <p class="sub">2026-07-29 장중 11:00 KST · 실적 컨퍼런스콜 실측 + 수급 반전 + 종목별 재검토 · <span class="tag">투자 참고용, 결정은 본인 책임</span></p>
+
+<div class="callout">
+<p class="kicker">tl;dr</p>
+<p>SK하이닉스 컨콜이 어제의 세 질문을 모두 해소했다 — <b>매출 미스는 ASP 약세가 아니라 출하 이연</b>(D램 ASP +30%·낸드 +50%대 강세), <b>3분기 가이던스 강함</b>(D램 출하 +10%·HBM4 본격 확대), <b>순이익 미스터리 +62조는 투자자산 평가이익</b>(비현금 일회성). 펀더는 훼손이 아니라 시점 문제였다. 동시에 시장은 더 빠졌지만(KOSPI -4.7%, 고점比 -39%) <b>오늘 처음 외국인이 순매수로 돌았고</b>(어제 -4.99조 → 오늘 +1,043억) 하락종목이 40%뿐인 브레드스 다이버전스가 나타났다. "살 만한 것"은 있고 여럿이 존에 들어왔지만, <b>오늘 밤 FOMC 전 음봉·거래 진공</b>에서는 실적 백스톱 있는 방어주 정찰이 규율에 맞는 유일한 액션이다.</p>
+</div>
+
+<h2>1. 하이닉스 컨콜 — 어제의 세 질문에 답이 나왔다</h2>
+
+<p>어제 장전 리포트는 세 가지를 물었다: 미스가 출하 이연이냐 ASP 약세냐, HBM4·3분기 가이던스 톤, 순이익을 부풀린 영업외 +62조의 정체. 컨퍼런스콜 전문이 셋 다 해소했다.</p>
+
+<div class="callout good">
+<p class="kicker">질문 ① 매출 미스의 성격 → 출하 이연 (경미)</p>
+<p><b>ASP는 강했다</b> — D램 평균단가 약 +30%, 낸드 +50%대 중반(QoQ). 즉 가격 훼손이 아니다. 회사 설명: "일부 <b>고부가 제품의 출하 확대 시점이 하반기로 이월</b>되고 포트폴리오 구성이 블렌디드 ASP에 영향을 줬다." 매출 미스 -5.8%의 정체는 가격이 아니라 <b>물량 인식 시점</b>이며, 그 물량은 3분기로 넘어간다. 밸류의 분모(이익 추정)가 흔들리는 미스가 아니다.</p>
+</div>
+
+<div class="callout good">
+<p class="kicker">질문 ② HBM4·3분기 가이던스 → 강함</p>
+<p><b>3분기 D램 출하 QoQ 약 +10%</b>, 낸드 한 자릿수 초반. 하반기 비트그로스가 상반기를 상회할 전망. <b>HBM4는 2분기부터 양산 출하 시작, 하반기 본격 확대</b>(전력효율·원가 경쟁력 입증), HBM4E는 상반기 주요 고객사 샘플 공급 완료. HBM4 확대 + 1c나노 일반 D램 증가가 하반기 블렌디드 ASP에 긍정 기여. 어제 미스의 이연 물량이 3분기 실적 개선으로 돌아온다는 회사 스토리와 정합한다.</p>
+</div>
+
+<div class="callout">
+<p class="kicker">질문 ③ 순이익 +62조 미스터리 → 투자자산 평가이익</p>
+<p>순영업외이익 62.2조 = <b>투자자산 매각수익·평가이익 63.3조</b> + 외환관련이익 1.1조. 즉 순이익 93.9조(순이익률 118%)는 대부분 <b>비영업·비현금성 일회성</b>으로 부풀려진 헤드라인이다. 실질 본업 수익력은 영업이익 60.5조로 읽어야 한다. 어제 "순이익 헤드라인 주의" 경고의 정체가 확인됐다.</p>
+</div>
+
+<p><b>수요 코멘트도 우호적이다</b> — "주요 고객들이 여전히 더 많은 메모리 공급을 요청"하고 있고, 빅테크가 AI 매출·수익 성장으로 메모리 구매를 지속 확대. 간밤 미국을 흔든 CXMT(중국 DRAM) 공포는 <b>범용 D램 공급</b> 이슈인데, 하이닉스의 해자는 HBM4에 있고 그건 순항 중이다 — 이 대비가 핵심이다.</p>
+
+<table>
+<tr><th>게이트 (어제 설정)</th><th>어제 장전 판정</th><th>컨콜 후 갱신</th></tr>
+<tr><td>① 실적·가이던스</td><td class="down">헤드라인 실패(-5.7%)</td><td class="up">부분 회복 — 미스=출하 이연, ASP 강세, 3Q 가이던스 강, HBM4 순항. "ASP 톤다운 없음" 조건 충족</td></tr>
+<tr><td>② FOMC·메가캡</td><td>대기</td><td>오늘 밤(7/30 새벽 KST) — 미변</td></tr>
+<tr><td>③ 수급 전환</td><td>1일차(연기금 +6,399억)</td><td class="up">오늘 외국인 순매수 전환 관측(아래 §2) — 강화 중</td></tr>
+</table>
+<p><span class="verdict v-partly">하이닉스 판정</span> — 게이트 ①이 "헤드라인 실패"에서 "부분 회복"으로 상향됐다. 펀더 톤은 오히려 우호적이다. 그러나 진입 재개는 여전히 FOMC 통과 + 트로프+1 확인이 조건이고, 오늘 -9%로 <b>하단 존(128만~133만)에 -6%까지 접근</b>(141.1만)했다. 시장 동반 하락으로 존에 닿으면 추격이 아니라 존 체결이 된다.</p>
+
+<h2>2. 시장 — 더 빠졌는데, 오늘 처음 안이 좋아졌다</h2>
+
+<div class="grid2">
+  <div class="stat"><div class="l">KOSPI</div><div class="v down">5,738 (-4.7%) · 고점比 -38.9%</div></div>
+  <div class="stat"><div class="l">KOSDAQ</div><div class="v down">669 (-5.1%) · 고점比 -45.3%</div></div>
+  <div class="stat"><div class="l">브레드스 (KOSPI 하락)</div><div class="v up">40% (어제 93%)</div></div>
+  <div class="stat"><div class="l">거래대금</div><div class="v">20일 평균의 0.35배 (진공 지속)</div></div>
+</div>
+
+<p>과매도 스코어카드에 오늘을 대입하면 3개 중 1.5개가 성립한다:</p>
+<ul>
+<li><b>낙폭·이격 (성립·심화)</b> — KOSPI -38.9%는 2020 코로나 트로프(-35.7%)를 통과, RSI 30대 초반의 극단 구간. "싸다"는 더 강해졌다.</li>
+<li><b>거래 클라이맥스 (여전히 미성립·핵심)</b> — 거래대금 0.35배. 투매 폭발이 아니라 <b>살 사람이 없어 미끄러지는 유동성 진공</b>이 그대로. 과거 진짜 바닥은 거래대금 1.8배 폭발과 함께 났다.</li>
+<li><b>수급 전환 (오늘 처음 균열 — 새 신호)</b> — 어제 외국인 -4.99조 기록 투매였는데 <b>오늘 외국인 +1,043억 순매수 전환, 실질기관 +5,183억 강매수, 개인 -1.36조 매도</b>(잠정). 어제 칼받던 개인이 파는 걸 스마트머니가 받는 구도다.</li>
+</ul>
+
+<p>그리고 <b>브레드스 다이버전스</b> — 지수는 -4.7%인데 KOSPI 하락종목이 40%뿐이다. 오늘 지수 하락은 하이닉스(-9%)·반도체 대장이 끌어내린 것이고, <b>절반 넘는 종목은 올랐다</b>. 지수가 신저점을 파는데 내부가 좋아지는 전형적 바닥 다이버전스다. 단 이건 <b>장중 잠정치·1일·음봉</b>이라 트로프+1(반등일 양봉 + 수급 확정)은 아직 아니다.</p>
+
+<h2>3. 종목별 재검토 — 하이닉스 외 살 만한 것</h2>
+
+<p>오늘의 다이버전스 렌즈로 우리 검증 픽을 재정렬한다 — "지수 밑에서 실제로 오르는 종목"과 "존에 들어온 종목"을 가른다.</p>
+
+<h3>Tier A — 방어 상대강도 + 실적 백스톱 (오늘 실제로 손이 나갈 자리)</h3>
+
+<div class="stock buy">
+<p><span class="badge b-buy">Buy</span> <b>노바렉스 (194700)</b> · 13,050원 <span class="up">+3.0%</span> · 시총 2,382억</p>
+<p><b>사업</b>: 건강기능식품 CDMO 국내 1위권. 개별인정형 원료 국내 최다(49건)가 진입장벽. <b>실적</b>: 2025 매출 +36%·영업이익 +94%, 가동률 113%(풀가동 초과), 수출 +66%(중국 견인). PER 6.6배(자기 5년 16%ile 저평가)·forward ~5배·PBR 0.92·ROE ~15%, 자사주 소각+배당·무희석.</p>
+<p><b>역노화 오해 정정</b>: NAD/NMN 테마주로 분류되나 실제 NMN 직접 매출은 사실상 없다(NMN 국내 건기식 미인정). <b>"역노화"가 아니라 저평가 우량 CDMO로만 매수가 성립</b>한다. 오늘 -4.7% 장에서 +3.0% = 이틀 연속 크래시 역행 방어. <b>진입</b>: 크래시 유동성 감안 분할(1차 12,500~13,300 도달 시). <b>리스크</b>: 2027 신공장 전 가동률 천장 → 성장 감속, 스몰캡 유동성.</p>
+</div>
+
+<div class="stock buy">
+<p><span class="badge b-buy">Buy</span> <b>대웅제약 (069620)</b> · 125,100원 <span class="down">-0.6%</span> · 시총 1.45조</p>
+<p><b>사업</b>: 나보타(글로벌 보톡스 연 1조)+펙수클루(위장약)+본업 제약. 영업이익 ~2,000억(CAGR ~27%)의 <b>실적 제약사</b>이지 pre-revenue 바이오가 아니다. <b>밸류</b>: PER 7.5·PBR 1.46 = 자기 5년 밴드 최하단(3%ile). 2024 순이익 급감(233억)은 이온바이오 손상차손+한올 지분법 <b>일회성</b>으로 규명, 실질 ROE 17~19%.</p>
+<p><b>역노화 노출 = 무료 옵션</b>: 턴바이오 ERA(부분 리프로그래밍)는 2026-05 부실 미 바이오를 <b>경매로 저가 취득한 종료 이벤트</b>이고 pre-clinical, 실제 개발은 관계사 한올바이오파마(지분 30.8%)가 진행. 서사 프리미엄일 뿐 매수 이유가 아니다 — <b>저평가 퀄리티 제약이 매수 근거</b>. -4.7% 장에서 -0.6% = 방어주 상대강도. <b>진입</b>: 정찰 후 115,000~120,000 지지권 분할. 목표가(19~22만)는 크래시 前 stale.</p>
+</div>
+
+<p class="sub">Tier A 두 종목의 공통점 — 하방이 실적으로 정의돼 있어(pre-revenue 아님) FOMC가 매파여도 순수 바이오처럼 무너지지 않고, 크래시 역행 방어가 이틀째다. 오늘의 "오르는 절반"의 정체이자, 바닥이 형성되면 리더십이 될 부류.</p>
+
+<h3>Tier B — 존에 들어왔으나 트로프+1 대기 (FOMC 후 양봉 확인)</h3>
+
+<div class="stock wait">
+<p><span class="badge b-hold">Watch</span> <b>LIG디펜스앤에어로스페이스 (079550)</b> · 659,000원 <span class="down">-5.5%</span> · 시총 14.5조</p>
+<p>진입존 하단(65~67만)에 <b>정확히 도달</b>. 이번 크래시 유일한 3주체 dual(60d 외인+실질기관+연기금 동반), 수주잔고 25.3조=5.9년치, 1Q 영업이익 +56%. <b>단 제약 3중</b>: ①가치 백스톱 없음(PBR 10.6·trailing PER 60 = 성장·수주 백스톱만) → 모멘텀 사이즈 절반 이하 ②진행 중 5,000억 우선주 유증(납입 9/16) ③이라크 3.7조 잔고 대금지연 보도. FOMC 통과+양봉 확인 후 1차 분할, 손절 65.3만 종가.</p>
+</div>
+
+<div class="stock wait">
+<p><span class="badge b-hold">Watch</span> <b>동진쎄미켐 (005290)</b> · 35,300원 <span class="down">-3.3%</span> · 시총 1.80조</p>
+<p>존(36,000~38,500) 하단 이탈 — 가치 백스톱(PER 19·PBR 1.7)은 더 싸졌다. EUV 포토레지스트 국산화 대표, 1Q 영업이익 +39%·OPM 20%, 크래시 기간 실질기관 19/26일 매집(연기금 주도). <b>약점</b>: 외인 미전환(-443억). 시장 동반 하락 도달이라 존 체결 조건은 유효하나, 오늘 -3%로 방어는 평범(Tier A만큼 강하지 않음). FOMC 후 양봉+수급 확인.</p>
+</div>
+
+<div class="stock wait">
+<p><span class="badge b-hold">Watch</span> <b>SK오션플랜트 (100090)</b> · 12,270원 <span class="down">-2.9%</span> · 시총 7,666억</p>
+<p>존(12,500~13,400) 살짝 아래. 유일한 가치 백스톱(PBR 0.97·27E PER 8배)+지분매각 딜가 준거 ~2만원, 해상풍력 사이클 실체. <b>단 7/31 매각 우선협상 마감이 먼저</b> — 양면 이벤트라 결과 확인 전 진입 금지. 매각 결렬 시 즉시 재평가. 에너지 선호 부합.</p>
+</div>
+
+<h3>Tier C — 근접·게이트 대기</h3>
+<ul>
+<li><b>리노공업 (058470)</b> 57,900원 (-6.0%) — wide moat(ROE 10년 15%+·무차입) but 진입존(&lt;56,000)까지 -3%. 오늘도 내려오는 중, 5만원대 도달 시. 단 창업주 6월 블록딜 오버행.</li>
+<li><b>GST (083450)</b> 36,300원 (-5.0%) — 반도체 스크러버·칠러. 이번 크래시 dual 스크린에서도 수급 생존. 8/7 2Q 실적이 확인 게이트.</li>
+</ul>
+
+<h3>제거·회피</h3>
+
+<div class="stock avoid">
+<p><span class="badge b-risk">제거</span> <b>한미약품 (128940)</b> · 315,000원 <span class="down">-15.9%</span></p>
+<p><b>매수 리스트에서 제거.</b> 2Q 영업이익 1,311억(+117%)의 호실적에도 -16% 급락 = <b>sell-the-news가 정확히 실현</b>. 어제 딥다이브가 지목한 대로 급증분 대부분이 릴리 기술이전 일회성이었고, 여기에 북경한미 성장 둔화가 겹쳤다. <b>손절선 356,500을 -12% 관통</b>(315,000) — thesis 스톱 발동. 재진입은 훨씬 낮은 레벨에서 새로 판정. 이 종목이 오늘 실행 규율의 값을 실시간으로 증명한다: 존에서 샀다면 이미 스톱에 물렸다.</p>
+</div>
+
+<div class="stock avoid">
+<p><span class="badge b-park">추격 금지</span> <b>달바글로벌 (483650)</b> · 271,500원 <span class="up">+6.1%</span></p>
+<p>크래시 역행 상승 dual — 수급은 가장 좋지만 낙폭이 없어 반등 플레이가 아니고, 시장 안정 시 낙폭과대주 로테이션의 <b>자금원(빠져나가는 쪽)</b>이 되는 crowding 클래스. 추격 금지.</p>
+</div>
+
+<h2>4. 종합 — 살 만한 것은 있다, 단 순서가 있다</h2>
+
+<p>당신의 "점점 과매도"라는 직감은 정량으로 옳아지고 있고, 오늘 수급 전환이 그 직감에 처음 데이터를 붙였다. 그리고 컨콜은 반도체 대장의 펀더가 훼손이 아니라 시점 문제임을 확인해줬다. 그러나 실행은 순서가 있다:</p>
+
+<table>
+<tr><th>시점</th><th>액션</th></tr>
+<tr><td>오늘 (FOMC 전, 음봉, 거래 진공)</td><td>실적 백스톱 있는 <b>Tier A(노바렉스·대웅) 소량 정찰</b>만. 이 둘은 매파 FOMC에도 순수 바이오처럼 안 무너지고 크래시 역행 방어가 이틀째. 나머지는 준비만.</td></tr>
+<tr><td>오늘 밤 (7/30 새벽 KST)</td><td>FOMC + 메가캡 capex 가이던스 = 이번 주 최대 바이너리. 통과 여부가 트로프+1의 전제.</td></tr>
+<tr><td>FOMC 후 (양봉+수급 확정 시)</td><td>Tier B 본진입 — LIG(존 하단, 모멘텀 사이즈)·동진(존, 가치)·SK오션(7/31 매각 통과 후). 하이닉스는 하단 존(128~133만) 도달 시 1/4 트랜치.</td></tr>
+</table>
+
+<p>한 줄: <b>급락일 당일 매수는 이번 크래시 5연속 실패였다.</b> 오늘 밤 FOMC를 앞둔 음봉·거래 진공에서 지르는 건 과매도 직감을 이기는 게 아니라 규율을 어기는 것이다. 한미약품이 오늘 스톱을 뚫은 게 그 값을 실시간으로 증명한다. FOMC 통과 + 양봉 확인 후 며칠 놓치는 비용이, 여기서 물리는 비용보다 싸다는 게 과거 5회 크래시의 실측이다. 유일한 예외가 실적 백스톱 있는 방어주(노바렉스·대웅) 정찰이다.</p>
+
+<div class="callout warn">
+<p class="kicker">무엇이 이 판정을 바꾸나</p>
+<p>① FOMC 매파 서프라이즈 + 메가캡 capex 하향 → AI 사이클 서사 훼손, 전면 재대기 ② 거래대금 클라이맥스(일 10조+ 폭발) + RSI 20대 진입 → 진짜 트로프 신호, Tier B 가속 ③ 오늘 수급 반전이 확정치에서 뒤집힘(잠정 → 확정 저녁 ~18시) → 다이버전스 무효 ④ 하이닉스 하단 존(128만) 도달 → 추격 아닌 존 체결 기회. 수치는 전부 11:00 KST 실측 — 장중·잠정 변동 유의.</p>
+</div>
+
+<h3>Sources</h3>
+<ul class="sub">
+<li>컨콜: <a href="https://www.thelec.kr/news/articleView.html?idxno=60209">디일렉 — SK하이닉스 2026년 2분기 실적발표 컨퍼런스콜 전문</a> / 실적: 전자공시(DART) 잠정실적 공정공시 원문</li>
+<li>지수·수급·가격: 한국거래소 확정·장중 데이터 직접 실측 (2026-07-29 11:00 KST) / 한미약품 2Q: <a href="https://www.etoday.co.kr/news/view/2608412">이투데이</a></li>
+<li>종목 밸류·재무: 분기보고서·공시·증권가 추정 교차 확인 (크래시 前 목표가는 stale 명기)</li>
+</ul>
+
+  <div class="foot">
+    <p>2026-07-29 장중 11:00 KST 기준 · 투자 권유 아님 · 결정과 결과는 본인 책임 · 수치는 작성 시점 실측(시장 변동·정정 가능)</p>
+  </div>
+
+</div>
+</body>
+</html>
