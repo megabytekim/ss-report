@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>📊 66조는 세 종목이었다 — 전종목 수급 해부</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="📊 66조는 세 종목이었다 — 전종목 수급 해부">
+<meta property="og:description" content="60일 외국인 순매도 66.3조의 100.8%가 단 3종목에서 나왔다. 나머지 2,683종 합계는 +5,487억, 사실상 중립. 전종목 2,686개의 4호라이즌 수급을 블록 제거 후 다시 읽었다.">
+<meta name="twitter:card" content="summary">
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --card2:#1d212b; --line:#2a2f3a;
+    --tx:#e6e8ec; --mut:#9aa3b2; --dim:#6b7280;
+    --accent:#4f8cff; --amber:#f0a93b; --red:#e5575a; --green:#3fb27f; --blue:#4f8cff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    line-height:1.65;font-size:15px;-webkit-text-size-adjust:100%}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
+  h1{font-size:23px;margin:0 0 6px;letter-spacing:-.3px}
+  h2{font-size:18px;margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  h3{font-size:16px;margin:18px 0 8px}
+  p{margin:9px 0}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;
+    border:1px solid var(--line);color:var(--mut);vertical-align:middle}
+  .badge{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:6px}
+  .b-hold{background:rgba(240,169,59,.15);color:var(--amber);border:1px solid rgba(240,169,59,.35)}
+  .b-risk{background:rgba(229,87,90,.15);color:var(--red);border:1px solid rgba(229,87,90,.35)}
+  .b-reg{background:rgba(79,140,255,.15);color:var(--blue);border:1px solid rgba(79,140,255,.35)}
+  .b-park{background:rgba(107,114,128,.18);color:var(--mut);border:1px solid var(--line)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 6px;margin:16px 0}
+  .callout{background:linear-gradient(180deg,rgba(79,140,255,.10),rgba(79,140,255,.03));
+    border:1px solid rgba(79,140,255,.30);border-radius:12px;padding:14px 16px;margin:14px 0}
+  .callout.warn{background:linear-gradient(180deg,rgba(229,87,90,.10),rgba(229,87,90,.03));border-color:rgba(229,87,90,.30)}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--dim);margin:0 0 4px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12.5px;background:var(--card2)}
+  td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .up{color:var(--green)} .down{color:var(--red)}
+  ul{margin:8px 0;padding-left:20px} li{margin:5px 0}
+  ol{margin:8px 0;padding-left:22px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+  .stat{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:10px 12px}
+  .stat .l{font-size:11.5px;color:var(--dim)} .stat .v{font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+  .verdict{font-weight:600}
+  .v-true{color:var(--green)} .v-partly{color:var(--amber)} .v-false{color:var(--red)}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:12px}
+  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>66조는 세 종목이었다 — 전종목 수급 해부</h1>
+  <p class="sub">기준일 2026-08-14 확정 거래일 · KOSPI 921종 + KOSDAQ 1,765종 = 2,686개 · 1일/5일/20일/60일 4개 호라이즌 자체 집계 · <span class="tag">투자 참고용, 결정은 본인 책임</span></p>
+
+  <div class="callout">
+    <p class="kicker">한 문단 요약</p>
+    <p>60일 외국인 순매도 <strong>-66.3조</strong>의 <strong>100.8%</strong>가 단 3종목에서 나왔다. 나머지 2,683종 합계는 +5,487억으로 사실상 중립이다. "외국인이 한국을 떠났다"는 서술은 데이터로 지지되지 않는다. 이 리포트는 세 가지를 한다 — ①헤드라인을 분해하고, ②자금이 실제로 가는 섹터를 통계 검정까지 걸어 확인하고, ③수급 숫자가 어떻게 사람을 속이는지를 <strong>판정이 뒤집힌 6종목</strong>으로 보여준다. 세 번째가 방법론적 핵심이다.</p>
+  </div>
+
+  <p><strong>용어 하나만 정리하고 시작한다.</strong> 우리는 "기관"을 두 개로 쪼갠다. <strong>기관합계</strong>에서 <strong>금융투자</strong>(증권사 자기매매·지수차익·ETF 유동성공급·스왑 헷지 북)를 뺀 것을 <strong>실질기관</strong>이라 부른다. 뒤에서 보겠지만, 이 분해를 하지 않으면 시장을 정반대로 읽게 된다.</p>
+
+  <h2>1. 시장 레짐 — 60일 -66조에서 20일 전환까지</h2>
+
+  <h3>1-1. "외국인 대탈출"은 시장 레짐이 아니라 3종목 이벤트다</h3>
+
+  <p>60일 누적 외국인 순매도는 <strong>-663,177억(약 -66.3조)</strong>. 숫자만 보면 전면 이탈이다. 그런데 종목별로 쪼개면 그림이 완전히 달라진다.</p>
+
+  <div class="scroll">
+  <table>
+    <tr><th>종목</th><th>외국인 60d</th><th>시장 net 대비</th><th>시총 대비</th></tr>
+    <tr><td>SK하이닉스</td><td class="num down">-330,695억</td><td class="num">49.9%</td><td class="num">-2.75%</td></tr>
+    <tr><td>삼성전자</td><td class="num down">-286,503억</td><td class="num">43.2%</td><td class="num">-1.79%</td></tr>
+    <tr><td>SK스퀘어</td><td class="num down">-51,467억</td><td class="num">7.8%</td><td class="num">-3.38%</td></tr>
+    <tr><td><strong>3종 합계</strong></td><td class="num down"><strong>-668,665억</strong></td><td class="num"><strong>100.8%</strong></td><td class="num">—</td></tr>
+    <tr><td><strong>나머지 2,683종</strong></td><td class="num up"><strong>+5,487억</strong></td><td class="num">—</td><td class="num">—</td></tr>
+  </table>
+  </div>
+
+  <p>상위 2종(SK하이닉스+삼성전자)만으로 <strong>93.1%</strong>다. 각 종목 시총 대비로는 -2.75% / -1.79% / -3.38% 수준으로, "지분을 던졌다"기보다 대형 리밸런싱의 성격에 가깝다. 즉 <strong>시장 전체 수치는 이 3종에서 벌어진 일이 통째로 만들어낸 것</strong>이다.</p>
+
+  <div class="callout warn">
+    <p class="kicker">이 사실이 바꾸는 실무</p>
+    <p>삼성전자·SK하이닉스의 수급 하위권을 <strong>종목 고유 악재로 읽으면 오독</strong>이다. 반대로, 초대형주에 가려지지 않은 <strong>중소형 종목의 수급 하위권이야말로 진짜 종목 고유 리스크 지점</strong>이다. 시장 전체 순매수 순위표는 이 3종을 빼고 다시 정렬해야 의미가 생긴다.</p>
+  </div>
+
+  <h3>1-2. 진짜 전환은 20일이 아니라 최근 1주에서 터졌다</h3>
+
+  <div class="scroll">
+  <table>
+    <tr><th>그룹</th><th>종목수</th><th>외인 60d</th><th>외인 20d</th><th>외인 5d</th><th>외인 1d</th><th>실질기관 60d</th><th>실질기관 20d</th></tr>
+    <tr><td>삼성전자·SK하이닉스·SK스퀘어</td><td class="num">3</td><td class="num down">-668,665</td><td class="num up">+7,977</td><td class="num up">+49,644</td><td class="num up">+25,595</td><td class="num up">+30,999</td><td class="num up">+2,101</td></tr>
+    <tr><td>KOSPI (위 3종 제외)</td><td class="num">918</td><td class="num down">-3,647</td><td class="num up">+21,064</td><td class="num up">+16,097</td><td class="num up">+4,891</td><td class="num down">-66,031</td><td class="num up">+20,492</td></tr>
+    <tr><td>KOSDAQ 전체</td><td class="num">1,765</td><td class="num up">+9,135</td><td class="num down">-14,779</td><td class="num down">-6,187</td><td class="num down">-674</td><td class="num down">-1,354</td><td class="num up">+1,483</td></tr>
+    <tr><td><strong>전체시장</strong></td><td class="num"><strong>2,686</strong></td><td class="num down"><strong>-663,177</strong></td><td class="num up"><strong>+14,262</strong></td><td class="num up"><strong>+59,553</strong></td><td class="num up"><strong>+29,813</strong></td><td class="num down"><strong>-36,386</strong></td><td class="num up"><strong>+24,076</strong></td></tr>
+  </table>
+  </div>
+  <p style="font-size:12.5px;color:var(--dim)">단위 억원 · 실질기관 = 기관합계 − 금융투자</p>
+
+  <p>60일간 가장 심하게 팔린 상위 20종(-788,499억)은 20일 <span class="up">+10,484억</span>, 5일 <span class="up">+53,684억</span>, 1일 <span class="up">+28,335억</span>으로 부호가 뒤집혔다. 위 3종을 빼도 -119,835억 → +2,508 → +4,040 → +2,739로 동일하게 전환한다.</p>
+
+  <p>중요한 것은 <strong>속도</strong>다. 3종의 20일 +7,977억은 20일 내내의 완만한 매집이 아니라, <strong>최근 5일 +49,644억(그중 1일 +25,595억)이 만든 숫자</strong>다. 20일 창의 앞 15일은 여전히 순매도였다는 뜻이다. 전환은 이제 막 시작됐고, 그만큼 되돌림일 가능성도 열려 있다.</p>
+
+  <p>또 하나. 이 전환은 <strong>"팔던 걸 되사는" 되돌림이지 신규 종목으로 가는 로테이션이 아니다.</strong> 60일 매도 상위 20종과 20일 매수 상위 20종의 교집합이 6종, 상위 100종 기준으로는 25종이 겹친다. 반면 폭(breadth) 기준으로 보면 60일 순매도 1,431종의 20일 합계는 여전히 <strong>-1.19조</strong>다. <strong>머리는 돌아섰지만 몸통은 아직 안 돌았다.</strong></p>
+
+  <h3>1-3. 코스피/코스닥은 갈렸다 — 정확히는 시총이 갈렸다</h3>
+
+  <div class="scroll">
+  <table>
+    <tr><th>시장</th><th>시총 구간</th><th>종목수</th><th>외인 60d</th><th>외인 20d</th><th>외인 5d</th><th>실질기관 20d</th></tr>
+    <tr><td>KOSPI</td><td>1조+</td><td class="num">234</td><td class="num down">-674,128</td><td class="num up">+28,518</td><td class="num up">+66,519</td><td class="num up">+22,127</td></tr>
+    <tr><td>KOSPI</td><td><em>1조+ (위 3종 제외)</em></td><td class="num">231</td><td class="num down"><em>-5,463</em></td><td class="num up"><em>+20,541</em></td><td class="num up"><em>+16,875</em></td><td class="num up"><em>+20,026</em></td></tr>
+    <tr><td>KOSPI</td><td>3천억~1조</td><td class="num">180</td><td class="num up">+2,405</td><td class="num down">-94</td><td class="num down">-648</td><td class="num up">+359</td></tr>
+    <tr><td>KOSPI</td><td>3천억 미만</td><td class="num">507</td><td class="num down">-589</td><td class="num up">+617</td><td class="num down">-131</td><td class="num up">+107</td></tr>
+    <tr><td>KOSDAQ</td><td>1조+</td><td class="num">78</td><td class="num up">+1,248</td><td class="num down">-9,080</td><td class="num down">-3,432</td><td class="num up">+1,838</td></tr>
+    <tr><td>KOSDAQ</td><td>3천억~1조</td><td class="num">202</td><td class="num up">+6,163</td><td class="num down">-4,174</td><td class="num down">-1,891</td><td class="num up">+448</td></tr>
+    <tr><td>KOSDAQ</td><td>3천억 미만</td><td class="num">1,485</td><td class="num up">+1,724</td><td class="num down">-1,526</td><td class="num down">-864</td><td class="num down">-804</td></tr>
+  </table>
+  </div>
+
+  <ul>
+    <li><strong>KOSPI 20일 순매수 +2.90조 중 +2.85조(98.2%)가 시총 1조 이상 구간</strong>에서 나왔다. 3천억~1조 구간은 -94억으로 사실상 0이다.</li>
+    <li><strong>KOSDAQ은 세 구간 전부 20일 순매도다.</strong> 60일에는 종목의 45%(795종)가 외국인 순매수였는데, 20일에는 49%(868종)가 순매도로 반전됐다. 시총 구간과 무관한 전면 이탈이다.</li>
+  </ul>
+
+  <p>정리하면 <strong>디커플링의 축은 시장이 아니라 시총</strong>이다. 대형주 온리 복귀, 중소형 전면 이탈.</p>
+
+  <h3>1-4. 금융투자 +19.4조를 "기관이 샀다"로 읽으면 안 된다</h3>
+
+  <p>시장 60일 금융투자는 <strong>+193,975억(+19.4조)</strong>. 이걸 기관의 뷰로 읽는 순간 시장 판독이 통째로 어긋난다. 근거는 네 가지다.</p>
+
+  <ol>
+    <li><strong>집중도</strong>: 상위 15종 합계가 전체의 87.6%, 상위 3종만으로 61.7%. 15종 전부 시총 100위 이내(9종은 30위 이내), 14종이 KOSPI. 시총 1조+ 구간이 전체의 <strong>97.0%</strong>.</li>
+    <li><strong>상관계수</strong>: 금융투자 60일과 시총의 상관 <strong>+0.923</strong>. 시총 1조+ 구간에서 외국인 60일과의 상관 <strong>-0.868</strong>(당일 기준 -0.918). 반면 실질기관과의 상관은 <strong>-0.044</strong>로 무관.</li>
+    <li><strong>창을 바꾸면 부호가 뒤집힌다</strong>: 1조+ 구간 금융투자는 60일 +18.81조 → 20일 <strong>-1.05조</strong> → 5일 -5,568억 → 1일 <strong>-1.34조</strong>. 같은 기간 실질기관은 -2.26조 → <strong>+2.40조</strong>로 정확히 정반대.</li>
+    <li>상위 15종 중 11종에서 외국인이 순매도 — <strong>외국인 물량의 기계적 반대편</strong>이다.</li>
+  </ol>
+
+  <p>즉 지수차익·ETF 유동성공급·스왑 헷지의 재고 북이지 방향성 보유가 아니다. <strong>기관의 뷰는 실질기관으로만 읽어야 하며, 실질기관은 60일 -3.64조로 오히려 순매도였다가 20일 +2.41조로 전환했다.</strong></p>
+
+  <div class="callout warn">
+    <p class="kicker">교과서적 오독 사례</p>
+    <p><strong>삼성전기.</strong> 60일 외국인 +15,736억, 금융투자 +26,199억. 여기까지만 보면 강한 매집이다. 그런데 <strong>실질기관은 -42,558억으로 전 시장 최하위</strong>이고, 20일 외국인은 <strong>-11,912억으로 전 시장 최대 매도</strong>로 전환했다. 금융투자 숫자만 보면 정반대 결론이 나온다.</p>
+  </div>
+
+  <h2>2. 자금이 가는 곳 — 동반매수 생존자 54종</h2>
+
+  <h3>2-1. 정의</h3>
+
+  <p><strong>동반매수</strong> = 외국인과 실질기관이 <strong>20일·60일 네 값 모두</strong> 순매수인 종목. 전종목 기준 136종(시장의 5.1%)이다. 반대로 네 값 모두 순매도인 <strong>양매도</strong>는 206종.</p>
+
+  <p>여기서 한 단계 더 갔다. 시총 3천억 이상 동반매수 상위 60종에 대해 <strong>대량 교차거래 발생일을 제거하고 다시 합산</strong>했더니, 6종이 매도우위로 뒤집혔다(4장에서 상술). 뒤집힌 6종을 뺀 <strong>54종이 이 리포트가 말하는 "생존자"</strong>다. 아래 수치는 전부 블록 제거 후 기준이다.</p>
+
+  <h3>2-2. 클러스터는 실재한다</h3>
+
+  <div class="scroll">
+  <table>
+    <tr><th>클러스터</th><th>종목수</th><th>합산시총(조)</th><th>외인 60d</th><th>실질기관 60d</th><th>합계(억)</th><th>시총대비</th><th>20d/60d</th></tr>
+    <tr><td>제약·바이오</td><td class="num">8</td><td class="num">149.6</td><td class="num up">+9,919</td><td class="num up">+3,710</td><td class="num up"><strong>+13,629</strong></td><td class="num">0.91%</td><td class="num">0.60</td></tr>
+    <tr><td><strong>화장품</strong></td><td class="num"><strong>7</strong></td><td class="num">20.7</td><td class="num up">+3,932</td><td class="num up">+2,609</td><td class="num up"><strong>+6,541</strong></td><td class="num"><strong>3.16%</strong></td><td class="num">0.69</td></tr>
+    <tr><td>방산·금속</td><td class="num">5</td><td class="num">81.0</td><td class="num up">+5,033</td><td class="num up">+3,218</td><td class="num up">+8,251</td><td class="num">1.02%</td><td class="num">0.47</td></tr>
+    <tr><td>에너지·유틸</td><td class="num">3</td><td class="num">24.1</td><td class="num up">+2,177</td><td class="num up">+2,090</td><td class="num up">+4,267</td><td class="num">1.77%</td><td class="num">0.91</td></tr>
+    <tr><td>금융·보험</td><td class="num">5</td><td class="num">38.1</td><td class="num up">+1,610</td><td class="num up">+2,365</td><td class="num up">+3,975</td><td class="num">1.04%</td><td class="num">0.47</td></tr>
+    <tr><td>조선·해운·항공</td><td class="num">3</td><td class="num">24.6</td><td class="num up">+2,111</td><td class="num up">+657</td><td class="num up">+2,768</td><td class="num">1.12%</td><td class="num">0.65</td></tr>
+    <tr><td>건설·건자재·부동산</td><td class="num">5</td><td class="num">6.0</td><td class="num up">+1,991</td><td class="num up">+659</td><td class="num up">+2,650</td><td class="num">4.39%</td><td class="num">0.45</td></tr>
+    <tr><td>자동차부품</td><td class="num">2</td><td class="num">6.6</td><td class="num up">+1,562</td><td class="num up">+668</td><td class="num up">+2,230</td><td class="num">3.38%</td><td class="num">0.28</td></tr>
+    <tr><td>반도체소부장</td><td class="num">6</td><td class="num">4.1</td><td class="num up">+1,376</td><td class="num up">+660</td><td class="num up">+2,036</td><td class="num">4.98%</td><td class="num">0.20</td></tr>
+    <tr><td><strong>음식료</strong></td><td class="num"><strong>7</strong></td><td class="num">8.5</td><td class="num up">+878</td><td class="num up">+629</td><td class="num up">+1,507</td><td class="num">1.78%</td><td class="num"><strong>0.91</strong></td></tr>
+    <tr><td>IT·기타</td><td class="num">3</td><td class="num">2.4</td><td class="num up">+236</td><td class="num up">+218</td><td class="num up">+454</td><td class="num">1.89%</td><td class="num">0.63</td></tr>
+    <tr><td><strong>생존자 54종 합계</strong></td><td class="num"><strong>54</strong></td><td class="num">365.6</td><td class="num"></td><td class="num"></td><td class="num up"><strong>+48,308</strong></td><td class="num">1.32%</td><td class="num">0.58</td></tr>
+  </table>
+  </div>
+
+  <p><strong>20d/60d 비율</strong>은 매집의 신선도다. 60일 매수가 20일에 얼마나 몰려 있는지로, 등속이면 0.333이다. 이 값이 높을수록 최근 집중, 낮을수록 이미 지나간 매집이다.</p>
+
+  <h3>2-3. 화장품 가설 — 통계 검정으로 확인했다</h3>
+
+  <p>눈으로 보면 화장품이 몰려 보인다. 그런데 <strong>선별 과정 자체가 만든 착시</strong>일 수 있다. 세 가지 검정으로 걸렀다.</p>
+
+  <div class="scroll">
+  <table>
+    <tr><th>검정</th><th>대상군</th><th>생존/dual</th><th>적중률</th><th>기대 대비</th><th>p-value</th></tr>
+    <tr><td>A. 스크린 유니버스(시총 3천억+, N=694)</td><td>화장품 밸류체인 15종</td><td class="num">7</td><td class="num"><strong>46.7%</strong></td><td class="num"><strong>6.0x</strong></td><td class="num"><strong>4.7e-05</strong></td></tr>
+    <tr><td>A. 동일</td><td>음식료·담배 14종</td><td class="num">4</td><td class="num">28.6%</td><td class="num">3.7x</td><td class="num">0.018</td></tr>
+    <tr><td>A. 대조군</td><td>화학 전체 70종</td><td class="num">8</td><td class="num">11.4%</td><td class="num">1.5x</td><td class="num">0.17 (무의미)</td></tr>
+    <tr><td>A. 대조군</td><td>전기전자 111종</td><td class="num">2</td><td class="num">1.8%</td><td class="num">0.2x</td><td class="num">0.999</td></tr>
+    <tr><td><strong>B. 전 시장 2,686종 (선택편향 통제)</strong></td><td>화장품 밸류체인 35종</td><td class="num"><strong>13</strong></td><td class="num"><strong>37.1%</strong></td><td class="num">—</td><td class="num"><strong>4.6e-09</strong></td></tr>
+    <tr><td>B. 동일</td><td>음식료·담배 84종</td><td class="num">9</td><td class="num">10.7%</td><td class="num">—</td><td class="num">0.024</td></tr>
+  </table>
+  </div>
+
+  <p><strong>검정 A</strong>: 업종은 거래소 업종지수 구성종목으로 2,532종에 객관 부여했다. 화장품은 업종 분류상 '화학'에 흡수되므로 밸류체인(브랜드/ODM/용기/유통)만 별도 지정했다. <strong>화학 전체는 p=0.17로 무의미한데, 그 안의 화장품만 떼면 p=4.7e-05.</strong> 집중은 "화학"이 아니라 정확히 화장품이다(생존자 화학 8종 중 7종이 화장품).</p>
+
+  <p><strong>검정 B</strong>: 상위 60종 컷 이전, 전 시장 2,686종에 동일 규칙을 적용해도 화장품 35종 중 13종이 동반매수(37.1%, p=4.6e-09). <strong>독립 baseline에서 오히려 더 강하다 → 스크린 아티팩트가 아니다.</strong></p>
+
+  <p><strong>검정 C</strong>: 시총 4분위로 층화해도 대형 Q4(p=0.003)·중형 Q2(p=0.04)에서 생존. 소형주 효과가 아니다.</p>
+
+  <h3>2-4. 다만 화장품은 최근 1주에 금이 갔다</h3>
+
+  <div class="callout warn">
+    <p class="kicker">섹터 집중 경고</p>
+    <p>화장품은 생존자 클러스터 중 <strong>시총 대비 순매수 3.16%로 대형 클러스터 1위</strong>다. 그런데 최근 5일 수치(블록 미조정)에서 <strong>외국인 +1,624억 / 실질기관 -1,128억</strong>으로 <strong>동반매수가 깨지고 외국인 단독으로 전환</strong>했다. 특정 종목 이슈가 아니라 밸류체인 전반에서 광범위하게 나타난다.</p>
+    <p>반면 <strong>음식료는 5일 외국인 +443억 / 실질기관 +284억으로 동반 유지</strong>(농심·빙그레·롯데웰푸드 3종이 양쪽 동반). 20d/60d도 음식료 0.91 vs 화장품 0.69. <strong>신선도만 놓고 보면 음식료 &gt; 화장품</strong>이라는 게 우리 판단이다. 화장품 클러스터 하나에 몰아 담는 구성은 이 균열을 반영하지 못한다.</p>
+  </div>
+
+  <p>밸류체인 내부에서도 갈린다. 화장품 중 유일하게 블록 제거 후 탈락한 종목이 <strong>유통</strong> 포지션이었다. 브랜드·ODM은 생존, 유통은 탈락했다.</p>
+
+  <h3>2-5. 시총 대비 순매수 상위 (생존자 기준)</h3>
+
+  <div class="scroll">
+  <table>
+    <tr><th>#</th><th>종목</th><th>시장</th><th>시총(억)</th><th>클러스터</th><th>외인 60d</th><th>실질기관 60d</th><th>합계</th><th>시총대비</th></tr>
+    <tr><td class="num">1</td><td>SK이터닉스</td><td>KOSPI</td><td class="num">19,861</td><td>에너지·유틸</td><td class="num up">+538</td><td class="num up">+1,468</td><td class="num up">+2,006</td><td class="num"><strong>10.10%</strong></td></tr>
+    <tr><td class="num">2</td><td>테크윙</td><td>KOSDAQ</td><td class="num">18,249</td><td>반도체소부장</td><td class="num up">+985</td><td class="num up">+534</td><td class="num up">+1,519</td><td class="num">8.32%</td></tr>
+    <tr><td class="num">3</td><td>자이에스앤디</td><td>KOSPI</td><td class="num">3,890</td><td>건설·부동산</td><td class="num up">+9</td><td class="num up">+277</td><td class="num up">+286</td><td class="num">7.35%</td></tr>
+    <tr><td class="num">4</td><td>HL만도</td><td>KOSPI</td><td class="num">26,813</td><td>자동차부품</td><td class="num up">+1,132</td><td class="num up">+620</td><td class="num up">+1,752</td><td class="num">6.53%</td></tr>
+    <tr><td class="num">5</td><td>삼표시멘트</td><td>KOSDAQ</td><td class="num">9,000</td><td>건자재</td><td class="num up">+504</td><td class="num up">+76</td><td class="num up">+580</td><td class="num">6.44%</td></tr>
+    <tr><td class="num">6</td><td>달바글로벌</td><td>KOSPI</td><td class="num">28,549</td><td><strong>화장품</strong></td><td class="num up">+1,342</td><td class="num up">+347</td><td class="num up">+1,689</td><td class="num">5.92%</td></tr>
+    <tr><td class="num">7</td><td>DL이앤씨</td><td>KOSPI</td><td class="num">28,556</td><td>건설</td><td class="num up">+1,271</td><td class="num up">+137</td><td class="num up">+1,408</td><td class="num">4.93%</td></tr>
+    <tr><td class="num">8</td><td>월덱스</td><td>KOSDAQ</td><td class="num">4,697</td><td>반도체소부장</td><td class="num up">+195</td><td class="num up">+16</td><td class="num up">+211</td><td class="num">4.49%</td></tr>
+    <tr><td class="num">9</td><td>LG생활건강</td><td>KOSPI</td><td class="num">46,050</td><td><strong>화장품</strong></td><td class="num up">+1,112</td><td class="num up">+905</td><td class="num up">+2,017</td><td class="num">4.38%</td></tr>
+    <tr><td class="num">10</td><td>인벤티지랩</td><td>KOSDAQ</td><td class="num">4,272</td><td>제약·바이오</td><td class="num up">+162</td><td class="num up">+17</td><td class="num up">+179</td><td class="num">4.19%</td></tr>
+    <tr><td class="num">11</td><td>빙그레</td><td>KOSPI</td><td class="num">—</td><td>음식료</td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num">4.01%</td></tr>
+    <tr><td class="num">12</td><td>펌텍코리아</td><td>KOSDAQ</td><td class="num">—</td><td><strong>화장품</strong></td><td class="num"></td><td class="num"></td><td class="num"></td><td class="num">3.67%</td></tr>
+  </table>
+  </div>
+
+  <p style="font-size:12.5px;color:var(--dim)">이 표는 수급 스크린 결과이며 매수 추천이 아니다. 시총 대비 비율이 높다는 것은 유입 강도를 뜻할 뿐, 밸류에이션·실적·수급 지속성은 별도 검증이 필요하다.</p>
+
+  <h2>3. 자금이 빠지는 곳 — 양매도 206종</h2>
+
+  <h3>3-1. 먼저, 규모부터 정직하게</h3>
+
+  <p>양매도 206종의 60일 순유출(외국인+실질기관)은 <strong>-46,040억(-4.6조)</strong>. 이들의 시총 합계는 131.8조로 <strong>시장 전체의 2.12%</strong>에 불과하다. 그리고 유출의 <strong>68.6%가 상위 5종</strong>, <strong>88.1%가 상위 25종</strong>에 몰려 있다. 나머지 181종을 전부 합쳐야 -5,497억이다.</p>
+
+  <p>즉 <strong>"어디서 빠졌나"의 정직한 답은 "거의 아무 데서도 안 빠졌다"</strong>이다. 진짜 자금 이동은 시장 전체 외국인 -66.3조에 있지, 이 206종 리스트에 있지 않다.</p>
+
+  <p style="font-size:12.5px;color:var(--dim)">이하 3장의 수치는 블록 제거 재계산이 미완료된 총량 기준이다. 판정(부호)은 총량으로도 대체로 안전하나 금액에는 블록 포함 가능성이 있다. 별도로 독립 소스(일별 투자자 수량×종가)로 상위 4종을 대조했고 오차는 0.4~12% 범위였다.</p>
+
+  <h3>3-2. 1위의 함정 — 금액 유출 1위는 이탈이 아니었다</h3>
+
+  <p><strong>LG이노텍</strong>의 -17,617억(시총 대비 -11.4%)은 유출 규모 1위다. 그런데 뜯어보면 자금 이탈이 아니다.</p>
+
+  <ul>
+    <li>주가: 5/19 793,000원 → 6/1 <strong>1,530,000원(+93%)</strong> → 8/14 654,000원</li>
+    <li>외국인 순매도 -5,128억 중 <strong>6/1 하루에만 -4,485억(87%)</strong></li>
+    <li>외국인소진율: 27.57% → 23.42%(6/1) → <strong>27.26%(8/14)로 복귀</strong></li>
+  </ul>
+
+  <p><strong>고가에 팔고 저가에 되샀다.</strong> 금액 기준 유출 1위가 지분 기준으로는 -0.31%p, 사실상 중립이다. 20일 유출도 60일의 5%뿐 — <strong>이미 끝난 일</strong>이다.</p>
+
+  <p>대조군은 <strong>한국항공우주</strong>. 외국인 최대 매도일이 60일 합계의 10%에 불과하고(분산 매도), 외국인소진율도 -2.88%p 실제로 감소했다. <strong>이쪽이 진짜 이탈이다.</strong></p>
+
+  <div class="callout">
+    <p class="kicker">교훈</p>
+    <p>급등 후 급락한 종목의 "대량 순매도"는 <strong>가격 비대칭이 만든 아티팩트</strong>일 수 있다. 금액이 아니라 <strong>지분(소진율) 변화</strong>를 함께 봐야 한다.</p>
+  </div>
+
+  <h3>3-3. 무차별 매도가 아니라 3중 로테이션이다</h3>
+
+  <div class="scroll">
+  <table>
+    <tr><th>업종</th><th>양매도 종목수</th><th>유출 60d</th><th>동반매수 종목수</th><th>유입 60d</th><th>순합</th></tr>
+    <tr><td><strong>전자장비와기기</strong></td><td class="num">11</td><td class="num down">-19,142</td><td class="num">2</td><td class="num up">+1,060</td><td class="num down"><strong>-18,082</strong></td></tr>
+    <tr><td>기계</td><td class="num">12</td><td class="num down">-4,754</td><td class="num">3</td><td class="num up">+15</td><td class="num down">-4,739</td></tr>
+    <tr><td>화학</td><td class="num">9</td><td class="num down">-2,020</td><td class="num">1</td><td class="num up">+7</td><td class="num down">-2,013</td></tr>
+    <tr><td>조선</td><td class="num">4</td><td class="num down">-1,082</td><td class="num">1</td><td class="num up">+10</td><td class="num down">-1,072</td></tr>
+    <tr><td>다각화된통신서비스</td><td class="num">1</td><td class="num down">-592</td><td class="num">0</td><td class="num">0</td><td class="num down">-592</td></tr>
+    <tr><td><strong>반도체와반도체장비</strong></td><td class="num">14</td><td class="num down">-3,619</td><td class="num">8</td><td class="num up">+2,863</td><td class="num down"><strong>-756</strong></td></tr>
+    <tr><td>생물공학</td><td class="num">5</td><td class="num down">-1,738</td><td class="num">3</td><td class="num up">+1,952</td><td class="num up">+213</td></tr>
+    <tr><td>건설</td><td class="num">6</td><td class="num down">-357</td><td class="num">8</td><td class="num up">+1,963</td><td class="num up">+1,606</td></tr>
+    <tr><td><strong>우주항공과국방</strong></td><td class="num">3</td><td class="num down"><strong>-6,870</strong></td><td class="num">2</td><td class="num up"><strong>+9,128</strong></td><td class="num up"><strong>+2,258</strong></td></tr>
+    <tr><td>자동차부품</td><td class="num">9</td><td class="num down">-131</td><td class="num">6</td><td class="num up">+2,250</td><td class="num up">+2,119</td></tr>
+    <tr><td>은행·손해보험</td><td class="num">0</td><td class="num">0</td><td class="num">4</td><td class="num up">+3,772</td><td class="num up">+3,772</td></tr>
+    <tr><td>석유와가스</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num up">+6,295</td><td class="num up">+6,295</td></tr>
+    <tr><td><strong>화장품</strong></td><td class="num">2</td><td class="num down">-26</td><td class="num">11</td><td class="num up"><strong>+6,960</strong></td><td class="num up"><strong>+6,933</strong></td></tr>
+    <tr><td><strong>제약</strong></td><td class="num">7</td><td class="num down">-301</td><td class="num">10</td><td class="num up"><strong>+13,978</strong></td><td class="num up"><strong>+13,677</strong></td></tr>
+  </table>
+  </div>
+
+  <p>세 층이 겹쳐 있다.</p>
+
+  <p><strong>① 섹터 간 이동</strong>: 전자장비·기계·조선·화학·통신(합 -2.7조 순유출)에서 제약·화장품·석유가스·은행/손보·해운(합 +3.1조 순유입)으로. 성장·시클리컬 부품에서 <strong>방어 + 가치 + 소비</strong>로.</p>
+
+  <p><strong>② 섹터 내 종목 교체 — 여기가 핵심이다.</strong> 우주항공과국방은 한 종목에서 -6,790억이 빠지는 동시에 다른 두 종목으로 +9,127억이 들어왔다. <strong>섹터를 버린 게 아니라 섹터 안에서 말을 갈아탔다.</strong> 반도체도 동일하다 — 양매도 14종과 동반매수 8종이 공존해 순합이 -756억으로 거의 상쇄된다. 생물공학도 순합 +213억.</p>
+
+  <p>양매도 쪽 업종 50개, 동반매수 쪽 업종 49개, <strong>교집합이 38개</strong>다. 커버리지는 겹치는데 종목이 다르다 — 이것이 <strong>"무차별 매도"가 아니라는 결정적 증거</strong>다.</p>
+
+  <p><strong>③ 시총 축</strong>: 시총 중앙값 기준 양매도 1,152억 vs 동반매수 2,699억, 상위 25종만 보면 1.5조 vs 4.6조로 <strong>3.04배</strong>. 적출률로 보면 더 명확하다 — 동반매수는 시총 1조~10조 구간에서 10~13%가 걸리는데 양매도는 그 구간에서 4.6~7.8%. 반대로 1천억 미만은 양매도 7.0% vs 동반매수 2.3%.</p>
+
+  <p><strong>소형주는 팔려서 빠진 게 아니라 아무도 안 사서 방치된 쪽에 가깝다.</strong> 양매도 206종 중 186종(90%)이 시총 1조 미만인데, 그들의 유출 합계는 -8,091억으로 전체의 17.6%뿐이다.</p>
+
+  <h3>3-4. 회피 우선순위 — 세 조건이 겹치는 곳</h3>
+
+  <p>양매도 리스트는 매도 시그널이 아니라 <strong>회피 필터</strong>로만 쓸 성격이다. 우리가 쓰는 우선순위는 세 가지 동시 충족이다.</p>
+
+  <ol>
+    <li><strong>20일 유출이 60일의 1/3 초과</strong> (가속 진행형)</li>
+    <li><strong>외국인소진율이 실제로 하락</strong> (금액이 아닌 지분 확인)</li>
+    <li><strong>시총 1조 미만</strong> (유동성 방패 없음)</li>
+  </ol>
+
+  <p>셋을 모두 만족하는 종목: <strong>비에이치 · 엠케이전자 · 아모텍 · 코스모로보틱스</strong>. <span class="badge b-risk">회피</span></p>
+
+  <p>가장 순수한 경고는 비에이치다 — 60일 유출이 시총의 -10.2%, 그중 <strong>-8.9%가 최근 20일에 집중</strong>, 외국인소진율 <strong>-6.16%p 실제 감소</strong>, 주가 -46.3%. 엠케이전자도 동일 구조(20일 -6.9%, 소진율 -3.01%p, 주가 -50.8%).</p>
+
+  <p><strong>유출 속도 전반</strong>: 양매도 206종의 20일/60일 유출 비율 중앙값은 <strong>0.397</strong>로 등속(0.333)을 넘는다. <strong>116종(56%)이 여전히 가속 중</strong>이다. 금액 가중으로는 26.8%로 감속처럼 보이지만, 이는 위에서 본 유출 1위 종목 하나가 총합을 끌어내린 결과다. <strong>개별 종목 레벨에서는 유출이 안 끝났다.</strong></p>
+
+  <h3>3-5. 반대 방향의 함정 — "수급 없는 반등"</h3>
+
+  <p>60일 양매도인데 20일 주가만 급반등한 조합이 있다: 펩트론(+62.8%), 태성(+46.1%), 메지온(+29.9%), SFA(+23.4%), 한화리츠(+20.2%). <strong>수급 유입 없이 오른 것</strong>이다. 우리 판단으로는 동반매수 전환이 확인되기 전까지 진입 근거로 쓸 수 없다. <span class="badge b-hold">보류</span></p>
+
+  <p>한 가지 더 깨야 할 서사가 있다. 양매도 199종 중 60일 주가가 오른 건 36종(18%)인데, <strong>이들의 시총 대비 유출 중앙값은 -1.33%로 양매도 전체(-1.47%)와 거의 같다.</strong> "대량 유출을 개인이 흡수해서 올랐다"는 이야기는 데이터에 없다. <strong>유출이 작아서 오른 것</strong>이다. 상승 36종의 시총 중앙값은 866억으로, 대부분 소형·저유동 구간의 개별 이벤트다.</p>
+
+  <p><strong>유동성이 곧 충격 흡수력</strong>이라는 증거도 있다. 시총 대비 유출률이 비슷할 때 — 한국항공우주 -4.76% 유출에 주가 -9.5%, LG이노텍 -11.38%에 -17.5%. 반면 소형주는 비에이치 -10.2%에 -46.3%, 코스모로보틱스 -14.4%에 -65.5%. <strong>같은 유출률에서 대형이 3~4배 덜 깨진다.</strong></p>
+
+  <h3>3-6. 숨은 층위 — 양매도 종목을 누가 받고 있나</h3>
+
+  <p>양매도 206종의 60일 <strong>금융투자는 +18,457억</strong>. 기관합계로는 -7,953억뿐인데 실질기관은 -26,410억이다. 즉 <strong>42종(유출액의 32%)은 기관합계 기준으로는 오히려 순매수</strong>로 집계된다.</p>
+
+  <p><strong>"양매도"라는 라벨은 실질기관 렌즈에서만 성립한다.</strong> 기관합계만 보면 이 종목들은 매도 대상으로 보이지 않는다.</p>
+
+  <h2>4. 숫자에 속지 않는 법 — 판정이 뒤집힌 6종</h2>
+
+  <p>이 장이 리포트의 방법론적 핵심이다.</p>
+
+  <h3>4-1. 왜 블록을 빼야 하나</h3>
+
+  <p>수급 통계는 성질이 전혀 다른 두 거래를 한 숫자로 합친다.</p>
+
+  <ul>
+    <li><strong>가격을 만든 거래</strong>: 호가창에서 체결된 것. 시장 참여자의 판단이 가격에 반영된다.</li>
+    <li><strong>가격과 무관한 거래</strong>: 장외에서 합의된 가격으로 소유권만 이전되는 대량 교차거래. 호가창을 건드리지 않는다.</li>
+  </ul>
+
+  <p>이 둘을 섞으면, <strong>하루의 소유권 이전이 60일간의 추세로 둔갑한다.</strong> 그래서 우리는 세 층으로 나눠 읽는다.</p>
+
+  <ol>
+    <li><strong>총량</strong> — 오독 위험. 판정의 부호 정도만 참고</li>
+    <li><strong>블록 제거</strong> — <strong>추세 판독의 기준</strong>. 금액을 인용할 때는 반드시 이쪽</li>
+    <li><strong>블록 자체</strong> — <strong>이벤트 판독</strong>. 규모가 크면 그게 그날의 최대 정보</li>
+  </ol>
+
+  <h3>4-2. 60종 중 6종이 뒤집혔다</h3>
+
+  <p>시총 3천억 이상 동반매수 상위 60종에 이 규약을 적용한 결과, <strong>6종의 판정이 매도우위로 뒤집혔다(10%).</strong></p>
+
+  <div class="scroll">
+  <table>
+    <tr><th>종목</th><th>시총(억)</th><th>외인 60d (총량→제거)</th><th>실질기관 60d (총량→제거)</th><th>실질기관 왜곡배수</th><th>블록일이 실질기관 60d에서 차지한 비중</th></tr>
+    <tr><td>지엔씨에너지</td><td class="num">9,030</td><td class="num">+385 → <strong>+549</strong></td><td class="num">+251 → <strong>+73</strong></td><td class="num">0.29x</td><td class="num">71%</td></tr>
+    <tr><td>기가비스</td><td class="num">15,224</td><td class="num">+255 → <strong>+543</strong></td><td class="num">+576 → <strong>+211</strong></td><td class="num">0.37x</td><td class="num">63%</td></tr>
+    <tr><td>고영</td><td class="num">22,064</td><td class="num">+943 → <strong>+1,148</strong></td><td class="num">+25 → <strong class="down">-152</strong></td><td class="num down"><strong>-6.08x (부호전환)</strong></td><td class="num"><strong>708%</strong></td></tr>
+    <tr><td>SK</td><td class="num">424,141</td><td class="num">+694 → <strong>+1,937</strong></td><td class="num">+2,242 → <strong>+500</strong></td><td class="num">0.22x</td><td class="num">78%</td></tr>
+    <tr><td>실리콘투</td><td class="num">28,099</td><td class="num">+90 → <strong>+194</strong></td><td class="num">+60 → <strong class="down">-92</strong></td><td class="num down"><strong>-1.53x (부호전환)</strong></td><td class="num"><strong>253%</strong></td></tr>
+    <tr><td>SK바이오팜</td><td class="num">68,367</td><td class="num">+32 → <strong>+270</strong></td><td class="num">+173 → <strong class="down">-78</strong></td><td class="num down"><strong>-0.45x (부호전환)</strong></td><td class="num"><strong>145%</strong></td></tr>
+  </table>
+  </div>
+
+  <div class="callout warn">
+    <p class="kicker">예외 0건</p>
+    <p><strong>6종 전부에서 블록일의 구조가 동일했다 — 블록일 = 외국인 매도 / 국내 실질기관 매수.</strong> 즉 총량 기준 동반매수는 "외국인이 넘긴 물량을 국내 기관이 받은 하루"를 "60일 동반 매집"으로 오독한 것이다. 블록을 빼면 <strong>외국인 매수는 총량보다 22~744% 강해지고, 국내 기관은 약해지거나 부호가 뒤집힌다.</strong> 동반매수의 두 다리가 실은 서로 반대 방향이었다.</p>
+  </div>
+
+  <p><strong>고영·실리콘투·SK바이오팜은 60일 판정이 단 하루에 매달려 있었다.</strong> 60일 중 59일간 국내 기관은 순매도(각 -152 / -92 / -78억)인데, 블록 하루의 +177 / +152 / +251억이 그걸 덮고 라벨을 만들었다. 블록일 강도비(블록일 일평균 ÷ 비블록일 일평균)는 각각 69배, 98배, <strong>190배</strong>다.</p>
+
+  <h3>4-3. 지분 데이터로 교차검증</h3>
+
+  <p>순매수 금액과 완전히 독립적인 소스인 <strong>외국인소진율(보유 지분율)</strong> 변화로 대조했다.</p>
+
+  <div class="scroll">
+  <table>
+    <tr><th>종목</th><th>5/20</th><th>8/14</th><th>60일 변화</th><th>판정</th></tr>
+    <tr><td>지엔씨에너지</td><td class="num">3.69%</td><td class="num">9.45%</td><td class="num up"><strong>+5.76%p</strong></td><td><strong>블록 제거값(+549) 확증</strong>, 총량은 과소평가</td></tr>
+    <tr><td>기가비스</td><td class="num">2.11%</td><td class="num">4.60%</td><td class="num up">+2.49%p</td><td>블록 제거값(+543) 쪽 정합</td></tr>
+    <tr><td>고영</td><td class="num">21.50%</td><td class="num">25.66%</td><td class="num up">+4.16%p</td><td>총량(+943) 쪽 정합</td></tr>
+    <tr><td>SK</td><td class="num">29.63%</td><td class="num">29.91%</td><td class="num"><strong>+0.28%p</strong></td><td><strong>제거값(+1,937)은 과잉 보정</strong></td></tr>
+    <tr><td>실리콘투</td><td class="num">6.93%</td><td class="num">6.97%</td><td class="num"><strong>+0.04%p</strong></td><td><strong>외국인 순증 사실상 0</strong> — 총량·제거값 둘 다 과대</td></tr>
+    <tr><td>SK바이오팜</td><td class="num">13.09%</td><td class="num">12.59%</td><td class="num down"><strong>-0.50%p</strong></td><td><strong>외국인 보유 감소</strong> — "매수"와 방향 충돌</td></tr>
+  </table>
+  </div>
+
+  <p><strong>지엔씨에너지가 결정적이다.</strong> 블록일 전후 소진율이 7/28 10.53% → 8/3 6.73% → 8/4 <strong>5.14%</strong>로 급락한 뒤 8/14 9.45%로 회복했다. <strong>블록일에 외국인이 실제로 팔았고(지분으로 확인), 그 전후로는 강하게 샀다.</strong> 블록 제거 판독이 정확히 맞았다는 뜻이다.</p>
+
+  <p>반대로 <strong>실리콘투는 소진율 +0.04%p로 외국인 순증이 사실상 0</strong>, SK바이오팜은 아예 <strong>-0.50%p로 보유가 줄었다.</strong> 두 종목은 "외국인 매수"라는 총량 신호 자체가 허수다.</p>
+
+  <h3>4-4. 블록의 정체 — 공시 대조</h3>
+
+  <p>블록일에 무슨 일이 있었는지는 대량보유·임원소유 공시로 상당 부분 확인된다. 같은 "블록"이라도 성격이 정반대다.</p>
+
+  <div class="scroll">
+  <table>
+    <tr><th>종목</th><th>블록의 정체</th><th>성격</th></tr>
+    <tr><td><strong>지엔씨에너지</strong></td><td>8/3 국내 가치운용사 5.37% 신규(883,737주), 8/4 대형 운용사 5.98→7.21% — <strong>블록일과 날짜 정확 일치</strong>. 직전 7/27 사모 교환사채 교환청구 145,137주(자기주식 교부, 신주 없음). 대표이사는 2·5·6월 연속 장내 매수</td><td class="up"><strong>긍정</strong> — 국내 가치운용사 신규 인수 + 교환사채 물량 흡수</td></tr>
+    <tr><td><strong>기가비스</strong></td><td>6/5 최대주주 61.56→<strong>48.42%</strong>(-1,666,323주), 사유에 "시간외매매" 명시. 7/29 10%이상주주 12.47→9.94%(-320,000주) → <strong>7/31 블록 직전</strong>. 그 외 임원 매도 8건 연쇄</td><td class="down"><strong>부정</strong> — 10%이상주주 3인 연쇄 이탈</td></tr>
+    <tr><td><strong>고영</strong></td><td>6/9 대응 공시 확인 안 됨(5% 미만 주체 추정). 주변 정황은 오히려 양호 — 최대주주 담보주식 7.90%(2024-12)→4.60%(2026-08) 지속 축소, 7/23 자기주식 소각, 8/14 대형 외국계 5.11% 신규보고</td><td><strong>중립~긍정</strong></td></tr>
+    <tr><td><strong>SK</strong></td><td>검출 자체가 오류(4-5 참조). 대주주 축은 정반대 — 최대주주 지분 +157,008주, 담보주식 15.71%(2025-04)→5.00%(2026-05) 대폭 축소, 5/20 임원 8명 전원 매수</td><td><strong>판정 무효</strong></td></tr>
+    <tr><td><strong>실리콘투</strong></td><td>4/27 최대주주 50.58→<strong>43.62%</strong>(-4,561,842주, 사유: 특별관계자 전환우선주 전환청구 + 공동보유 해소). 동일자 투자목적회사 <strong>6.72%(4,404,344주) 신규 분리보고</strong>. <strong>이후 1% 이상 변동보고 없음 = 미매각</strong></td><td class="down"><strong>부정</strong> — 약 1,887억 오버행 <strong>잔존</strong>(엑싯 대기)</td></tr>
+    <tr><td><strong>SK바이오팜</strong></td><td>2/26 매매계약 체결 → 3/31 최대주주 64.09→<strong>50.14%</strong>(-10,923,927주, 환산 약 9,500억). 국민연금도 4/1 7.03→6.00%. 다만 이 대형 구주매출은 60일 창 밖</td><td class="down"><strong>부정~중립</strong> — 경영권 최소선까지 내려와 잔여 매각 여력이 상시 오버행</td></tr>
+  </table>
+  </div>
+
+  <h3>4-5. 이 방법론 자체의 한계 두 가지</h3>
+
+  <p>정직하게 밝힌다. 우리가 쓴 블록 검출 규약에는 결함이 있고, 이번 분석에서 그게 드러났다.</p>
+
+  <p><strong>① 고정 금액 임계는 대형주에서 과다검출한다.</strong> 검출 임계가 절대금액 100억 고정이었는데, 종목별 거래 규모 대비 상대 강도가 20배 이상 벌어진다.</p>
+
+  <div class="scroll">
+  <table>
+    <tr><th>종목</th><th>중위 일거래대금(억)</th><th>100억 임계 / 일거래대금</th><th>검출된 블록일수</th></tr>
+    <tr><td><strong>SK</strong></td><td class="num"><strong>1,555</strong></td><td class="num"><strong>6.4%</strong></td><td class="num"><strong>21</strong></td></tr>
+    <tr><td>고영</td><td class="num">396</td><td class="num">25.2%</td><td class="num">1</td></tr>
+    <tr><td>기가비스</td><td class="num">222</td><td class="num">45.0%</td><td class="num">2</td></tr>
+    <tr><td>실리콘투</td><td class="num">217</td><td class="num">46.0%</td><td class="num">1</td></tr>
+    <tr><td>SK바이오팜</td><td class="num">129</td><td class="num">77.5%</td><td class="num">1</td></tr>
+    <tr><td>지엔씨에너지</td><td class="num">77</td><td class="num">129.5%</td><td class="num">3</td></tr>
+  </table>
+  </div>
+
+  <p>SK는 임계가 일거래대금의 6.4%에 불과해 <strong>평범한 날(거래량 중위 대비 1.09~1.68배, 등락 ±2%)까지 전부 걸린다.</strong> 60일 중 21일(35%)이 "블록"으로 잡혔다는 건 지주사 특성도 특정 사건도 아니고 <strong>구조적 검출 오류</strong>다. <strong>SK의 뒤집힘은 무효 처리해야 하며, 제거값 +1,937억도 정상 거래일 상당수를 도려낸 과잉 보정값이다.</strong> → 거래대금 비율 임계(예: 중위 일거래대금의 30%)로 전환해야 한다.</p>
+
+  <p><strong>② 검출된 "블록"의 대부분은 장외 거래가 아니었다.</strong> 진짜 시간외 대량매매의 시그니처는 <strong>거래량 급증 + 가격 무영향</strong>이다(장외 합의가라 호가창을 안 건드리므로). 이 조건을 만족한 건 <strong>SK바이오팜 6/11(거래량 6.57배, 등락 +2.43%) 단 1건</strong>이다.</p>
+
+  <p>나머지는 전부 <strong>±12~22% 급변동 + 거래량 2~11배</strong>였다. 지엔씨에너지 8/4(+21.90%, 거래량 10.95배), 기가비스 7/31(+22.92%), 고영 6/9(+20.32%) — 호가창에서 외국인과 기관이 정면충돌한 이벤트일이다.</p>
+
+  <div class="callout warn">
+    <p class="kicker">규약의 자기수정</p>
+    <p>이 경우 "블록 제거"는 노이즈 제거가 아니라 <strong>정보 밀도가 가장 높은 날을 삭제하는 것</strong>이 된다. 3층 규약 중 ③(블록 자체 = 이벤트 판독)이 ②(제거)보다 우선해야 하는 구간이다. → 검출된 블록은 당일 등락률·거래량 배수를 함께 태깅해 <strong>장외크로스 / 이벤트일충돌 / 임계아티팩트</strong> 3분류로 나눠야 한다.</p>
+  </div>
+
+  <h3>4-6. 6종 재판정</h3>
+
+  <div class="scroll">
+  <table>
+    <tr><th>종목</th><th>우리 판정</th><th>근거 요약</th></tr>
+    <tr><td><strong>지엔씨에너지</strong></td><td class="verdict v-partly">가짜 아님 — 라벨만 틀렸고 블록 자체는 긍정 신호</td><td>실체는 "외국인 장내 강한 매수(제거값 +549, 소진율 +5.76%p 확증) + 국내 기관은 블록으로만 인수". 단서: 60일 +119.6% 급등 직후 진입가, 교환사채 잔량 잔존</td></tr>
+    <tr><td><strong>기가비스</strong></td><td class="verdict v-false">진짜 가짜 — 회피</td><td>기관 매수 +365억의 실체가 내부자 매도 물량 인수. 10%이상주주 3인 연쇄 이탈. 블록 제거 20일 실질기관 -150억. 가격도 20일 -16.0%로 이미 확인</td></tr>
+    <tr><td><strong>고영</strong></td><td class="verdict v-partly">동반 아님 — 외국인 단독. 중립~약긍정</td><td>기관은 6/9 급등일 하루 추격(+177억)이 전부, 나머지 59일 -152억. 외국인 매수는 소진율로 확증. <strong>"외국인 단독 매수"로 재라벨</strong></td></tr>
+    <tr><td><strong>SK</strong></td><td class="verdict v-partly">검증 무효 — 임계 아티팩트</td><td>21일 검출은 과다검출. 대주주 축은 정반대로 긍정. 유효한 경고는 하나 — 블록 제거 20일 실질기관 <strong>-376억</strong>(6/25 고점 대비 -32% 구간에서 국내 기관 이탈)</td></tr>
+    <tr><td><strong>실리콘투</strong></td><td class="verdict v-false">가짜 — 부정</td><td>60일 실질기관이 7/7 하루(+152억)로 전부, 나머지 -92억. 외국인 소진율 +0.04%p로 매수 자체가 허수. <strong>약 1,887억 오버행이 미매각 상태로 잔존</strong></td></tr>
+    <tr><td><strong>SK바이오팜</strong></td><td class="verdict v-false">가짜 — 부정~중립</td><td>6종 중 유일한 진짜 장외 크로스. 그 하루 +251억이 60일 실질기관의 145% → 빼면 -78억. 소진율 -0.50%p로 방향 충돌. 최대주주가 경영권 최소선까지 내려와 상시 오버행</td></tr>
+  </table>
+  </div>
+
+  <p><strong>결론: 6종 중 명확한 가짜 3종(기가비스·실리콘투·SK바이오팜), 라벨 오류지만 실체 양호 1종(지엔씨에너지), 동반이 아니라 외국인 단독 1종(고영), 검증 무효 1종(SK).</strong></p>
+
+  <p>부호만 봐도 최소 3종은 회피 대상이었다. <strong>블록 제거 재합산은 동반매수 스크린의 선택 옵션이 아니라 필수 게이트다.</strong></p>
+
+  <h2>5. 종합 판정</h2>
+
+  <div class="card">
+    <h3>1. 헤드라인 정정 — "외국인 대탈출"은 없었다</h3>
+    <p>60일 -66.3조의 100.8%가 SK하이닉스·삼성전자·SK스퀘어에서 나왔고, 나머지 2,683종은 +5,487억으로 중립이다. 상위 2종만으로 93.1%다. <strong>이 종목들의 수급 하위권을 종목 고유 악재로 읽으면 오독이며, 반대로 초대형주에 가려지지 않은 중소형 종목의 하위권이야말로 진짜 종목 고유 리스크 지점이다.</strong></p>
+
+    <h3>2. 전환은 시작됐지만 머리만 돌았다</h3>
+    <p>60일 매도 상위 20종은 20일·5일·1일 모두 부호가 뒤집혔고, 특히 5일 +5.4조가 결정적이다. 그러나 이건 <strong>팔던 걸 되사는 되돌림</strong>이지 신규 로테이션이 아니며, 폭 기준으로는 60일 순매도 1,431종의 20일 합계가 여전히 -1.19조다. <strong>KOSPI 20일 순매수의 98.2%가 시총 1조+ 구간에서 나왔고, KOSDAQ은 세 시총 구간 전부 순매도다. 축은 시장이 아니라 시총이다.</strong></p>
+
+    <h3>3. 자금이 실제로 가는 곳은 방어·소비·제약이다</h3>
+    <p>블록 검증을 통과한 동반매수 54종에서 화장품은 시총 대비 3.16%, 전 시장 독립 검정에서 p=4.6e-09로 유의하다. 화학 섹터 전체로 보면 무의미한데(p=0.17) 그 안의 화장품만 떼면 압도적이다. <strong>다만 최근 1주 화장품은 외국인 단독으로 전환됐고(실질기관 -1,128억), 신선도만으로는 음식료가 앞선다</strong>(20일/60일 비율 0.91 vs 0.69, 5일 동반 유지). 제약·바이오는 절대 규모(+13,629억)로 최대이나 시총 대비는 0.91%로 낮다.</p>
+
+    <h3>4. 빠지는 쪽은 "무차별"이 아니라 3중 로테이션이다</h3>
+    <p>①섹터 간(전자장비·기계·조선·화학 -2.7조 → 제약·화장품·석유가스·금융·해운 +3.1조), ②섹터 내 종목 교체(방산·반도체 모두 순합이 거의 상쇄), ③소형에서 대형으로. 양매도 업종 50개와 동반매수 업종 49개의 교집합이 38개 — <strong>커버리지는 겹치는데 종목이 다르다.</strong></p>
+
+    <h3>5. 그리고 방법론이 결론을 바꾼다</h3>
+    <p>검증한 60종 중 6종(10%)이 블록 제거만으로 뒤집혔고, 6종 전부에서 구조가 동일했다 — <strong>블록일 = 외국인 매도 / 국내 기관 매수.</strong> 세 종목은 60일 판정이 <strong>단 하루</strong>에 매달려 있었다. 동시에 우리 검출 규약 자체의 결함도 드러났다: 고정 금액 임계는 대형주에서 정상 거래일을 대량 오검출하고, 검출된 "블록"의 대부분은 장외 거래가 아니라 ±12~22% 급변동일의 호가창 충돌이었다(진짜 장외 크로스는 6종 중 1건). <strong>거래대금 비율 임계로의 전환과 블록의 3분류 태깅이 필요하다.</strong></p>
+  </div>
+
+  <h3>실무 규칙 5줄</h3>
+
+  <ol>
+    <li><strong>금액이 아니라 지분으로 확인한다.</strong> 유출 금액 1위 종목은 외국인소진율이 -0.31%p, 사실상 제자리였다. 급등 후 급락 종목의 대량 순매도는 가격 비대칭 아티팩트일 수 있다.</li>
+    <li><strong>"기관"은 반드시 쪼갠다.</strong> 금융투자 +19.4조는 방향성 뷰가 아니라 헷지 북이다(시총 상관 +0.923, 외국인 상관 -0.868, 실질기관 상관 -0.044).</li>
+    <li><strong>동반매수 판정은 블록 제거 후에만 인용한다.</strong> 검증 없는 동반매수 라벨은 10% 확률로 반대 신호다.</li>
+    <li><strong>회피는 세 조건 동시 충족으로 좁힌다</strong> — 20일 유출이 60일의 1/3 초과 + 소진율 실제 하락 + 시총 1조 미만.</li>
+    <li><strong>수급 없이 20일만 급반등한 양매도 종목은 진입 근거가 아니다.</strong> 동반매수 전환 확인이 먼저다.</li>
+  </ol>
+
+  <h2>데이터·한계 명시</h2>
+
+  <ul>
+    <li><strong>집계 범위</strong>: KOSPI 921 + KOSDAQ 1,765 = 2,686종. 1일/5일/20일/60일 투자자별 일별 순매수를 자체 합산. 기준일 2026-08-14 확정 거래일.</li>
+    <li><strong>업종 분류</strong>: 거래소 업종지수 구성종목 기준으로 2,532종에 객관 부여(미매핑 154종은 대부분 우선주로 검정 분모에서 제외). 화장품은 업종 분류상 '화학'에 흡수되므로 밸류체인 종목만 별도 지정했다.</li>
+    <li><strong>블록 제거 재합산의 커버리지</strong>: 시총 3천억 이상 동반매수 상위 60종에만 적용됐다. <strong>3장(양매도 206종)의 금액과 2-4절의 5일 수치는 총량 기준</strong>이며, 이 리포트가 스스로 요구한 게이트를 아직 통과하지 못한 구간이다. 판정의 부호는 총량으로도 대체로 안전하나, 금액 인용 시 블록 포함 가능성을 감안해야 한다. 3장 상위 4종은 별도 소스(일별 투자자 수량×종가)로 독립 대조해 0.4~12% 오차 범위를 확인했다.</li>
+    <li><strong>미확보</strong>: 위 3종의 일자별 매도 분해(단일일 이벤트 vs 60일 분산), 5일·1일 창의 블록 검증, 실질기관 내부 엔티티 분해(연기금 vs 투신 vs 사모), 신규상장 종목의 락업 해제 일정.</li>
+    <li>본 리포트의 판정과 해석은 <strong>작성자 자체 평가</strong>이며 특정 종목의 매수·매도를 권유하지 않는다. 언급된 종목은 수급 지형 설명을 위한 사례이고, 투자 판단과 그 결과는 투자자 본인의 책임이다.</li>
+  </ul>
+
+  <div class="foot">
+    <p>2026-08-15 발행 · 기준일 2026-08-14 확정 거래일 · 투자 권유 아님 · 결정과 결과는 본인 책임 · 수치는 작성 시점 실측(시장 변동·정정 가능)</p>
+  </div>
+
+</div>
+</body>
+</html>
